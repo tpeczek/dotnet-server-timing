@@ -11,6 +11,12 @@ Lib.AspNetCore.ServerTiming is available on [NuGet](https://www.nuget.org/packag
 PM>  Install-Package Lib.AspNetCore.ServerTiming
 ```
 
+## Documentation
+
+There is a blog post available describing implementation details and usage basics:
+
+- [Feeding Server Timing API from ASP.NET Core](https://www.tpeczek.com/2017/06/feeding-server-timing-api-from-aspnet.html)
+
 ## Donating
 
 Lib.AspNetCore.ServerTiming is a personal open source project. If Lib.AspNetCore.ServerTiming has been helpful to you, consider donating. Donating helps support Lib.AspNetCore.ServerTiming.
