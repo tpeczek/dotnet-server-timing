@@ -94,12 +94,12 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
 
                 if (Value.HasValue)
                 {
-                    _serverTimingMetric = _serverTimingMetric + "=" + Value.Value.ToString(CultureInfo.InvariantCulture);
+                    _serverTimingMetric = _serverTimingMetric + ";dur=" + Value.Value.ToString(CultureInfo.InvariantCulture);
                 }
 
                 if (!String.IsNullOrEmpty(Description))
                 {
-                    _serverTimingMetric = _serverTimingMetric + ";\"" + Description + "\"";
+                    _serverTimingMetric = _serverTimingMetric + ";desc=\"" + Description + "\"";
                 }
             }
 
