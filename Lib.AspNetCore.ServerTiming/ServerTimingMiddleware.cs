@@ -55,24 +55,28 @@ namespace Lib.AspNetCore.ServerTiming
         /// Process an individual request.
         /// </summary>
         /// <param name="context">The context.</param>
+        /// <param name="serverTiming">The instance of <see cref="IServerTiming"/> for current requet.</param>
         /// <returns>The task object representing the asynchronous operation.</returns>
-        public Task Invoke(HttpContext context)
+        public Task Invoke(HttpContext context, IServerTiming serverTiming)
         {
+            if (serverTiming == null)
+            {
+                throw new ArgumentNullException(nameof(serverTiming));
+            }
+
             if (_timingAllowOriginHeaderValue != null)
             {
                 context.Response.SetResponseHeader(HeaderNames.TimingAllowOrigin, _timingAllowOriginHeaderValue);
             }
 
-            HandleServerTiming(context);
+            HandleServerTiming(context, serverTiming);
 
             return _next(context);
         }
 
-        private void HandleServerTiming(HttpContext context)
+        private void HandleServerTiming(HttpContext context, IServerTiming serverTiming)
         {
             context.Response.OnStarting(() => {
-                IServerTiming serverTiming = context.RequestServices.GetRequiredService<IServerTiming>();
-
                 if (serverTiming.Metrics.Count > 0)
                 {
                     context.Response.SetServerTiming(new ServerTimingHeaderValue(serverTiming.Metrics));
