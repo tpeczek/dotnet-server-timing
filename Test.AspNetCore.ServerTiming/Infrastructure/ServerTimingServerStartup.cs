@@ -7,7 +7,7 @@ using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Test.AspNetCore.ServerTiming.Infrastructure
 {
-    internal class TestServerStartup
+    internal class ServerTimingServerStartup
     {
         private const string DELAY_SERVER_TIMING_METRIC_NAME = "DELAY";
         private const int DELAY_SERVER_TIMING_METRIC_VALUE = 100;
