@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Http.Extensions;
 
