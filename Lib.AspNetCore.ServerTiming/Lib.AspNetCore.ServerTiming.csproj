@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Lib.AspNetCore.ServerTiming is a library which provides Server Timing API support for ASP.NET Core.</Description>
-    <Copyright>Copyright © 2017 - 2018 Tomasz Pęczek</Copyright>
+    <Copyright>Copyright © 2017 - 2019 Tomasz Pęczek</Copyright>
     <VersionPrefix>2.1.0</VersionPrefix>
     <Authors>Tomasz Pęczek</Authors>
     <TargetFrameworks>net451;netstandard1.6;netstandard2.0</TargetFrameworks>
