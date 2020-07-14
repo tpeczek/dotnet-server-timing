@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Lib.AspNetCore.ServerTiming.Http.Headers
 {
@@ -10,6 +11,9 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
     {
         #region Fields
         private string _serverTimingMetric;
+        
+        /// <summary>Regex to find chars that are invalid in https://httpwg.org/specs/rfc7230.html#rfc.section.3.2.6</summary>
+        static readonly Regex invalidTokenChars = new Regex("[^&#\\$%&'\\*\\+\\-\\.\\^`\\|~\\w]");
         #endregion
 
         #region Properties
@@ -90,7 +94,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         {
             if (_serverTimingMetric == null)
             {
-                _serverTimingMetric = Name;
+                _serverTimingMetric = invalidTokenChars.Replace(Name.Replace(' ', '-'), "");
 
                 if (Value.HasValue)
                 {
