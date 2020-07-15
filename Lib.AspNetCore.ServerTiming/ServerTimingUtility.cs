@@ -54,24 +54,11 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="timing">The timings to extend</param>
         /// <param name="duration">The duration to log in ms.</param>
         /// <param name="metricName">The name of the metric to log.</param>
-        public static void AddMetric(this IServerTiming timing, decimal duration, string metricName)
-        {
-            if (timing == null)
-                return;
-
-            var metric = new ServerTimingMetric(metricName, duration);
-            timing.Metrics.Add(metric);
-        }
-
-        /// <summary>Add a metric for the current caller.
-        /// <para>This will generate a metric name of "{fileName}.{function}+{lineNumber}"</para>
-        /// <para>This uses caller compile-time attributes to avoid reflection costs.</para></summary>
-        /// <param name="timing">The timings to extend</param>
-        /// <param name="duration">The duration to log in ms.</param>
         /// <param name="functionName">Optional, populated compile-time with the name of the calling function</param>
         /// <param name="filePath">Optional, populated compile-time with the path to the calling file</param>
         /// <param name="lineNumber">Optional, populated compile-time with line number in the calling file</param>
-        public static void AddMetricCaller(this IServerTiming timing, decimal duration,
+        public static void AddMetric(this IServerTiming timing, decimal duration,
+            string metricName = null,
             [CallerMemberName] string functionName = null,
             [CallerFilePath] string filePath = null,
             [CallerLineNumber] int lineNumber = 0)
@@ -79,8 +66,8 @@ namespace Lib.AspNetCore.ServerTiming
             if (timing == null)
                 return;
 
-            string caller = FormatCallerName(functionName, filePath, lineNumber);
-            timing.AddMetric(duration, caller);
+            var metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), duration);
+            timing.Metrics.Add(metric);
         }
 
         /// <summary>Format a metric name from caller params.</summary>
