@@ -12,8 +12,8 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         #region Fields
         private string _serverTimingMetric;
         
-        /// <summary>Regex to find chars that are invalid in https://httpwg.org/specs/rfc7230.html#rfc.section.3.2.6</summary>
-        static readonly Regex invalidTokenChars = new Regex("[^&#\\$%&'\\*\\+\\-\\.\\^`\\|~\\w]");
+        // Regex to find chars that are invalid in https://httpwg.org/specs/rfc7230.html#rfc.section.3.2.6
+        private static readonly Regex _invalidTokenChars = new Regex("[^&#\\$%&'\\*\\+\\-\\.\\^`\\|~\\w]");
         #endregion
 
         #region Properties
@@ -92,9 +92,9 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
         /// <returns>The string representation of metric.</returns>
         public override string ToString()
         {
-            if (_serverTimingMetric == null)
+            if (_serverTimingMetric is null)
             {
-                _serverTimingMetric = invalidTokenChars.Replace(Name.Replace(' ', '-'), "");
+                _serverTimingMetric = _invalidTokenChars.Replace(Name.Replace(' ', '-'), "");
 
                 if (Value.HasValue)
                 {

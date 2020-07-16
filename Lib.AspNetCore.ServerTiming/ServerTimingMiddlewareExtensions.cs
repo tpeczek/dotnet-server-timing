@@ -18,7 +18,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <returns>The original app parameter</returns>
         public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app)
         {
-            if (app == null)
+            if (app is null)
             {
                 throw new ArgumentNullException(nameof(app));
             }
@@ -34,7 +34,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <returns>The original app parameter</returns>
         public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ICollection<string> timingAllowOrigins)
         {
-            if (app == null)
+            if (app is null)
             {
                 throw new ArgumentNullException(nameof(app));
             }
@@ -50,7 +50,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <returns>The original app parameter</returns>
         public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, params string[] timingAllowOrigins)
         {
-            if (app == null)
+            if (app is null)
             {
                 throw new ArgumentNullException(nameof(app));
             }

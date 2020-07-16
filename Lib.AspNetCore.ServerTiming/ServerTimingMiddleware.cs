@@ -58,7 +58,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <returns>The task object representing the asynchronous operation.</returns>
         public Task Invoke(HttpContext context, IServerTiming serverTiming)
         {
-            if (serverTiming == null)
+            if (serverTiming is null)
             {
                 throw new ArgumentNullException(nameof(serverTiming));
             }
