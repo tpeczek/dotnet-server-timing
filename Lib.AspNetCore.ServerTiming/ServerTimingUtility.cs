@@ -23,8 +23,10 @@ namespace Lib.AspNetCore.ServerTiming
             [CallerFilePath] string filePath = null,
             [CallerLineNumber] int lineNumber = 0)
         {
-            if (timing == null)
+            if (timing == null) 
+            {
                 return null;
+            }
 
             string caller = metricName ?? FormatCallerName(functionName, filePath, lineNumber);
             return new ServerTimingInstance(timing, caller);
@@ -46,8 +48,10 @@ namespace Lib.AspNetCore.ServerTiming
             [CallerFilePath] string filePath = null,
             [CallerLineNumber] int lineNumber = 0)
         {
-            using (timing.TimeAction(metricName, functionName, filePath, lineNumber))
+            using (timing.TimeAction(metricName, functionName, filePath, lineNumber)) 
+            {
                 return await task;
+            }
         }
 
         /// <summary>Add a metric to the timing, if present.</summary>
@@ -64,7 +68,9 @@ namespace Lib.AspNetCore.ServerTiming
             [CallerLineNumber] int lineNumber = 0)
         {
             if (timing == null)
+            {
                 return;
+            }
 
             var metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), duration);
             timing.Metrics.Add(metric);
@@ -72,28 +78,28 @@ namespace Lib.AspNetCore.ServerTiming
 
         /// <summary>Format a metric name from caller params.</summary>
         /// <returns>Generated metric name of "{fileName}.{function}+{lineNumber}</returns>
-        static string FormatCallerName(string functionName, string filePath, int lineNumber) =>
+        private static string FormatCallerName(string functionName, string filePath, int lineNumber) =>
             string.Concat(Path.GetFileNameWithoutExtension(filePath), ".", functionName, "+", lineNumber);
 
         /// <summary>On dispose log the duration to the timing.</summary>
-        sealed class ServerTimingInstance : IDisposable
+        private sealed class ServerTimingInstance : IDisposable
         {
-            readonly IServerTiming timing;
-            readonly string metricName;
-            readonly Stopwatch watch;
+            private readonly IServerTiming _timing;
+            private readonly string _metricName;
+            private readonly Stopwatch _watch;
 
             public ServerTimingInstance(IServerTiming timing, string metricName)
             {
-                this.timing = timing;
-                this.metricName = metricName;
-                this.watch = new Stopwatch();
-                this.watch.Start();
+                _timing = timing;
+                _metricName = metricName;
+                _watch = new Stopwatch();
+                _watch.Start();
             }
 
-            void IDisposable.Dispose()
+            private void IDisposable.Dispose()
             {
-                this.watch.Stop();
-                this.timing.AddMetric(this.watch.ElapsedMilliseconds, this.metricName);
+                _watch.Stop();
+                _timing.AddMetric(_watch.ElapsedMilliseconds, _metricName);
             }
         }
     }
