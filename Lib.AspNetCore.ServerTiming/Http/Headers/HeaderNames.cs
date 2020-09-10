@@ -14,5 +14,7 @@
         /// The Timing-Allow-Origin header.
         /// </summary>
         public const string TimingAllowOrigin = "Timing-Allow-Origin";
+
+        internal const string AcceptTransferEncoding = "TE";
     }
 }

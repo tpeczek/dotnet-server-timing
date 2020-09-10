@@ -85,6 +85,16 @@ namespace Lib.AspNetCore.ServerTiming
             serverTiming.Metrics.Add(metric);
         }
 
+        internal static void SetServerTimingDeliveryMode(this IServerTiming serverTiming, ServerTimigDeliveryMode deliveryMode)
+        {
+            ServerTiming concreteServerTiming = serverTiming as ServerTiming;
+
+            if (concreteServerTiming != null)
+            {
+                concreteServerTiming.DeliveryMode = deliveryMode;
+            }
+        }
+
         // Format a metric name from caller params --> "{fileName}.{function}+{lineNumber}
         private static string FormatCallerName(string functionName, string filePath, int lineNumber) =>
             String.Concat(Path.GetFileNameWithoutExtension(filePath), ".", functionName, "+", lineNumber);

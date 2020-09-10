@@ -55,6 +55,25 @@ namespace Test.AspNetCore.ServerTiming
                 }
             }
         }
+
+#if NETCOREAPP3_0
+        [Fact]
+        public async Task Request_AllowsTrailers_ReturnsResponseWithServerTimingTrailer()
+        {
+            using (TestServer server = PrepareTestServer())
+            {
+                using (HttpClient client = server.CreateClient())
+                {
+                    client.DefaultRequestVersion = System.Net.HttpVersion.Version20;
+                    client.DefaultRequestHeaders.Add("TE", "trailers");
+
+                    HttpResponseMessage response = await client.GetAsync("/");
+
+                    Assert.True(response.TrailingHeaders.TryGetValues(SERVER_TIMING_HEADER_NAME, out IEnumerable<string> serverTimingHeaderValue));
+                }
+            }
+        }
+#endif
         #endregion
     }
 }

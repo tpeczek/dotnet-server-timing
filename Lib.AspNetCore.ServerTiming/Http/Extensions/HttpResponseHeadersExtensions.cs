@@ -32,6 +32,30 @@ namespace Lib.AspNetCore.ServerTiming.Http.Extensions
             response.SetResponseHeader(HeaderNames.ServerTiming, serverTiming.ToString());
         }
 
+#if NETCOREAPP3_0
+        /// <summary>
+        /// Sets the Server-Timing trailer header value.
+        /// </summary>
+        /// <param name="response">The response.</param>
+        /// <param name="serverTiming">The Server-Timing header value.</param>
+        public static void SetServerTimingTrailer(this HttpResponse response, ServerTimingHeaderValue serverTiming)
+        {
+            response.AppendTrailer(HeaderNames.ServerTiming, serverTiming?.ToString());
+        }
+
+        /// <summary>
+        /// Sets the Server-Timing trailer header value.
+        /// </summary>
+        /// <param name="response">The response.</param>
+        /// <param name="metrics">The metrics.</param>
+        public static void SetServerTimingTrailer(this HttpResponse response, params ServerTimingMetric[] metrics)
+        {
+            ServerTimingHeaderValue serverTiming = new ServerTimingHeaderValue(metrics);
+
+            response.AppendTrailer(HeaderNames.ServerTiming, serverTiming.ToString());
+        }
+#endif
+
         /// <summary>
         /// Sets the Timing-Allow-Origin header value.
         /// </summary>

@@ -68,12 +68,40 @@ namespace Lib.AspNetCore.ServerTiming
                 context.Response.SetResponseHeader(HeaderNames.TimingAllowOrigin, _timingAllowOriginHeaderValue);
             }
 
-            HandleServerTiming(context, serverTiming);
-
-            return _next(context);
+            return HandleServerTimingAsync(context, serverTiming);
         }
 
-        private void HandleServerTiming(HttpContext context, IServerTiming serverTiming)
+#if NETCOREAPP3_0
+        private async Task HandleServerTimingAsync(HttpContext context, IServerTiming serverTiming)
+        {
+            if (context.Request.AllowsTrailers() && context.Response.SupportsTrailers())
+            {
+                await HandleServerTimingAsTrailerHeaderAsync(context, serverTiming);
+            }
+            else
+            {
+                await HandleServerTimingAsResponseHeaderAsync(context, serverTiming);
+            }
+        }
+
+        private async Task HandleServerTimingAsTrailerHeaderAsync(HttpContext context, IServerTiming serverTiming)
+        {
+            context.Response.DeclareTrailer(HeaderNames.ServerTiming);
+
+            serverTiming.SetServerTimingDeliveryMode(ServerTimigDeliveryMode.Trailer);
+
+            await _next(context);
+
+            context.Response.SetServerTimingTrailer(new ServerTimingHeaderValue(serverTiming.Metrics));
+        }
+#else
+        private Task HandleServerTimingAsync(HttpContext context, IServerTiming serverTiming)
+        {
+            return HandleServerTimingAsResponseHeaderAsync(context, serverTiming);
+        }
+#endif
+
+        private Task HandleServerTimingAsResponseHeaderAsync(HttpContext context, IServerTiming serverTiming)
         {
             context.Response.OnStarting(() => {
                 if (serverTiming.Metrics.Count > 0)
@@ -83,6 +111,10 @@ namespace Lib.AspNetCore.ServerTiming
 
                 return _completedTask;
             });
+
+            serverTiming.SetServerTimingDeliveryMode(ServerTimigDeliveryMode.ResponseHeader);
+
+            return _next(context);
         }
         #endregion
     }
