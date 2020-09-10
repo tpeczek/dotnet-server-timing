@@ -1,6 +1,24 @@
+## Lib.AspNetCore.ServerTiming 3.2.0
+### Additions and Changes
+- Added support for delivering metrics through HTTP trailers when available. To check if HTTP trailers delivery is possible for current request one can check `IServerTiming.DeliveryMode` property.
+
 ## Lib.AspNetCore.ServerTiming 3.1.0
 ### Additions and Changes
 - Added helper methods for easy timing of code blocks and tasks execution (thanks to @KeithHenry)
+
+   ```cs
+   using (serverTiming.TimeAction())
+   {
+       // Code block you want to time
+       ...
+   }
+   ```
+
+   ```cs
+   var operationResult = await serverTiming.TimeTask(AynchronousOperationYouWantToTime());
+   ```
+
+   Both methods can take a metric name, if it won't be provided the default name is `{fileNameWithoutExtension}.{functionName}+{lineNumber}`.
 
 ## Lib.AspNetCore.ServerTiming 3.0.0
 ### Additions and Changes
