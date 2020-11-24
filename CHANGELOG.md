@@ -1,3 +1,8 @@
+## Lib.AspNetCore.ServerTiming 4.0.0
+### Additions and Changes
+- Changed support for ASP.NET Core 3.0.0 to ASP.NET Core 3.1.0
+- Added support for ASP.NET Core in .NET 5
+
 ## Lib.AspNetCore.ServerTiming 3.2.0
 ### Additions and Changes
 - Added support for delivering metrics through HTTP trailers when available. To check if HTTP trailers delivery is possible for current request one can check `IServerTiming.DeliveryMode` property.
