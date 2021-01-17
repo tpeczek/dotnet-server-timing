@@ -11,7 +11,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <summary>
         /// Gets the metrics delivery mode for current request.
         /// </summary>
-        ServerTimigDeliveryMode DeliveryMode { get; }
+        ServerTimingDeliveryMode DeliveryMode { get; }
 
         /// <summary>
         /// Gets the collection of metrics for current request.

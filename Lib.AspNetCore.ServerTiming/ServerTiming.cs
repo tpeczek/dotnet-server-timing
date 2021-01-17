@@ -6,7 +6,7 @@ namespace Lib.AspNetCore.ServerTiming
     internal class ServerTiming : IServerTiming
     {
         #region Properties
-        public ServerTimigDeliveryMode DeliveryMode { get; internal set; } = ServerTimigDeliveryMode.Unknown;
+        public ServerTimingDeliveryMode DeliveryMode { get; internal set; } = ServerTimingDeliveryMode.Unknown;
 
         public ICollection<ServerTimingMetric> Metrics { get; }
         #endregion
