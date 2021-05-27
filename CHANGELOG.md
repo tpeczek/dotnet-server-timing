@@ -1,3 +1,7 @@
+## Lib.AspNetCore.ServerTiming 4.1.0
+### Bug Fixes
+- Fix support for delivering metrics through HTTP trailers when available
+
 ## Lib.AspNetCore.ServerTiming 4.0.0
 ### Additions and Changes
 - Changed support for ASP.NET Core 3.0.0 to ASP.NET Core 3.1.0
