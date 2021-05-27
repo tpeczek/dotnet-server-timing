@@ -71,7 +71,7 @@ namespace Lib.AspNetCore.ServerTiming
             return HandleServerTimingAsync(context, serverTiming);
         }
 
-#if NETCOREAPP3_0
+#if !NETCOREAPP2_1 && !NET461
         private async Task HandleServerTimingAsync(HttpContext context, IServerTiming serverTiming)
         {
             if (context.Request.AllowsTrailers() && context.Response.SupportsTrailers())

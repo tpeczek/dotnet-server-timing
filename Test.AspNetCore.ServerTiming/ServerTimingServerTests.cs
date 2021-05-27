@@ -56,7 +56,7 @@ namespace Test.AspNetCore.ServerTiming
             }
         }
 
-#if NETCOREAPP3_0
+#if !NETCOREAPP2_1 && !NET461
         [Fact]
         public async Task Request_AllowsTrailers_ReturnsResponseWithServerTimingTrailer()
         {
