@@ -1,3 +1,7 @@
+## Lib.AspNetCore.ServerTiming 4.2.0
+### Additions and Changes
+- Added helper method for easy timing of non-generic tasks execution (thanks to @Vake93)
+
 ## Lib.AspNetCore.ServerTiming 4.1.0
 ### Bug Fixes
 - Fix support for delivering metrics through HTTP trailers when available
