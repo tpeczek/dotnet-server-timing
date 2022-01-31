@@ -1,3 +1,7 @@
+## Lib.AspNetCore.ServerTiming 4.3.0
+### Additions and Changes
+- Added .NET 6 TFM
+
 ## Lib.AspNetCore.ServerTiming 4.2.0
 ### Additions and Changes
 - Added helper method for easy timing of non-generic tasks execution (thanks to @Vake93)
