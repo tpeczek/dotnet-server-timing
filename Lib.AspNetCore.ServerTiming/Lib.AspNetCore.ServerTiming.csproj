@@ -11,6 +11,7 @@
     <PackageTags>aspnetcore;servertiming;performance</PackageTags>
     <PackageProjectUrl>https://github.com/tpeczek/Lib.AspNetCore.ServerTiming</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/tpeczek/Lib.AspNetCore.ServerTiming</RepositoryUrl>
     <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
@@ -21,6 +22,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
   <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net461')">
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="[2.1.0,3.0.0)" />
   </ItemGroup>
