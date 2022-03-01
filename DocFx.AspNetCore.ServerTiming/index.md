@@ -12,7 +12,7 @@ You can install [Lib.AspNetCore.ServerTiming](https://www.nuget.org/packages/Lib
 PM>  Install-Package Lib.AspNetCore.ServerTiming
 ```
 
-The configuration and basic usage patterns are described [here](articles/getting-started.md).
+The configuration and basic usage patterns are described [here](articles/getting-started.html).
 
 ## Demos
 

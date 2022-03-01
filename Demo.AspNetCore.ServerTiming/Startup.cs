@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.AspNetCore.ServerTiming
 {
@@ -33,7 +32,7 @@ namespace Demo.AspNetCore.ServerTiming
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseServerTiming("http://localhost:8000", "http://localhost:8001")
+            app.UseServerTiming()
                 .UseRouting()
                 .UseEndpoints(endpoints =>
                 {
