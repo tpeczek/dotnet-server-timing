@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.AspNetCore.ServerTiming
 {
@@ -21,6 +22,8 @@ namespace Demo.AspNetCore.ServerTiming
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddServerTiming();
+
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,6 +34,11 @@ namespace Demo.AspNetCore.ServerTiming
             }
 
             app.UseServerTiming("http://localhost:8000", "http://localhost:8001")
+                .UseRouting()
+                .UseEndpoints(endpoints =>
+                {
+                    endpoints.MapControllers();
+                })
                 .Run(async (context) =>
                 {
                     IServerTiming serverTiming = context.RequestServices.GetRequiredService<IServerTiming>();
