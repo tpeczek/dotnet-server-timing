@@ -1,0 +1,370 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/Lib.AspNetCore.ServerTiming/Lib.AspNetCore.ServerTiming/DocFx.AspNetCore.ServerTiming",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.html",
+          "hash": "JZGECoP/+E8icFLFBw4c1n7MBGHvX+DC7cr8tiP52Ls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Extensions.html",
+          "hash": "uD3A17tjI9EHDQcqO4RVLgMvYOQShtivGTqq9pACcuQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.html",
+          "hash": "VB9lYT0xjAnvGv1Oe0uKrBMlUupS+11ztbiKzOwaIMc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue.html",
+          "hash": "7HL1wOkHGBWqS3VocIehIdGpAlPKa0pL2XvTKgpRx0Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric.html",
+          "hash": "EIuNwe+GJ5bdImycHIVUUJV3vieujt9Xdapa786IB/w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.html",
+          "hash": "4ikw3CNXu0n+No8riDg01UCO1njQxV7zu+utXZHLG8Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Headers.html",
+          "hash": "N/f2Tf6Zml+8dpctxyXww79KyApJXZdDnDJsXGvzmEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.IServerTiming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.IServerTiming.html",
+          "hash": "WHTUp04Gwmx59BbqllzwkVDdZ/Ilxo86RbRHTRjTXDc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimigDeliveryMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimigDeliveryMode.html",
+          "hash": "Yzr/kCYW7rgrZdGyKdTtMO260Zo3nN6Ob13Be9ulWUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html",
+          "hash": "2jAC4tMHTr8HLkjtgHGpSktnvTvdByM1hMXeOlnCBSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html",
+          "hash": "XK37pwCcRpHXZ5URagUIHfE9+7ek5GxnaMjX7K9mZag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.html",
+          "hash": "ghTKi3UPmp1BhDmSBVQ/NQgpBC4cNGIkFFGePBPoUa8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.html",
+          "hash": "CXFxpN1pKrgxjr/azSVcJ5vIPLIy2twBbBSl4rsHyLU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.html",
+          "hash": "F969Zcf10udU87RYppcbQFPsbqk+SAx0SXm/3cyY4IM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.AspNetCore.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.AspNetCore.Builder.html",
+          "hash": "7tokiDAtzMrEVLfyN4ccVih8GF//3zn/VHZOJEPDmmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ShwkNp9MC080+a3hLxKAL3R+AgxigSjRcMpozZQnaLM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/advanced.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/advanced.html",
+          "hash": "DBPiwiMXRDiDo21UGUsaIfDx65zCCWgxU1Dx0D0fX+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html",
+          "hash": "qffUuonjBqMxH2ptNLfrkaS2Jsp77bMXdqIZZv8LkO4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "vUvxFa5Q6Tvjy5A96tGhesJn/A3Jzmk+z1UaUfkzL34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/basic-metrics-values.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/basic-metrics-values.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ico/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ico/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/svg/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/svg/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/timing-blocks-of-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/timing-blocks-of-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/timing-nested-blocks-of-code.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/timing-nested-blocks-of-code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Gx4yWuRZi1YaToRoSU1pX4h0g4HAHARJ97Pp90YyKX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 15,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
