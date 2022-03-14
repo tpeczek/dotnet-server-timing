@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Microsoft.AspNetCore.Http;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -17,5 +18,6 @@ namespace Lib.AspNetCore.ServerTiming
         /// Gets the collection of metrics for current request.
         /// </summary>
         ICollection<ServerTimingMetric> Metrics { get; }
+        
     }
 }

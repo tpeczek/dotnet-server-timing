@@ -32,7 +32,18 @@ namespace Demo.AspNetCore.ServerTiming
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseServerTiming()
+            app.UseServerTiming(options =>
+            {
+                options.AllowedOrigins.Add("http://localhost");
+                options.RestrictMetricsToIp("127.0.0.1");
+                options.RestrictMetricsToDevelopment(env);
+                
+                options.AddCustomProcessor((context, metrics) =>
+                {
+                    if (System.DateTime.Now.Hour >=18) metrics.Add(new ServerTimingMetric("Time to stop debugging this and go for a drink!"));
+                    return true;
+                });
+            })
                 .UseRouting()
                 .UseEndpoints(endpoints =>
                 {

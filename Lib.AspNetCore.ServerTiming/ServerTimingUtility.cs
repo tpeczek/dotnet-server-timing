@@ -84,7 +84,7 @@ namespace Lib.AspNetCore.ServerTiming
         }
 
         /// <summary>
-        /// Add a metric to the timing, if present.
+        /// Add a timed metric to the timing, if present.
         /// </summary>
         /// <param name="serverTiming">The <see cref="IServerTiming"/> to add metric to.</param>
         /// <param name="duration">The duration to log in ms.</param>
@@ -92,7 +92,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="functionName">Optional, populated compile-time with the name of the calling function</param>
         /// <param name="filePath">Optional, populated compile-time with the path to the calling file</param>
         /// <param name="lineNumber">Optional, populated compile-time with line number in the calling file</param>
-        public static void AddMetric(this IServerTiming serverTiming, decimal duration,
+        public static ServerTimingMetric? AddMetric(this IServerTiming serverTiming, decimal duration,
             string metricName = null,
             [CallerMemberName] string functionName = null,
             [CallerFilePath] string filePath = null,
@@ -100,13 +100,43 @@ namespace Lib.AspNetCore.ServerTiming
         {
             if (serverTiming is null)
             {
-                return;
+                return null;
             }
 
             ServerTimingMetric metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), duration);
 
             serverTiming.Metrics.Add(metric);
+            return metric;
         }
+
+        /// <summary>
+        /// Add an untimed metric to the timing, if present.
+        /// </summary>
+        /// <param name="serverTiming">The <see cref="IServerTiming"/> to add metric to.</param>
+        /// <param name="metricName">The name of the metric to log.</param>
+        /// <param name="description">The description of the metric</param>
+        /// <param name="functionName">Optional, populated compile-time with the name of the calling function</param>
+        /// <param name="filePath">Optional, populated compile-time with the path to the calling file</param>
+        /// <param name="lineNumber">Optional, populated compile-time with line number in the calling file</param>
+        public static ServerTimingMetric? AddMetric(this IServerTiming serverTiming,
+            string metricName = null,
+            string description = null,
+            [CallerMemberName] string functionName = null,
+            [CallerFilePath] string filePath = null,
+            [CallerLineNumber] int lineNumber = 0)
+        {
+            if (serverTiming is null)
+            {
+                return null;
+            }
+
+            ServerTimingMetric metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), description);
+
+            serverTiming.Metrics.Add(metric);
+            return metric;
+        }
+
+
 
         internal static void SetServerTimingDeliveryMode(this IServerTiming serverTiming, ServerTimigDeliveryMode deliveryMode)
         {
