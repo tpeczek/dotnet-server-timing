@@ -46,6 +46,7 @@ namespace Demo.AspNetCore.ServerTiming.Controllers
                     weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
                 };
             }
+
             return weatherForecasts;
         }
 

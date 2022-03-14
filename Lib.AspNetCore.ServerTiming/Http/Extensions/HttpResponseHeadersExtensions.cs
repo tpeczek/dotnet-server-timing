@@ -16,7 +16,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Extensions
         /// <param name="response">The response.</param>
         /// <param name="serverTiming">The Server-Timing header value.</param>
         public static void SetServerTiming(this HttpResponse response, ServerTimingHeaderValue serverTiming)
-        {            
+        {
             response.SetResponseHeader(HeaderNames.ServerTiming, serverTiming?.ToString());
         }
 
