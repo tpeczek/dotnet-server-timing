@@ -98,6 +98,11 @@ namespace Lib.AspNetCore.ServerTiming
             [CallerFilePath] string filePath = null,
             [CallerLineNumber] int lineNumber = 0)
         {
+            if (serverTiming is null)
+            {
+                return;
+            }
+
             ServerTimingMetric metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), duration);
 
             serverTiming.Metrics.Add(metric);
@@ -118,7 +123,12 @@ namespace Lib.AspNetCore.ServerTiming
             [CallerMemberName] string functionName = null,
             [CallerFilePath] string filePath = null,
             [CallerLineNumber] int lineNumber = 0)
-        {        
+        {
+            if (serverTiming is null)
+            {
+                return;
+            }
+
             ServerTimingMetric metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), description);
 
             serverTiming.Metrics.Add(metric);
