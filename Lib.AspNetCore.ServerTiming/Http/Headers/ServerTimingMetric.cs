@@ -70,7 +70,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Headers
             : this(name, null, description)
         { }
 
-        private ServerTimingMetric(string name, decimal? value, string description)
+        internal ServerTimingMetric(string name, decimal? value, string description)
         {
             if (String.IsNullOrEmpty(name))
             {
