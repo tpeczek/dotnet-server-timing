@@ -23,15 +23,17 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net461')">
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="[2.1.0,3.0.0)" />
   </ItemGroup>
   <ItemGroup Condition="('$(TargetFramework)' != 'netcoreapp2.1') And ('$(TargetFramework)' != 'net461')">
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DotNet.ReproducibleBuilds" Version="0.1.66" PrivateAssets="All"/>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="0.1.66" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.1.0" />
   </ItemGroup>
 </Project>

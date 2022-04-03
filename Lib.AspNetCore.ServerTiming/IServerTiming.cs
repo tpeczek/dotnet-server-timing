@@ -16,6 +16,6 @@ namespace Lib.AspNetCore.ServerTiming
         /// <summary>
         /// Gets the collection of metrics for current request.
         /// </summary>
-        ICollection<ServerTimingMetric> Metrics { get; }
+        ICollection<ServerTimingMetric> Metrics { get; }        
     }
 }
