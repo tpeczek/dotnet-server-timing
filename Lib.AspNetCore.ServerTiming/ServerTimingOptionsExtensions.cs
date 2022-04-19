@@ -99,7 +99,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="options">Options to update</param>
         /// <param name="process">Processing lambda. This may modify the metrics list it is passed, and should return true if
         /// further processors are allowed to run or false if they should be suppressed.</param>
-        public static void AddCustomProcessor(this ServerTimingOptions options, Func<HttpContext, List<ServerTimingMetric>, bool> process)
+        public static void AddCustomProcessor(this ServerTimingOptions options, Func<HttpContext, ICollection<ServerTimingMetric>, bool> process)
             => options.Processors.Add(new CustomProcessor(process));
 
     }

@@ -10,18 +10,18 @@ namespace Lib.AspNetCore.ServerTiming.Processors
     /// </summary>
     public class CustomProcessor : IServerTimingProcessor
     {
-        private readonly Func<HttpContext, List<ServerTimingMetric>, bool> _process;
+        private readonly Func<HttpContext, ICollection<ServerTimingMetric>, bool> _process;
 
         /// <summary>
         /// Create a custom processor
         /// </summary>
         /// <param name="process">Lambda to execute processing</param>
-        public CustomProcessor(Func<HttpContext, List<ServerTimingMetric>, bool> process)
+        public CustomProcessor(Func<HttpContext, ICollection<ServerTimingMetric>, bool> process)
         {
             _process = process;
         }
 
         ///<inheritdoc/>
-        public bool Process(HttpContext context, List<ServerTimingMetric> metrics) => _process(context, metrics);
+        public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics) => _process(context, metrics);
     }
 }

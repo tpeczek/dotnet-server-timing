@@ -27,7 +27,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         }
 
         /// <inheritdoc/>
-        public bool Process(HttpContext context, List<ServerTimingMetric> metrics)
+        public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             bool inRange = InRange(context.Connection.RemoteIpAddress.MapToIPv6().GetAddressBytes());
 

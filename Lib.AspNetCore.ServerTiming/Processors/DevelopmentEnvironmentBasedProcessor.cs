@@ -35,6 +35,6 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         }
 #endif
         /// <inheritdoc/>
-        public abstract bool Process(HttpContext context, List<ServerTimingMetric> metrics);
+        public abstract bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics);
     }
 }

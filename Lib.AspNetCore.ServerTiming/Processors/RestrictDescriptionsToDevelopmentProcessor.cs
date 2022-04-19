@@ -34,13 +34,13 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         /// <param name="context">Not used</param>
         /// <param name="metrics">Not used</param>
         /// <returns></returns>
-        public override bool Process(HttpContext context, List<ServerTimingMetric> metrics)
+        public override bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             if (!IsDevelopment)
             {
                 List<ServerTimingMetric> newMetrics = metrics.Select(m => new ServerTimingMetric(m.Name,m.Value,null)).ToList();
                 metrics.Clear();
-                metrics.AddRange(newMetrics);
+                newMetrics.ForEach(m => metrics.Add(m));
             }
             //Allow next processor to run
             return true;

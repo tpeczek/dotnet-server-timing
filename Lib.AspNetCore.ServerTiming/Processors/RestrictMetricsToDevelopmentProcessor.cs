@@ -34,7 +34,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         /// <param name="context">Not used</param>
         /// <param name="metrics">Not used</param>
         /// <returns></returns>
-        public override bool Process(HttpContext context, List<ServerTimingMetric> metrics)
+        public override bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             if (!IsDevelopment)
             {

@@ -10,7 +10,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
     public class RemoveAllMetricsProcessor : IServerTimingProcessor
     {
         /// <inheritdoc/>
-        public bool Process(HttpContext context, List<ServerTimingMetric> metrics)
+        public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             metrics.Clear();
             return true;

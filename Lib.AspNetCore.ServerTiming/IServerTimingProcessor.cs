@@ -1,21 +1,20 @@
-﻿using Lib.AspNetCore.ServerTiming.Http.Headers;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
+using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming
 {
     /// <summary>
-    /// Provides an oportunity to inspect and modify the metrics about to be sent in an HTTP repsonse
+    /// Provides a processor which can inspect and modify the metrics which are to be delivered in a response to current request.
     /// </summary>
     public interface IServerTimingProcessor
     {
         /// <summary>
-        /// Inspects/modifies the set of metrics to be sent in an HTTP Response. If the metrics are
-        /// cleared, no server timing headers are sent
+        /// Inspects and modifies the collection of metrics for current request. If no more metrics remain in the collection after processing, the Server-Timing header will not be sent.
         /// </summary>
-        /// <param name="context">The context of the current request</param>
-        /// <param name="metrics">The provisional set of metrics to be returned in the response header</param>
-        /// <returns>True if subsequent processors are allowed to run, false if this should be the last processor executed</returns>
-        public bool Process(HttpContext context, List<ServerTimingMetric> metrics);
+        /// <param name="context">The <see cref="HttpContext"/> for the current request.</param>
+        /// <param name="metrics">The collection of metrics for current request.</param>
+        /// <returns>True if subsequent processors are allowed to run; otherwise, false.</returns>
+        public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics);
     }
 }
