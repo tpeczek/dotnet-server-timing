@@ -8,7 +8,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
     /// A processor which will allow all headers to be sent in the development environment,
     /// and will not run any futher processors
     /// </summary>
-    public class RestrictMetricsToDevelopmentProcessor : DevelopmentEnvironmentBasedProcessor
+    public class RestrictMetricsToDevelopmentProcessor : HostingEnvironmentBasedProcessor
     {
 #if !NETCOREAPP2_1 && !NET461
         /// <summary>

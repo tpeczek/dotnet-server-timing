@@ -8,7 +8,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
     /// <summary>
     /// A processor which will remove the descriptions from all metrics unless in the development environment
     /// </summary>
-    public class RestrictDescriptionsToDevelopmentProcessor : DevelopmentEnvironmentBasedProcessor
+    public class RestrictDescriptionsToDevelopmentProcessor : HostingEnvironmentBasedProcessor
     {
 #if !NETCOREAPP2_1 && !NET461
         /// <summary>

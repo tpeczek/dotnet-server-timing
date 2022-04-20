@@ -14,7 +14,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// </summary>
         /// <param name="context">The <see cref="HttpContext"/> for the current request.</param>
         /// <param name="metrics">The collection of metrics for current request.</param>
-        /// <returns>True if subsequent processors are allowed to run; otherwise, false.</returns>
+        /// <returns>True if subsequent processors are allowed to run, otherwise false.</returns>
         public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics);
     }
 }
