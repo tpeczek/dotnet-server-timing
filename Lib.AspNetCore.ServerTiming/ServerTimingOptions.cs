@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Lib.AspNetCore.ServerTiming.Filters;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -13,8 +14,8 @@ namespace Lib.AspNetCore.ServerTiming
         public List<string> AllowedOrigins { get; } = new List<string>();
 
         /// <summary>
-        /// The collection of processors that are executed before any header is sent
+        /// The collection of filters that are executed before Server-Timing header is sent.
         /// </summary>
-        public List<IServerTimingProcessor> Processors { get; } = new List<IServerTimingProcessor>();
+        public List<IServerTimingMetricFilter> Filters { get; } = new List<IServerTimingMetricFilter>();
     }
 }

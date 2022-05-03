@@ -1,9 +1,9 @@
-﻿using Lib.AspNetCore.ServerTiming.Http.Headers;
-using Lib.AspNetCore.ServerTiming.Processors;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Net;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using Lib.AspNetCore.ServerTiming.Filters;
+using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -21,7 +21,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
             Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
-            options.Processors.Add(new RestrictMetricsToDevelopmentProcessor(hostEnvironment));
+            options.Filters.Add(new RestrictMetricsToDevelopmentProcessor(hostEnvironment));
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RestrictDescriptionsToDevelopment(this ServerTimingOptions options, 
             Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
-            options.Processors.Add(new RestrictDescriptionsToDevelopmentProcessor(hostEnvironment));
+            options.Filters.Add(new RestrictDescriptionsToDevelopmentMetricFilter(hostEnvironment));
         }
 #else
         /// <summary>
@@ -43,7 +43,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
             Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
-            options.Processors.Add(new RestrictMetricsToDevelopmentProcessor(hostingEnvironment));
+            options.Filters.Add(new RestrictMetricsToDevelopmentProcessor(hostingEnvironment));
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RemoveDescriptionsOutsideDevelopment(this ServerTimingOptions options, 
             Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
-            options.Processors.Add(new RestrictDescriptionsToDevelopmentProcessor(hostingEnvironment));
+            options.Filters.Add(new RestrictDescriptionsToDevelopmentMetricFilter(hostingEnvironment));
         }
 #endif
 
@@ -82,7 +82,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="from">Minimum IP Address to permit</param>
         /// <param name="to">Maximum IP Address to permit</param>
         public static void RestrictMetricsToIpRange(this ServerTimingOptions options, string from, string to)
-            => options.Processors.Add(new IpProcessor(IPAddress.Parse(from), IPAddress.Parse(to)));
+            => options.Filters.Add(new IpProcessor(IPAddress.Parse(from), IPAddress.Parse(to)));
 
         /// <summary>
         /// Configure the processors collection to only send headers to a specific IP range
@@ -91,7 +91,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="from">Minimum IP Address to permit</param>
         /// <param name="to">Maximum IP Address to permit</param>
         public static void RestrictMetricsToIpRange(this ServerTimingOptions options, IPAddress from, IPAddress to)
-            => options.Processors.Add(new IpProcessor(from, to));
+            => options.Filters.Add(new IpProcessor(from, to));
 
         /// <summary>
         /// Add a custom processor to filter / modify metrics
@@ -100,7 +100,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="process">Processing lambda. This may modify the metrics list it is passed, and should return true if
         /// further processors are allowed to run or false if they should be suppressed.</param>
         public static void AddCustomProcessor(this ServerTimingOptions options, Func<HttpContext, ICollection<ServerTimingMetric>, bool> process)
-            => options.Processors.Add(new CustomProcessor(process));
+            => options.Filters.Add(new CustomServerTimingMetricFilter(process));
 
     }
 }

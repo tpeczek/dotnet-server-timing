@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Http;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 
-namespace Lib.AspNetCore.ServerTiming.Processors
+namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
-    /// Base class for processors whose behavior depends on the web hosting environment an application is running in.
+    /// Base class for filters whose behavior depends on the web hosting environment an application is running in.
     /// </summary>
-    public abstract class HostingEnvironmentBasedProcessor : IServerTimingProcessor
+    public abstract class HostingEnvironmentServerTimingMetricFilter : IServerTimingMetricFilter
     {
         /// <summary>
         /// True if the environment name is development, otherwise false.
@@ -26,10 +26,10 @@ namespace Lib.AspNetCore.ServerTiming.Processors
 
 #if !NETCOREAPP2_1 && !NET461
         /// <summary>
-        /// Instantiates a new <see cref="HostingEnvironmentBasedProcessor"/>.
+        /// Instantiates a new <see cref="HostingEnvironmentServerTimingMetricFilter"/>.
         /// </summary>
         /// <param name="hostEnvironment">The <see cref="Microsoft.Extensions.Hosting.IHostEnvironment"/> used to determine the hosting environment an application is running in.</param>
-        public HostingEnvironmentBasedProcessor(Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
+        public HostingEnvironmentServerTimingMetricFilter(Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
             IsDevelopment = hostEnvironment.EnvironmentName == Microsoft.Extensions.Hosting.Environments.Development;
             IsStaging = hostEnvironment.EnvironmentName == Microsoft.Extensions.Hosting.Environments.Staging;
@@ -40,7 +40,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         /// Instantiates a new <see cref="HostingEnvironmentBasedProcessor"/>.
         /// </summary>
         /// <param name="hostingEnvironment">The <see cref="Microsoft.AspNetCore.Hosting.IHostingEnvironment"/> used to determine the hosting environment an application is running in.</param>
-        public HostingEnvironmentBasedProcessor(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
+        public HostingEnvironmentServerTimingMetricFilter(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             IsDevelopment = Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsDevelopment(hostingEnvironment);
             IsStaging = Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsStaging(hostingEnvironment);
@@ -49,6 +49,6 @@ namespace Lib.AspNetCore.ServerTiming.Processors
 #endif
 
         /// <inheritdoc/>
-        public abstract bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics);
+        public abstract bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics);
     }
 }

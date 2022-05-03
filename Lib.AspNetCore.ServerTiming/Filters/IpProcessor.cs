@@ -5,12 +5,12 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace Lib.AspNetCore.ServerTiming.Processors
+namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
     /// Limit when server timing responses are sent based on IP address ranges
     /// </summary>
-    public class IpProcessor : IServerTimingProcessor
+    public class IpProcessor : IServerTimingMetricFilter
     {
         private readonly byte[] _from;
         private readonly byte[] _to;
@@ -27,7 +27,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         }
 
         /// <inheritdoc/>
-        public bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
+        public bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             bool inRange = InRange(context.Connection.RemoteIpAddress.MapToIPv6().GetAddressBytes());
 

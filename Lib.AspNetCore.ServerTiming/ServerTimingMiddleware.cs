@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Lib.AspNetCore.ServerTiming.Filters;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Http.Extensions;
-using System.Linq;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -16,7 +17,7 @@ namespace Lib.AspNetCore.ServerTiming
         #region Fields
         private readonly RequestDelegate _next;
         private readonly string _timingAllowOriginHeaderValue;
-        private readonly List<IServerTimingProcessor> _processors;
+        private readonly List<IServerTimingMetricFilter> _serverTimingMetricFilters;
         private static Task _completedTask = Task.FromResult<object>(null);
         #endregion
 
@@ -47,7 +48,7 @@ namespace Lib.AspNetCore.ServerTiming
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
             _timingAllowOriginHeaderValue = timingAllowOrigin?.ToString();
-            _processors = new List<IServerTimingProcessor>();
+            _serverTimingMetricFilters = new List<IServerTimingMetricFilter>();
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace Lib.AspNetCore.ServerTiming
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
             _timingAllowOriginHeaderValue = new TimingAllowOriginHeaderValue(options.AllowedOrigins)?.ToString();
-            _processors = options.Processors;
+            _serverTimingMetricFilters = options.Filters;
         }
         #endregion
 
@@ -106,10 +107,10 @@ namespace Lib.AspNetCore.ServerTiming
 
             await _next(context);
 
-            var metrics = RunProcessors(serverTiming,context);
-            if (metrics.Any())
+            RunServerTimingMetricFilters(serverTiming, context);
+            if (serverTiming.Metrics.Any())
             {            
-                context.Response.SetServerTimingTrailer(new ServerTimingHeaderValue(metrics));
+                context.Response.SetServerTimingTrailer(new ServerTimingHeaderValue(serverTiming.Metrics));
             }
         }
 #else
@@ -122,10 +123,10 @@ namespace Lib.AspNetCore.ServerTiming
         private Task HandleServerTimingAsResponseHeaderAsync(HttpContext context, IServerTiming serverTiming)
         {
             context.Response.OnStarting(() => {
-                var metrics = RunProcessors(serverTiming,context);
-                if (metrics.Any())
+                RunServerTimingMetricFilters(serverTiming, context);
+                if (serverTiming.Metrics.Any())
                 {
-                    context.Response.SetServerTiming(new ServerTimingHeaderValue(metrics));
+                    context.Response.SetServerTiming(new ServerTimingHeaderValue(serverTiming.Metrics));
                 }
 
                 return _completedTask;
@@ -136,17 +137,15 @@ namespace Lib.AspNetCore.ServerTiming
             return _next(context);
         }
 
-        private List<ServerTimingMetric> RunProcessors(IServerTiming serverTiming, HttpContext context)
+        private void RunServerTimingMetricFilters(IServerTiming serverTiming, HttpContext context)
         {
-            //Create a mutable copy of metrics
-            var metrics = new List<ServerTimingMetric>(serverTiming.Metrics);
-
-            //Allow processors to filter them
-            foreach(var processor in _processors)
+            foreach(var serverTimingMetricFilter in _serverTimingMetricFilters)
             {
-                if (!processor.Process(context, metrics)) break;
+                if (!serverTimingMetricFilter.OnServerTimingHeaderPreparation(context, serverTiming.Metrics))
+                {
+                    break;
+                }
             }
-            return metrics;
         }
         #endregion
     }

@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
-namespace Lib.AspNetCore.ServerTiming.Processors
+namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
     /// A processor which will allow all headers to be sent in the development environment,
     /// and will not run any futher processors
     /// </summary>
-    public class RestrictMetricsToDevelopmentProcessor : HostingEnvironmentBasedProcessor
+    public class RestrictMetricsToDevelopmentProcessor : HostingEnvironmentServerTimingMetricFilter
     {
 #if !NETCOREAPP2_1 && !NET461
         /// <summary>
@@ -34,7 +34,7 @@ namespace Lib.AspNetCore.ServerTiming.Processors
         /// <param name="context">Not used</param>
         /// <param name="metrics">Not used</param>
         /// <returns></returns>
-        public override bool Process(HttpContext context, ICollection<ServerTimingMetric> metrics)
+        public override bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics)
         {
             if (!IsDevelopment)
             {
