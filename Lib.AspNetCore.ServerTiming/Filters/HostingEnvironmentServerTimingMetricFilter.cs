@@ -37,7 +37,7 @@ namespace Lib.AspNetCore.ServerTiming.Filters
         }
 #else
         /// <summary>
-        /// Instantiates a new <see cref="HostingEnvironmentBasedProcessor"/>.
+        /// Instantiates a new <see cref="HostingEnvironmentServerTimingMetricFilter"/>.
         /// </summary>
         /// <param name="hostingEnvironment">The <see cref="Microsoft.AspNetCore.Hosting.IHostingEnvironment"/> used to determine the hosting environment an application is running in.</param>
         public HostingEnvironmentServerTimingMetricFilter(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)

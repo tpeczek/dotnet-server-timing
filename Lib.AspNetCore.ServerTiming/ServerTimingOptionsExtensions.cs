@@ -21,7 +21,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
             Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
-            options.Filters.Add(new RestrictMetricsToDevelopmentProcessor(hostEnvironment));
+            options.Filters.Add(new RestrictToDevelopmentMetricFilter(hostEnvironment));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Lib.AspNetCore.ServerTiming
         public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
             Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
-            options.Filters.Add(new RestrictMetricsToDevelopmentProcessor(hostingEnvironment));
+            options.Filters.Add(new RestrictToDevelopmentMetricFilter(hostingEnvironment));
         }
 
         /// <summary>
