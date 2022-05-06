@@ -32,9 +32,7 @@ namespace Demo.AspNetCore.ServerTiming
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseServerTiming(options =>
-            {
-            })
+            app.UseServerTiming()
                 .UseRouting()
                 .UseEndpoints(endpoints =>
                 {

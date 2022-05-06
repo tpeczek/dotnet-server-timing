@@ -11,11 +11,11 @@ namespace Lib.AspNetCore.ServerTiming
         /// <summary>
         /// The collection of origins that are allowed to see values from timing APIs.
         /// </summary>
-        public List<string> AllowedOrigins { get; } = new List<string>();
+        public List<string> AllowedOrigins { get; set;  } = new List<string>();
 
         /// <summary>
         /// The collection of filters that are executed before Server-Timing header is sent.
         /// </summary>
-        public List<IServerTimingMetricFilter> Filters { get; } = new List<IServerTimingMetricFilter>();
+        public List<IServerTimingMetricFilter> Filters { get; set; } = new List<IServerTimingMetricFilter>();
     }
 }

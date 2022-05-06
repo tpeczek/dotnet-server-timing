@@ -59,8 +59,8 @@ namespace Lib.AspNetCore.ServerTiming
         public ServerTimingMiddleware(RequestDelegate next, ServerTimingOptions options)
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
-            _timingAllowOriginHeaderValue = new TimingAllowOriginHeaderValue(options.AllowedOrigins)?.ToString();
-            _serverTimingMetricFilters = options.Filters;
+            _timingAllowOriginHeaderValue = (options.AllowedOrigins is null) ? null : new TimingAllowOriginHeaderValue(options.AllowedOrigins).ToString();
+            _serverTimingMetricFilters = options.Filters ?? new List<IServerTimingMetricFilter>();
         }
         #endregion
 

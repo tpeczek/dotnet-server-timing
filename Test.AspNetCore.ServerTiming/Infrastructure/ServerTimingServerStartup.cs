@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming;
+using Lib.AspNetCore.ServerTiming.Filters;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Test.AspNetCore.ServerTiming.Infrastructure
@@ -22,8 +24,9 @@ namespace Test.AspNetCore.ServerTiming.Infrastructure
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseServerTiming()
-                .Run(async (context) =>
+            app.UseServerTiming();
+
+            app.Run(async (context) =>
                 {
                     IServerTiming serverTiming = context.RequestServices.GetService<IServerTiming>();
 

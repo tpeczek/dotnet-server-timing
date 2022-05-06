@@ -23,7 +23,7 @@ namespace Microsoft.AspNetCore.Builder
                 throw new ArgumentNullException(nameof(app));
             }
 
-            return UseServerTiming(app, options=> { });
+            return app.UseMiddleware<ServerTimingMiddleware>();
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <param name="app">The <see cref="IApplicationBuilder"/> passed to Configure method.</param>
         /// <param name="timingAllowOrigins">The collection of origins that are allowed to see values from timing APIs.</param>
         /// <returns>The original app parameter</returns>
-        [Obsolete("Use a version of this method that takes a lambda function to intialise options")]
+        [Obsolete($"This method is obsolete and will be removed in future, use the version which takes {nameof(ServerTimingOptions)} as a parameter.")]
         public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ICollection<string> timingAllowOrigins)
         {
             if (app is null)
@@ -40,7 +40,7 @@ namespace Microsoft.AspNetCore.Builder
                 throw new ArgumentNullException(nameof(app));
             }
 
-            return UseServerTiming(app, options => options.AllowedOrigins.AddRange(timingAllowOrigins));
+            return app.UseMiddleware<ServerTimingMiddleware>(timingAllowOrigins);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <param name="app">The <see cref="IApplicationBuilder"/> passed to Configure method.</param>
         /// <param name="timingAllowOrigins">The origins that are allowed to see values from timing APIs.</param>
         /// <returns>The original app parameter</returns>
-        [Obsolete("Use a version of this method that takes a lambda function to intialise options")]
+        [Obsolete($"This method is obsolete and will be removed in future, use the version which takes {nameof(ServerTimingOptions)} as a parameter.")]
         public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, params string[] timingAllowOrigins)
         {
             if (app is null)
@@ -57,24 +57,26 @@ namespace Microsoft.AspNetCore.Builder
                 throw new ArgumentNullException(nameof(app));
             }
 
-            return UseServerTiming(app,options => options.AllowedOrigins.AddRange(timingAllowOrigins));
+            return app.UseMiddleware<ServerTimingMiddleware>(new TimingAllowOriginHeaderValue(timingAllowOrigins));
         }
-
 
         /// <summary>
         /// Adds a <see cref="ServerTimingMiddleware"/> to application pipeline.
         /// </summary>
         /// <param name="app">The <see cref="IApplicationBuilder"/> passed to Configure method.</param>
-        /// <param name="setOptionsCallback">A lambda to set the configuration options for server timing</param>        
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to configure the middleware.</param>        
         /// <returns>The original app parameter</returns>
-        public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, Action<ServerTimingOptions> setOptionsCallback)
+        public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ServerTimingOptions options)
         {
             if (app is null)
             {
                 throw new ArgumentNullException(nameof(app));
             }
-            var options = new ServerTimingOptions();
-            setOptionsCallback?.Invoke(options);
+            
+            if (options is null)
+            {
+                throw new ArgumentNullException(nameof(options));
+            }
 
             return app.UseMiddleware<ServerTimingMiddleware>(options);
         }
