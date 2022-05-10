@@ -1,15 +1,15 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming.Filters;
+using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Moq;
 using Xunit;
 using Test.AspNetCore.ServerTiming.Infrastructure;
-using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Test.AspNetCore.ServerTiming
 {
@@ -29,6 +29,15 @@ namespace Test.AspNetCore.ServerTiming
             });
 
             return new TestServer(webHostBuilder);
+        }
+
+        private Mock<IServerTimingMetricFilter> PrepareServerTimingMetricFilterMock(bool onServerTimingHeaderPreparationResult = true)
+        {
+            Mock<IServerTimingMetricFilter> serverTimingMetricFilterMock = new Mock<IServerTimingMetricFilter>();
+
+            serverTimingMetricFilterMock.Setup(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>())).Returns(onServerTimingHeaderPreparationResult);
+
+            return serverTimingMetricFilterMock;
         }
         #endregion
 
@@ -81,6 +90,50 @@ namespace Test.AspNetCore.ServerTiming
             }
         }
 #endif
+
+        [Fact]
+        public async Task Request_TwoFiltersRegistered_FiltersNotShortCircuiting_AllFiltersRun()
+        {
+            Mock<IServerTimingMetricFilter> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+            Mock<IServerTimingMetricFilter> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+
+            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter>
+            {
+                firstServerTimingMetricFilter.Object,
+                secondServerTimingMetricFilter.Object
+            }))
+            {
+                using (HttpClient client = server.CreateClient())
+                {
+                    HttpResponseMessage response = await client.GetAsync("/");
+
+                    firstServerTimingMetricFilter.Verify(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>()), Times.Once);
+                    secondServerTimingMetricFilter.Verify(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>()), Times.Once);
+                }
+            }
+        }
+
+        [Fact]
+        public async Task Request_TwoFiltersRegistered_FirstFilterShortCircuiting_OnlyFirstFiltersRun()
+        {
+            Mock<IServerTimingMetricFilter> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock(false);
+            Mock<IServerTimingMetricFilter> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+
+            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter>
+            {
+                firstServerTimingMetricFilter.Object,
+                secondServerTimingMetricFilter.Object
+            }))
+            {
+                using (HttpClient client = server.CreateClient())
+                {
+                    HttpResponseMessage response = await client.GetAsync("/");
+
+                    firstServerTimingMetricFilter.Verify(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>()), Times.Once);
+                    secondServerTimingMetricFilter.Verify(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>()), Times.Never);
+                }
+            }
+        }
         #endregion
     }
 }
