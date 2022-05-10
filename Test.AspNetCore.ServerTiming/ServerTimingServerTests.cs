@@ -3,8 +3,13 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
+using Lib.AspNetCore.ServerTiming.Filters;
+using Moq;
 using Xunit;
 using Test.AspNetCore.ServerTiming.Infrastructure;
+using Microsoft.AspNetCore.Http;
+using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Test.AspNetCore.ServerTiming
 {
@@ -16,10 +21,12 @@ namespace Test.AspNetCore.ServerTiming
         #endregion
 
         #region Prepare SUT
-        private TestServer PrepareTestServer()
+        private TestServer PrepareTestServer(List<IServerTimingMetricFilter> filters = null)
         {
-            IWebHostBuilder webHostBuilder = new WebHostBuilder()
-                .UseStartup<ServerTimingServerStartup>();
+            IWebHostBuilder webHostBuilder = new WebHostBuilder().ConfigureServices(services =>
+            {
+                services.AddSingleton<IStartup>(new ServerTimingServerStartup(filters ?? new List<IServerTimingMetricFilter>()));
+            });
 
             return new TestServer(webHostBuilder);
         }
