@@ -82,7 +82,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="from">Minimum IP Address to permit</param>
         /// <param name="to">Maximum IP Address to permit</param>
         public static void RestrictMetricsToIpRange(this ServerTimingOptions options, string from, string to)
-            => options.Filters.Add(new IpProcessor(IPAddress.Parse(from), IPAddress.Parse(to)));
+            => options.Filters.Add(new IPRangeMetricFilter(IPAddress.Parse(from), IPAddress.Parse(to)));
 
         /// <summary>
         /// Configure the processors collection to only send headers to a specific IP range
@@ -91,7 +91,7 @@ namespace Lib.AspNetCore.ServerTiming
         /// <param name="from">Minimum IP Address to permit</param>
         /// <param name="to">Maximum IP Address to permit</param>
         public static void RestrictMetricsToIpRange(this ServerTimingOptions options, IPAddress from, IPAddress to)
-            => options.Filters.Add(new IpProcessor(from, to));
+            => options.Filters.Add(new IPRangeMetricFilter(from, to));
 
         /// <summary>
         /// Add a custom processor to filter / modify metrics
