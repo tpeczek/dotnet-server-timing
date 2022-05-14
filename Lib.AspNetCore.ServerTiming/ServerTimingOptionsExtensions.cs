@@ -8,99 +8,88 @@ using Lib.AspNetCore.ServerTiming.Http.Headers;
 namespace Lib.AspNetCore.ServerTiming
 {
     /// <summary>
-    /// Methods to provide shortcuts for setting the server timing options
+    /// The <see cref="ServerTimingOptions"/> extensions for registering <see cref="IServerTimingMetricFilter"/>s.
     /// </summary>
     public static class ServerTimingOptionsExtensions
     {
 #if !NETCOREAPP2_1 && !NET461
         /// <summary>
-        /// Configure the processors collection to only send headers in the development environment
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless an application is running in development environment.
         /// </summary>
-        /// <param name="options">The options to modify</param>
-        /// <param name="hostEnvironment">The host application's environment</param>
-        public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
-            Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="hostEnvironment">The <see cref="Microsoft.Extensions.Hosting.IHostEnvironment"/> used to determine the hosting environment an application is running in.</param>
+        public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
             options.Filters.Add(new RestrictToDevelopmentMetricFilter(hostEnvironment));
         }
 
         /// <summary>
-        /// Configure the processors collection to only send headers in the development environment
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove the descriptions from all metrics unless an application is running in development environment.
         /// </summary>
-        /// <param name="options">The options to modify</param>
-        /// <param name="hostEnvironment">The host application's environment</param>
-        public static void RestrictDescriptionsToDevelopment(this ServerTimingOptions options, 
-            Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="hostEnvironment">The <see cref="Microsoft.Extensions.Hosting.IHostEnvironment"/> used to determine the hosting environment an application is running in.</param>
+        public static void RestrictDescriptionsToDevelopment(this ServerTimingOptions options, Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
         {
             options.Filters.Add(new RestrictDescriptionsToDevelopmentMetricFilter(hostEnvironment));
         }
 #else
-        /// <summary>
-        /// Configure the processors collection to only send headers in the development environment
+        /// <summary>.
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless an application is running in development environment.
         /// </summary>
-        /// <param name="options"></param>
-        /// <param name="hostingEnvironment"></param>
-        public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, 
-            Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="hostingEnvironment">The <see cref="Microsoft.AspNetCore.Hosting.IHostingEnvironment"/> used to determine the hosting environment an application is running in.</param>
+        public static void RestrictMetricsToDevelopment(this ServerTimingOptions options, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             options.Filters.Add(new RestrictToDevelopmentMetricFilter(hostingEnvironment));
         }
 
         /// <summary>
-        /// Configure the processors collection to only send headers in the development environment
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove the descriptions from all metrics unless an application is running in development environment.
         /// </summary>
-        /// <param name="options"></param>
-        /// <param name="hostingEnvironment"></param>
-        public static void RemoveDescriptionsOutsideDevelopment(this ServerTimingOptions options, 
-            Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="hostingEnvironment">The <see cref="Microsoft.AspNetCore.Hosting.IHostingEnvironment"/> used to determine the hosting environment an application is running in</param>
+        public static void RemoveDescriptionsOutsideDevelopment(this ServerTimingOptions options, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             options.Filters.Add(new RestrictDescriptionsToDevelopmentMetricFilter(hostingEnvironment));
         }
 #endif
 
         /// <summary>
-        /// Configure the processors collection to only send headers to a specific IP
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless request comes from specific IP address.
         /// </summary>
-        /// <param name="options">Options to update</param>
-        /// <param name="ip">IP Address to permit</param>
-        public static void RestrictMetricsToIp(this ServerTimingOptions options, IPAddress ip)
-            => RestrictMetricsToIpRange(options, ip, ip);
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="address">The IP Address which is allowed to receive the metrics.</param>
+        public static void RestrictMetricsToIp(this ServerTimingOptions options, IPAddress address) => RestrictMetricsToIpRange(options, address, address);
 
         /// <summary>
-        /// Configure the processors collection to only send headers to a specific IP
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless request comes from specific IP address.
         /// </summary>
-        /// <param name="options">Options to update</param>
-        /// <param name="ip">IP Address to permit</param>
-        public static void RestrictMetricsToIp(this ServerTimingOptions options, string ip)
-            => RestrictMetricsToIpRange(options, ip, ip);
-
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="address">The IP Address which is allowed to receive the metrics.</param>
+        public static void RestrictMetricsToIp(this ServerTimingOptions options, string address) => RestrictMetricsToIpRange(options, address, address);
 
         /// <summary>
-        /// Configure the processors collection to only send headers to a specific IP range
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless request comes from IP address which falls within the specified range.
         /// </summary>
-        /// <param name="options">Options to update</param>
-        /// <param name="from">Minimum IP Address to permit</param>
-        /// <param name="to">Maximum IP Address to permit</param>
-        public static void RestrictMetricsToIpRange(this ServerTimingOptions options, string from, string to)
-            => options.Filters.Add(new IPRangeMetricFilter(IPAddress.Parse(from), IPAddress.Parse(to)));
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="lowerInclusive">The lower (inclusive) bound of the IP addresses range.</param>
+        /// <param name="upperInclusive">The upper (inclusive) bound of the IP addresses range.</param>
+        public static void RestrictMetricsToIpRange(this ServerTimingOptions options, string lowerInclusive, string upperInclusive) => options.Filters.Add(new IPRangeMetricFilter(IPAddress.Parse(lowerInclusive), IPAddress.Parse(upperInclusive)));
 
         /// <summary>
-        /// Configure the processors collection to only send headers to a specific IP range
+        /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless request comes from IP address which falls within the specified range.
         /// </summary>
-        /// <param name="options">Options to update</param>
-        /// <param name="from">Minimum IP Address to permit</param>
-        /// <param name="to">Maximum IP Address to permit</param>
-        public static void RestrictMetricsToIpRange(this ServerTimingOptions options, IPAddress from, IPAddress to)
-            => options.Filters.Add(new IPRangeMetricFilter(from, to));
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="lowerInclusive">The lower (inclusive) bound of the IP addresses range.</param>
+        /// <param name="upperInclusive">The upper (inclusive) bound of the IP addresses range.</param>
+        public static void RestrictMetricsToIpRange(this ServerTimingOptions options, IPAddress lowerInclusive, IPAddress upperInclusive) => options.Filters.Add(new IPRangeMetricFilter(lowerInclusive, upperInclusive));
 
         /// <summary>
-        /// Add a custom processor to filter / modify metrics
+        /// Adds a custom <see cref="IServerTimingMetricFilter"/>.
         /// </summary>
-        /// <param name="options">Options to update</param>
-        /// <param name="process">Processing lambda. This may modify the metrics list it is passed, and should return true if
-        /// further processors are allowed to run or false if they should be suppressed.</param>
-        public static void AddCustomProcessor(this ServerTimingOptions options, Func<HttpContext, ICollection<ServerTimingMetric>, bool> process)
-            => options.Filters.Add(new CustomServerTimingMetricFilter(process));
+        /// <param name="options">The <see cref="ServerTimingOptions"/> to modify.</param>
+        /// <param name="filter">The function used for inspecting and modifying the collection of metrics.</param>
+        public static void AddCustomMetricFilter(this ServerTimingOptions options, Func<HttpContext, ICollection<ServerTimingMetric>, bool> filter) => options.Filters.Add(new CustomServerTimingMetricFilter(filter));
 
     }
 }
