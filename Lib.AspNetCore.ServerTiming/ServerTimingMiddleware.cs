@@ -1,7 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Lib.AspNetCore.ServerTiming.Filters;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Http.Extensions;
 
@@ -15,7 +17,7 @@ namespace Lib.AspNetCore.ServerTiming
         #region Fields
         private readonly RequestDelegate _next;
         private readonly string _timingAllowOriginHeaderValue;
-
+        private readonly List<IServerTimingMetricFilter> _serverTimingMetricFilters;
         private static Task _completedTask = Task.FromResult<object>(null);
         #endregion
 
@@ -46,6 +48,19 @@ namespace Lib.AspNetCore.ServerTiming
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
             _timingAllowOriginHeaderValue = timingAllowOrigin?.ToString();
+            _serverTimingMetricFilters = new List<IServerTimingMetricFilter>();
+        }
+
+        /// <summary>
+        /// Instantiates a new <see cref="ServerTimingMiddleware"/>.
+        /// </summary>
+        /// <param name="next">The next middleware in the pipeline.</param>
+        /// <param name="options">Server timing configuration options</param>        
+        public ServerTimingMiddleware(RequestDelegate next, ServerTimingOptions options)
+        {
+            _next = next ?? throw new ArgumentNullException(nameof(next));
+            _timingAllowOriginHeaderValue = (options.AllowedOrigins is null) ? null : new TimingAllowOriginHeaderValue(options.AllowedOrigins).ToString();
+            _serverTimingMetricFilters = options.Filters ?? new List<IServerTimingMetricFilter>();
         }
         #endregion
 
@@ -92,7 +107,11 @@ namespace Lib.AspNetCore.ServerTiming
 
             await _next(context);
 
-            context.Response.SetServerTimingTrailer(new ServerTimingHeaderValue(serverTiming.Metrics));
+            RunServerTimingMetricFilters(serverTiming, context);
+            if (serverTiming.Metrics.Any())
+            {            
+                context.Response.SetServerTimingTrailer(new ServerTimingHeaderValue(serverTiming.Metrics));
+            }
         }
 #else
         private Task HandleServerTimingAsync(HttpContext context, IServerTiming serverTiming)
@@ -104,17 +123,29 @@ namespace Lib.AspNetCore.ServerTiming
         private Task HandleServerTimingAsResponseHeaderAsync(HttpContext context, IServerTiming serverTiming)
         {
             context.Response.OnStarting(() => {
-                if (serverTiming.Metrics.Count > 0)
+                RunServerTimingMetricFilters(serverTiming, context);
+                if (serverTiming.Metrics.Any())
                 {
                     context.Response.SetServerTiming(new ServerTimingHeaderValue(serverTiming.Metrics));
                 }
 
                 return _completedTask;
             });
-
+            
             serverTiming.SetServerTimingDeliveryMode(ServerTimigDeliveryMode.ResponseHeader);
 
             return _next(context);
+        }
+
+        private void RunServerTimingMetricFilters(IServerTiming serverTiming, HttpContext context)
+        {
+            foreach(var serverTimingMetricFilter in _serverTimingMetricFilters)
+            {
+                if (!serverTimingMetricFilter.OnServerTimingHeaderPreparation(context, serverTiming.Metrics))
+                {
+                    break;
+                }
+            }
         }
         #endregion
     }
