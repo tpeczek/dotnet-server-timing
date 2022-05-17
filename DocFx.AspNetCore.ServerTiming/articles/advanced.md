@@ -1,5 +1,11 @@
 ﻿# Advanced
 
+This section covers following subjects:
+
+- [Timing Blocks of Code](#timing-blocks-of-code)
+- [Timing Tasks](#timing-tasks)
+- [Metric Filters](#metric-filters)
+
 ## Timing Blocks of Code
 
 [`ServerTimingUtility`](../api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html) provides `TimeAction` method which allows for timing block of code. Calling the method starts a timer which will be stopped upon disposing the returned value.
@@ -139,43 +145,52 @@ public class WeatherForecastsController : Controller
 
 The result of the above snippet is exactly the same as the previous one.
 
-## Timing Based on Environment or Settings
+## Metric Filters
 
-An option to enable/disable timing based on environment or some settings is to create a condition around `IServerTiming` registration.
+Filters provide a way to inspect and modify the metrics which are to be delivered in a response to current request. They run on the collected metrics just before they are set as the response header value. This provides flexibility around exposing metrics only in certain scenarios or to certain clients.
+
+Filters can be added when registering the middleware by interacting with the `Filters` collection available on [`ServerTimingOptions`](../api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html).
 
 ```cs
 public class Startup
 {
-    public void ConfigureServices(IServiceCollection services, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app)
     {
         ...
 
-        if (env.IsDevelopment())
+        app.UseServerTiming(new ServerTimingOptions
         {
-		    services.AddServerTiming();
-        }
-
-		...
-    }
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        ...
+            Filters = new List<IServerTimingMetricFilter> { ... }
+        });
 			
-        if (env.IsDevelopment())
-        {
-		    app.UseServerTiming();
-		}
-        
 		...
     }
 }
 ```
 
-When doing this, the service needs to be inject in a way which allows for null and the ternary conditional operator (`?.`) can be used to call methods against a service instance in a `null` safe way.
+There is a number of builti-in filters:
+
+* [`RestrictToDevelopmentMetricFilter`](../api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html) (removes all metrics unless an application is running in development environment)
+* [`RestrictDescriptionsToDevelopmentMetricFilter`](../api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html) (removes the descriptions from all metrics unless an application is running in development environment)
+* [`IPRangeMetricFilter`](../api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html) (removes all metrics unless the current request IP address falls within the specified range)
+
+The [`ServerTimingOptionsExtensions`](../api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html) class provides some helper methods for adding those built-in filters to an instance of [`ServerTimingOptions`](../api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html).
 
 ```cs
-serverTiming?.Metrics.Add(new ServerTimingMetric("cache", 300, "Cache"));
+public class Startup
+{
+    public void Configure(IApplicationBuilder app)
+    {
+        ...
+			
+        ServerTimingOptions options = new ServerTimingOptions();
+        options.RestrictMetricsToDevelopment();
+
+		app.UseServerTiming(options);
+			
+		...
+    }
+}
 ```
 
-Additonally the `TimeAction` and `TimeTask` methods are safe to be called against `null`.
+Additionally, there is a [`CustomServerTimingMetricFilter`](../api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html) available (with a dedicated extension method as well) which can take a function to be used for inspecting and modifying the collection of metrics for current request.
