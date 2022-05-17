@@ -5,6 +5,90 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html",
+          "hash": "RvXjV/PIKI7kCNIchVw/k78enNTB9NsA30p66n2CApA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html",
+          "hash": "yasp3czxeDIRyC+bUUUw8HFvvDrcrawFmywPtkMbVhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html",
+          "hash": "nBkZioSJl4dIfKxrrAEzzxUPnO4NL8rjW51u4b88Emk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html",
+          "hash": "9naeZtZ/iKmpPPpw8HulRx3ndQFyeavSIcL6BtNG5ao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html",
+          "hash": "VPVWhkDB36htlAkseVKPMYxIlXSgt72YjwQZlurx7m4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html",
+          "hash": "QGI0kbCS7wVd40KAn1OYYQjn29fK355Yo5H6DApBTqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.Filters.html",
+          "hash": "9us+KvYHMrB1I9z4Tvj5eK00PA72pSuW4ryFe4//ISk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.yml",
       "output": {
         ".html": {
@@ -93,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lib.AspNetCore.ServerTiming.IServerTiming.html",
-          "hash": "WHTUp04Gwmx59BbqllzwkVDdZ/Ilxo86RbRHTRjTXDc="
+          "hash": "6CNu5zjh/hZFK/5cuEfFGNJBjBoqBbmFkYTKZLswpUY="
         }
       },
       "is_incremental": false,
@@ -117,7 +201,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html",
-          "hash": "2jAC4tMHTr8HLkjtgHGpSktnvTvdByM1hMXeOlnCBSs="
+          "hash": "chK0ULveb78NXorrqWoiy/4rAYXB1r8KQD0HxEuODqU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html",
+          "hash": "M/4XUrkpEODpMFdydaJf51igt/96vlt9lwvoqPN7V9A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html",
+          "hash": "JB/ALY31HAG0YsfBNFTa01wsPWkUxESB92M2CBe5D+A="
         }
       },
       "is_incremental": false,
@@ -129,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html",
-          "hash": "XK37pwCcRpHXZ5URagUIHfE9+7ek5GxnaMjX7K9mZag="
+          "hash": "OrhkOd2FKaWRR8ICaDARps7EwupZoEZJ9p4josRJfgo="
         }
       },
       "is_incremental": false,
@@ -141,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lib.AspNetCore.ServerTiming.html",
-          "hash": "ghTKi3UPmp1BhDmSBVQ/NQgpBC4cNGIkFFGePBPoUa8="
+          "hash": "7DdZzzz5T9i1DeLhz8UmeZNzXRGR3AbWn0UKFscx+S0="
         }
       },
       "is_incremental": false,
@@ -153,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.html",
-          "hash": "CXFxpN1pKrgxjr/azSVcJ5vIPLIy2twBbBSl4rsHyLU="
+          "hash": "lpA7TUQ9ZBZV5E872By9e4npoy1y6nnftucKj1PEStk="
         }
       },
       "is_incremental": false,
@@ -189,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ShwkNp9MC080+a3hLxKAL3R+AgxigSjRcMpozZQnaLM="
+          "hash": "Ui/VfLb2Bb2kmdCD0k0gJRYsorTNkjLkMh26EPOeiSQ="
         }
       },
       "is_incremental": false,
@@ -204,7 +312,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/advanced.html",
-          "hash": "DBPiwiMXRDiDo21UGUsaIfDx65zCCWgxU1Dx0D0fX+E="
+          "hash": "Ldi3QKk3bk2A9lvh4OCp+/bQiirNaILfbrXZ3TIlB4I="
         }
       },
       "is_incremental": false,
@@ -219,7 +327,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started.html",
-          "hash": "qffUuonjBqMxH2ptNLfrkaS2Jsp77bMXdqIZZv8LkO4="
+          "hash": "dwdu5IJQoCI846K6CrGvjAP68M3yJ+UebudMTcZQhaA="
         }
       },
       "is_incremental": false,
@@ -331,7 +439,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 15,
+          "total_file_count": 24,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

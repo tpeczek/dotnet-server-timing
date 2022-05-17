@@ -107,7 +107,7 @@
   </h3>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_Lib_AspNetCore_ServerTiming_IServerTiming_System_Decimal_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.Decimal,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, Decimal, String, String, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Add a metric to the timing, if present.</p>
+  <div class="markdown level1 summary"><p>Add a timed metric to the timing, if present.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,6 +140,63 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">metricName</span></td>
         <td><p>The name of the metric to log.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">functionName</span></td>
+        <td><p>Optional, populated compile-time with the name of the calling function</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td><p>Optional, populated compile-time with the path to the calling file</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">lineNumber</span></td>
+        <td><p>Optional, populated compile-time with line number in the calling file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric*"></a>
+  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_Lib_AspNetCore_ServerTiming_IServerTiming_System_String_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.String,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, String, String, String, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Add an untimed metric to the timing, if present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddMetric(this IServerTiming serverTiming, string metricName = null, string description = null, string functionName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><span class="parametername">serverTiming</span></td>
+        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">metricName</span></td>
+        <td><p>The name of the metric to log.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the metric</p>
 </td>
       </tr>
       <tr>

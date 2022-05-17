@@ -7,6 +7,251 @@ references:
   commentId: N:Lib.AspNetCore.ServerTiming
   fullName: Lib.AspNetCore.ServerTiming
   nameWithType: Lib.AspNetCore.ServerTiming
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  href: api/Lib.AspNetCore.ServerTiming.Filters.html
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  name: CustomServerTimingMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor(System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  name: CustomServerTimingMetricFilter(Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_CustomServerTimingMetricFilter__ctor_System_Func_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__System_Boolean__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor(System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  name.vb: CustomServerTimingMetricFilter(Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(System.Func<Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>, System.Boolean>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(System.Func(Of Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric), System.Boolean))
+  nameWithType: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  nameWithType.vb: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor*
+  name: CustomServerTimingMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_CustomServerTimingMetricFilter__ctor_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_CustomServerTimingMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_CustomServerTimingMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  name: HostingEnvironmentServerTimingMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  nameWithType: HostingEnvironmentServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  name: HostingEnvironmentServerTimingMetricFilter(IHostEnvironment)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter__ctor_Microsoft_Extensions_Hosting_IHostEnvironment_
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.HostingEnvironmentServerTimingMetricFilter(Microsoft.Extensions.Hosting.IHostEnvironment)
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.HostingEnvironmentServerTimingMetricFilter(IHostEnvironment)
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.#ctor*
+  name: HostingEnvironmentServerTimingMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter__ctor_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.#ctor
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.HostingEnvironmentServerTimingMetricFilter
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.HostingEnvironmentServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  name: IsDevelopment
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsDevelopment
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment*
+  name: IsDevelopment
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsDevelopment_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  name: IsProduction
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsProduction
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsProduction
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction*
+  name: IsProduction
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsProduction_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsProduction
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  name: IsStaging
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsStaging
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsStaging
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging*
+  name: IsStaging
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_IsStaging_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsStaging
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  name: IPRangeMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(System.Net.IPAddress,System.Net.IPAddress)
+  name: IPRangeMetricFilter(IPAddress, IPAddress)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_System_Net_IPAddress_System_Net_IPAddress_
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(System.Net.IPAddress,System.Net.IPAddress)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.IPRangeMetricFilter(System.Net.IPAddress, System.Net.IPAddress)
+  nameWithType: IPRangeMetricFilter.IPRangeMetricFilter(IPAddress, IPAddress)
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor*
+  name: IPRangeMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter.IPRangeMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: IPRangeMetricFilter.OnServerTimingHeaderPreparation
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  name: IServerTimingMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  nameWithType: IServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IServerTimingMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: IServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: IServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_IServerTimingMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: IServerTimingMetricFilter.OnServerTimingHeaderPreparation
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  name: RestrictDescriptionsToDevelopmentMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  name: RestrictDescriptionsToDevelopmentMetricFilter(IHostEnvironment)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictDescriptionsToDevelopmentMetricFilter__ctor_Microsoft_Extensions_Hosting_IHostEnvironment_
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.RestrictDescriptionsToDevelopmentMetricFilter(Microsoft.Extensions.Hosting.IHostEnvironment)
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter.RestrictDescriptionsToDevelopmentMetricFilter(IHostEnvironment)
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.#ctor*
+  name: RestrictDescriptionsToDevelopmentMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictDescriptionsToDevelopmentMetricFilter__ctor_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.#ctor
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.RestrictDescriptionsToDevelopmentMetricFilter
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter.RestrictDescriptionsToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictDescriptionsToDevelopmentMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictDescriptionsToDevelopmentMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  name: RestrictToDevelopmentMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  name: RestrictToDevelopmentMetricFilter(IHostEnvironment)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictToDevelopmentMetricFilter__ctor_Microsoft_Extensions_Hosting_IHostEnvironment_
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter(Microsoft.Extensions.Hosting.IHostEnvironment)
+  nameWithType: RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter(IHostEnvironment)
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor*
+  name: RestrictToDevelopmentMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictToDevelopmentMetricFilter__ctor_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictToDevelopmentMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  nameWithType: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType.vb: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation*
+  name: OnServerTimingHeaderPreparation
+  href: api/Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html#Lib_AspNetCore_ServerTiming_Filters_RestrictToDevelopmentMetricFilter_OnServerTimingHeaderPreparation_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  nameWithType: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
 - uid: Lib.AspNetCore.ServerTiming.Http.Extensions
   name: Lib.AspNetCore.ServerTiming.Http.Extensions
   href: api/Lib.AspNetCore.ServerTiming.Http.Extensions.html
@@ -398,6 +643,12 @@ references:
   commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
   fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
   nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, TimingAllowOriginHeaderValue)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  name: ServerTimingMiddleware(RequestDelegate, ServerTimingOptions)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html#Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Lib_AspNetCore_ServerTiming_ServerTimingOptions_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ServerTimingOptions)
 - uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.Collections.Generic.ICollection{System.String})
   name: ServerTimingMiddleware(RequestDelegate, ICollection<String>)
   href: api/Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html#Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_System_Collections_Generic_ICollection_System_String__
@@ -427,6 +678,124 @@ references:
   isSpec: "True"
   fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke
   nameWithType: ServerTimingMiddleware.Invoke
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  name: ServerTimingOptions
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  nameWithType: ServerTimingOptions
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins
+  name: AllowedOrigins
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptions_AllowedOrigins
+  commentId: P:Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins
+  nameWithType: ServerTimingOptions.AllowedOrigins
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins*
+  name: AllowedOrigins
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptions_AllowedOrigins_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions.AllowedOrigins
+  nameWithType: ServerTimingOptions.AllowedOrigins
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters
+  name: Filters
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptions_Filters
+  commentId: P:Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters
+  nameWithType: ServerTimingOptions.Filters
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters*
+  name: Filters
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptions_Filters_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions.Filters
+  nameWithType: ServerTimingOptions.Filters
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions
+  name: ServerTimingOptionsExtensions
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions
+  nameWithType: ServerTimingOptionsExtensions
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  name: AddCustomMetricFilter(ServerTimingOptions, Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_AddCustomMetricFilter_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Func_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__System_Boolean__
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  name.vb: AddCustomMetricFilter(ServerTimingOptions, Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.Func<Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>, System.Boolean>)
+  fullName.vb: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.Func(Of Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric), System.Boolean))
+  nameWithType: ServerTimingOptionsExtensions.AddCustomMetricFilter(ServerTimingOptions, Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  nameWithType.vb: ServerTimingOptionsExtensions.AddCustomMetricFilter(ServerTimingOptions, Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter*
+  name: AddCustomMetricFilter
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_AddCustomMetricFilter_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter
+  nameWithType: ServerTimingOptionsExtensions.AddCustomMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)
+  name: RestrictDescriptionsToDevelopment(ServerTimingOptions, IHostEnvironment)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictDescriptionsToDevelopment_Lib_AspNetCore_ServerTiming_ServerTimingOptions_Microsoft_Extensions_Hosting_IHostEnvironment_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions, Microsoft.Extensions.Hosting.IHostEnvironment)
+  nameWithType: ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment(ServerTimingOptions, IHostEnvironment)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment*
+  name: RestrictDescriptionsToDevelopment
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictDescriptionsToDevelopment_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment
+  nameWithType: ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)
+  name: RestrictMetricsToDevelopment(ServerTimingOptions, IHostEnvironment)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToDevelopment_Lib_AspNetCore_ServerTiming_ServerTimingOptions_Microsoft_Extensions_Hosting_IHostEnvironment_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions, Microsoft.Extensions.Hosting.IHostEnvironment)
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToDevelopment(ServerTimingOptions, IHostEnvironment)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment*
+  name: RestrictMetricsToDevelopment
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToDevelopment_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToDevelopment
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress)
+  name: RestrictMetricsToIp(ServerTimingOptions, IPAddress)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Net_IPAddress_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.Net.IPAddress)
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIp(ServerTimingOptions, IPAddress)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String)
+  name: RestrictMetricsToIp(ServerTimingOptions, String)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_String_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.String)
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIp(ServerTimingOptions, String)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp*
+  name: RestrictMetricsToIp
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIp
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress,System.Net.IPAddress)
+  name: RestrictMetricsToIpRange(ServerTimingOptions, IPAddress, IPAddress)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Net_IPAddress_System_Net_IPAddress_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress,System.Net.IPAddress)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.Net.IPAddress, System.Net.IPAddress)
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIpRange(ServerTimingOptions, IPAddress, IPAddress)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String,System.String)
+  name: RestrictMetricsToIpRange(ServerTimingOptions, String, String)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_String_System_String_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String,System.String)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions, System.String, System.String)
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIpRange(ServerTimingOptions, String, String)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange*
+  name: RestrictMetricsToIpRange
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.html#Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange
+  isSpec: "True"
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange
+  nameWithType: ServerTimingOptionsExtensions.RestrictMetricsToIpRange
 - uid: Lib.AspNetCore.ServerTiming.ServerTimingUtility
   name: ServerTimingUtility
   href: api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html
@@ -439,6 +808,12 @@ references:
   commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.Decimal,System.String,System.String,System.String,System.Int32)
   fullName: Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming, System.Decimal, System.String, System.String, System.String, System.Int32)
   nameWithType: ServerTimingUtility.AddMetric(IServerTiming, Decimal, String, String, String, Int32)
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.String,System.String,System.String,System.String,System.Int32)
+  name: AddMetric(IServerTiming, String, String, String, String, Int32)
+  href: api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html#Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_Lib_AspNetCore_ServerTiming_IServerTiming_System_String_System_String_System_String_System_String_System_Int32_
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.String,System.String,System.String,System.String,System.Int32)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming, System.String, System.String, System.String, System.String, System.Int32)
+  nameWithType: ServerTimingUtility.AddMetric(IServerTiming, String, String, String, String, Int32)
 - uid: Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric*
   name: AddMetric
   href: api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html#Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_
@@ -499,6 +874,12 @@ references:
   commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  name: UseServerTiming(IApplicationBuilder, ServerTimingOptions)
+  href: api/Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.html#Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_AspNetCore_Builder_IApplicationBuilder_Lib_AspNetCore_ServerTiming_ServerTimingOptions_
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder, Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ServerTimingOptions)
 - uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Collections.Generic.ICollection{System.String})
   name: UseServerTiming(IApplicationBuilder, ICollection<String>)
   href: api/Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.html#Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_Collections_Generic_ICollection_System_String__

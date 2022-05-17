@@ -76,16 +76,20 @@
         ...
     }
 }
-</code></pre><p>There is an option to provide origins that are allowed to see values from timing APIs (which would otherwise be reported as zero due to cross-origin restrictions) while registering the middleware.</p>
+</code></pre><p>Options can be set when registering the middleware - e.g. to set URLs that are allowed to see values from timing APIs (which would otherwise be reported as zero due to cross-origin restrictions), or to only send timings in a development environment.</p>
 <pre><code class="lang-cs">public class Startup
 {
     ...
 
-    public void Configure(IApplicationBuilder app)
+    public void Configure(IApplicationBuilder app, IHostEnvironment env)
     {
         ...
 
-        app.UseServerTiming(&quot;https://tpeczek.com&quot;, &quot;https://developer.tpeczek.com&quot;);
+        app.UseServerTiming(options =&gt; {
+            options.AllowedOrigins.Add(&quot;https://tpeczek.com&quot;);
+            options.AllowedOrigins.Add(&quot;https://developer.tpeczek.com&quot;);
+            options.RestrictToDevelopment(env)
+        }
 
         ...
     }

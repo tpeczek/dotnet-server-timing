@@ -149,13 +149,63 @@
     </tbody>
   </table>
   <a id="Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_" data-uid="Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*"></a>
+  <h4 id="Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_AspNetCore_Builder_IApplicationBuilder_Lib_AspNetCore_ServerTiming_ServerTimingOptions_" data-uid="Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)">UseServerTiming(IApplicationBuilder, ServerTimingOptions)</h4>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a> to application pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ServerTimingOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
+        <td><span class="parametername">app</span></td>
+        <td><p>The <span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span> passed to Configure method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a> to configure the middleware.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Builder.IApplicationBuilder</span></td>
+        <td><p>The original app parameter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_" data-uid="Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*"></a>
   <h4 id="Microsoft_AspNetCore_Builder_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_Collections_Generic_ICollection_System_String__" data-uid="Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Collections.Generic.ICollection{System.String})">UseServerTiming(IApplicationBuilder, ICollection&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a> to application pipeline.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ICollection&lt;string&gt; timingAllowOrigins)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete and will be removed in future, use the version which takes ServerTimingOptions as a parameter.&quot;)]
+public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ICollection&lt;string&gt; timingAllowOrigins)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,7 +254,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, params string[] timingAllowOrigins)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method is obsolete and will be removed in future, use the version which takes ServerTimingOptions as a parameter.&quot;)]
+public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, params string[] timingAllowOrigins)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
