@@ -1,3 +1,7 @@
+## Lib.AspNetCore.ServerTiming 4.4.0
+### Additions and Changes
+- Added [metric filters](https://tpeczek.github.io/Lib.AspNetCore.ServerTiming/articles/advanced.html#metric-filters)
+
 ## Lib.AspNetCore.ServerTiming 4.3.0
 ### Additions and Changes
 - Added .NET 6 TFM
