@@ -3,7 +3,7 @@
     /// <summary>
     /// The metrics delivery mode.
     /// </summary>
-    public enum ServerTimigDeliveryMode
+    public enum ServerTimingDeliveryMode
     {
         /// The metrics delivery mode is no yet known.
         Unknown,

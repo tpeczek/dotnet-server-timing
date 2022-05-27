@@ -103,7 +103,7 @@ namespace Lib.AspNetCore.ServerTiming
         {
             context.Response.DeclareTrailer(HeaderNames.ServerTiming);
 
-            serverTiming.SetServerTimingDeliveryMode(ServerTimigDeliveryMode.Trailer);
+            serverTiming.SetServerTimingDeliveryMode(ServerTimingDeliveryMode.Trailer);
 
             await _next(context);
 
@@ -131,8 +131,8 @@ namespace Lib.AspNetCore.ServerTiming
 
                 return _completedTask;
             });
-            
-            serverTiming.SetServerTimingDeliveryMode(ServerTimigDeliveryMode.ResponseHeader);
+
+            serverTiming.SetServerTimingDeliveryMode(ServerTimingDeliveryMode.ResponseHeader);
 
             return _next(context);
         }

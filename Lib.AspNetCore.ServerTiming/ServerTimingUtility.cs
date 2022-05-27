@@ -134,9 +134,7 @@ namespace Lib.AspNetCore.ServerTiming
             serverTiming.Metrics.Add(metric);
         }
 
-
-
-        internal static void SetServerTimingDeliveryMode(this IServerTiming serverTiming, ServerTimigDeliveryMode deliveryMode)
+        internal static void SetServerTimingDeliveryMode(this IServerTiming serverTiming, ServerTimingDeliveryMode deliveryMode)
         {
             ServerTiming concreteServerTiming = serverTiming as ServerTiming;
 
