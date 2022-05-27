@@ -1,3 +1,19 @@
+## Lib.AspNetCore.ServerTiming 4.4.0
+### Additions and Changes
+- Added [metric filters](https://tpeczek.github.io/Lib.AspNetCore.ServerTiming/articles/advanced.html#metric-filters)
+
+## Lib.AspNetCore.ServerTiming 4.3.0
+### Additions and Changes
+- Added .NET 6 TFM
+
+## Lib.AspNetCore.ServerTiming 4.2.0
+### Additions and Changes
+- Added helper method for easy timing of non-generic tasks execution (thanks to @Vake93)
+
+## Lib.AspNetCore.ServerTiming 4.1.0
+### Bug Fixes
+- Fix support for delivering metrics through HTTP trailers when available
+
 ## Lib.AspNetCore.ServerTiming 4.0.0
 ### Additions and Changes
 - Changed support for ASP.NET Core 3.0.0 to ASP.NET Core 3.1.0
