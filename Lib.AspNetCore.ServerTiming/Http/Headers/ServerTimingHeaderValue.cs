@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Http.Headers
 {

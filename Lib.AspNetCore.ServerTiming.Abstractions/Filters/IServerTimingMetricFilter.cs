@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
 
-namespace Lib.AspNetCore.ServerTiming.Filters
+namespace Lib.AspNetCore.ServerTiming.Abstractions.Filters
 {
     /// <summary>
     /// A filter that can inspect and modify the metrics which are to be delivered in a response to current request.

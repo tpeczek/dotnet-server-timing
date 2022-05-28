@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Lib.AspNetCore.ServerTiming.Http.Headers
+namespace Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers
 {
     /// <summary>
     /// Server timing performance metric.

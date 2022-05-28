@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Lib.AspNetCore.ServerTiming;
+using Lib.AspNetCore.ServerTiming.Abstractions;
 
 namespace Demo.AspNetCore.ServerTiming.Controllers
 {

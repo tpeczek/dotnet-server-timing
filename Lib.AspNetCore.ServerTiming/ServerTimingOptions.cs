@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Lib.AspNetCore.ServerTiming.Filters;
+using Lib.AspNetCore.ServerTiming.Abstractions.Filters;
 
 namespace Lib.AspNetCore.ServerTiming
 {

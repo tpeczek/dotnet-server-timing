@@ -3,7 +3,8 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.AspNetCore.ServerTiming.Abstractions;
+using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming 
 {

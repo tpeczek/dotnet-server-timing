@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Filters
 {
@@ -36,7 +36,7 @@ namespace Lib.AspNetCore.ServerTiming.Filters
         {
             if (!IsDevelopment)
             {
-                List<ServerTimingMetric> newMetrics = metrics .Select(m => new ServerTimingMetric(m.Name,m.Value,null)).ToList();
+                List<ServerTimingMetric> newMetrics = metrics .Select(m => m.Value.HasValue ? new ServerTimingMetric(m.Name, m.Value.Value, null) : new ServerTimingMetric(m.Name, null)).ToList();
                 metrics.Clear();
                 newMetrics.ForEach(m => metrics.Add(m));
             }

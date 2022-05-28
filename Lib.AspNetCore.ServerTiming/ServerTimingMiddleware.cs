@@ -3,9 +3,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Filters;
+using Lib.AspNetCore.ServerTiming.Abstractions;
 using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Http.Extensions;
+using Lib.AspNetCore.ServerTiming.Abstractions.Filters;
 
 namespace Lib.AspNetCore.ServerTiming
 {

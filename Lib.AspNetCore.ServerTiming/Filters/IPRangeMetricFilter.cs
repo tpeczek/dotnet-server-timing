@@ -2,7 +2,8 @@
 using System.Net.Sockets;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.AspNetCore.ServerTiming.Abstractions.Filters;
+using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Filters
 {
