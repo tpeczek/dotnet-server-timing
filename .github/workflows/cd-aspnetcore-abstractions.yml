@@ -1,8 +1,8 @@
-name: CD
+name: Lib.AspNetCore.ServerTiming.Abstractions - CD
 on:
   push:
     tags:
-    - "v[0-9]+.[0-9]+.[0-9]+"
+    - "aspnetcore-abstractions-v[0-9]+.[0-9]+.[0-9]+"
 jobs:
   deployment:
     runs-on: windows-latest
@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Extract VERSION
-      run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+      run: echo "VERSION=${GITHUB_REF/refs\/tags\/aspnetcore-abstractions-v/}" >> $GITHUB_ENV
       shell: bash
     - name: Setup .NET Core 2.1 SDK
       uses: actions/setup-dotnet@v1
@@ -36,8 +36,8 @@ jobs:
       run: dotnet test --configuration Release --no-build
     - name: Pack
       run: dotnet pack --configuration Release --no-build
-    - name: NuGet Push Lib.AspNetCore.ServerTiming
-      run: dotnet nuget push Lib.AspNetCore.ServerTiming/bin/Release/Lib.AspNetCore.ServerTiming.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
+    - name: NuGet Push Lib.AspNetCore.ServerTiming.Abstractions
+      run: dotnet nuget push Lib.AspNetCore.ServerTiming.Abstractions/bin/Release/Lib.AspNetCore.ServerTiming.Abstractions.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
       shell: bash
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
