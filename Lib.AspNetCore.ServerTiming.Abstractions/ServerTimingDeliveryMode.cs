@@ -1,4 +1,4 @@
-﻿namespace Lib.AspNetCore.ServerTiming.Abstractions
+﻿namespace Lib.AspNetCore.ServerTiming
 {
     /// <summary>
     /// The metrics delivery mode.

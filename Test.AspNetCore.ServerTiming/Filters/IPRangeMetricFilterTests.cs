@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Lib.AspNetCore.ServerTiming.Filters;
-using Lib.AspNetCore.ServerTiming.Abstractions.Http.Headers;
+using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Xunit;
 
 

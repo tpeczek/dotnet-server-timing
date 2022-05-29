@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Lib.AspNetCore.ServerTiming;
-using Lib.AspNetCore.ServerTiming.Abstractions;
 
 namespace Microsoft.AspNetCore.Builder
 {
