@@ -4,6 +4,7 @@
       "src": [
         {
           "files": [
+            "Lib.AspNetCore.ServerTiming.Abstractions/Lib.AspNetCore.ServerTiming.Abstractions.csproj",
             "Lib.AspNetCore.ServerTiming/Lib.AspNetCore.ServerTiming.csproj"
           ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
