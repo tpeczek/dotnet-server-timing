@@ -1,3 +1,8 @@
+## Lib.AspNetCore.ServerTiming 5.0.0
+### Additions and Changes
+- Renamed `ServerTimigDeliveryMode` to `ServerTimingDeliveryMode`
+- Extracted abstractions (`IServerTiming` and `IServerTimingMetricFilter`) to [Lib.AspNetCore.ServerTiming.Abstractions](https://www.nuget.org/packages/Lib.AspNetCore.ServerTiming.Abstractions/) package
+
 ## Lib.AspNetCore.ServerTiming 4.4.0
 ### Additions and Changes
 - Added [metric filters](https://tpeczek.github.io/Lib.AspNetCore.ServerTiming/articles/advanced.html#metric-filters)
