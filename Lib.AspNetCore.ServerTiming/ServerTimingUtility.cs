@@ -145,8 +145,7 @@ namespace Lib.AspNetCore.ServerTiming
         }
 
         // Format a metric name from caller params --> "{fileName}.{function}+{lineNumber}
-        private static string FormatCallerName(string functionName, string filePath, int lineNumber) =>
-            String.Concat(Path.GetFileNameWithoutExtension(filePath), ".", functionName, "+", lineNumber);
+        private static string FormatCallerName(string functionName, string filePath, int lineNumber) => String.Concat(Path.GetFileNameWithoutExtension(filePath), ".", functionName, "+", lineNumber);
 
         // On dispose, add server timing performance metric.
         private sealed class ServerTimingInstance : IDisposable
