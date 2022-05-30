@@ -1,3 +1,7 @@
+## Lib.AspNetCore.ServerTiming 5.0.1
+### Bug Fixes
+- Fix incorrect dependency version.
+
 ## Lib.AspNetCore.ServerTiming 5.0.0
 ### Additions and Changes
 - Renamed `ServerTimigDeliveryMode` to `ServerTimingDeliveryMode`
