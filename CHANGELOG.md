@@ -1,6 +1,11 @@
+## Lib.AspNetCore.ServerTiming 5.1.0
+### Additions and Changes
+- Removed upper bounds on dependencies for .NET 6 TFM so it can be used with .NET 7 without resolution issues.
+- Added testing against .NET 7.
+
 ## Lib.AspNetCore.ServerTiming 5.0.1
 ### Bug Fixes
-- Fix incorrect dependency version.
+- Fixed incorrect dependency version.
 
 ## Lib.AspNetCore.ServerTiming 5.0.0
 ### Additions and Changes
