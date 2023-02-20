@@ -1,6 +1,7 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Azure.Functions.Worker.Middleware;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Demo.Azure.Functions.Worker.ServerTiming
 {
@@ -18,7 +19,8 @@ namespace Demo.Azure.Functions.Worker.ServerTiming
             HttpResponseData? response = invocationResult.Value as HttpResponseData;
             if (response is not null)
             {
-                response.Headers.Add("Server-Timing", "cache;dur=300;desc=\"Cache\",sql;dur=900;desc=\"Sql Server\",fs;dur=600;desc=\"FileSystem\",cpu;dur=1230;desc=\"Total CPU\"");
+                IServerTiming serverTiming = context.InstanceServices.GetRequiredService<IServerTiming>();
+                response.Headers.Add(HeaderNames.ServerTiming, new ServerTimingHeaderValue(serverTiming.Metrics).ToString());
             }
         }
     }

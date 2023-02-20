@@ -1,17 +1,16 @@
 using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Extensions.Logging;
 
 namespace Demo.Azure.Functions.Worker.ServerTiming
 {
     public class ServerTimingFunctions
     {
-        private readonly ILogger _logger;
+        private readonly IServerTiming _serverTiming;
 
-        public ServerTimingFunctions(ILoggerFactory loggerFactory)
+        public ServerTimingFunctions(IServerTiming serverTiming)
         {
-            _logger = loggerFactory.CreateLogger<ServerTimingFunctions>();
+            _serverTiming = serverTiming;
         }
 
         [Function("basic")]
@@ -20,6 +19,11 @@ namespace Demo.Azure.Functions.Worker.ServerTiming
 
             var response = request.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+
+            _serverTiming.Metrics.Add(new ServerTimingMetric("cache", 300, "Cache"));
+            _serverTiming.Metrics.Add(new ServerTimingMetric("sql", 900, "Sql Server"));
+            _serverTiming.Metrics.Add(new ServerTimingMetric("fs", 600, "FileSystem"));
+            _serverTiming.Metrics.Add(new ServerTimingMetric("cpu", 1230, "Total CPU"));
 
             response.WriteString("-- Demo.Azure.Functions.Worker.ServerTiming --");
 
