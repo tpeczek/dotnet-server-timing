@@ -24,7 +24,7 @@ namespace Lib.AspNetCore.ServerTiming.Filters
         /// </summary>
         protected bool IsProduction { get; }
 
-#if !NETCOREAPP2_1 && !NET461
+#if !NETCOREAPP2_1 && !NET462
         /// <summary>
         /// Instantiates a new <see cref="HostingEnvironmentServerTimingMetricFilter"/>.
         /// </summary>

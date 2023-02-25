@@ -10,7 +10,7 @@ namespace Lib.AspNetCore.ServerTiming.Filters
     /// </summary>
     public class RestrictDescriptionsToDevelopmentMetricFilter : HostingEnvironmentServerTimingMetricFilter
     {
-#if !NETCOREAPP2_1 && !NET461
+#if !NETCOREAPP2_1 && !NET462
         /// <summary>
         /// Instantiates a new <see cref="RestrictDescriptionsToDevelopmentMetricFilter"/>.
         /// </summary>

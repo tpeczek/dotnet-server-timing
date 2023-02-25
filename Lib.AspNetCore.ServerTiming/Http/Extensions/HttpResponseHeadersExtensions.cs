@@ -32,7 +32,7 @@ namespace Lib.AspNetCore.ServerTiming.Http.Extensions
             response.SetResponseHeader(HeaderNames.ServerTiming, serverTiming.ToString());
         }
 
-#if !NETCOREAPP2_1 && !NET461
+#if !NETCOREAPP2_1 && !NET462
         /// <summary>
         /// Sets the Server-Timing trailer header value.
         /// </summary>

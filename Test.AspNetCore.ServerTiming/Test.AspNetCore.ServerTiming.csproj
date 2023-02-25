@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0;net6.0;net7.0;net461</TargetFrameworks>
+    <TargetFrameworks>net462;netcoreapp2.1;net6.0;net7.0</TargetFrameworks>
+    <!-- <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0;net6.0;net7.0;net461</TargetFrameworks> -->
   	<IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
@@ -12,10 +13,10 @@
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
   </ItemGroup>
-  <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net461')">
+  <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net462')">
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="[2.1.0,3.0.0)" />
   </ItemGroup>
-  <ItemGroup Condition="('$(TargetFramework)' != 'netcoreapp2.1') And ('$(TargetFramework)' != 'net461')">
+  <ItemGroup Condition="('$(TargetFramework)' != 'netcoreapp2.1') And ('$(TargetFramework)' != 'net462')">
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="[3.0.0,4.0.0)" />
   </ItemGroup>
   <ItemGroup>

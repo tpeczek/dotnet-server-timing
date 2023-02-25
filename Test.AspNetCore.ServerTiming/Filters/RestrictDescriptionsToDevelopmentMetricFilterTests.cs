@@ -12,7 +12,7 @@ namespace Test.AspNetCore.ServerTiming.Filters
         #region Prepare SUT
         private RestrictDescriptionsToDevelopmentMetricFilter PrepareRestrictDescriptionsToDevelopmentMetricFilter(bool isDevelopment)
         {
-#if !NETCOREAPP2_1 && !NET461
+#if !NETCOREAPP2_1 && !NET462
             Mock<Microsoft.Extensions.Hosting.IHostEnvironment> hostEnvironment = new Mock<Microsoft.Extensions.Hosting.IHostEnvironment>();
             hostEnvironment.SetupGet(m => m.EnvironmentName).Returns(isDevelopment ? Microsoft.Extensions.Hosting.Environments.Development : "Test.AspNetCore.ServerTiming");
 

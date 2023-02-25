@@ -12,7 +12,7 @@ namespace Lib.AspNetCore.ServerTiming
     /// </summary>
     public static class ServerTimingOptionsExtensions
     {
-#if !NETCOREAPP2_1 && !NET461
+#if !NETCOREAPP2_1 && !NET462
         /// <summary>
         /// Adds <see cref="IServerTimingMetricFilter"/> which will remove all metrics unless an application is running in development environment.
         /// </summary>
