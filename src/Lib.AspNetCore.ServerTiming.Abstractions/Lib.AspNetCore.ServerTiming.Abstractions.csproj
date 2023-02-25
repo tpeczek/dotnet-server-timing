@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Lib.AspNetCore.ServerTiming.Abstractions provides abstractions for Lib.AspNetCore.ServerTiming, a library which provides Server Timing API support for ASP.NET Core.</Description>
+    <Copyright>Copyright © 2022 - 2023 Tomasz Pęczek</Copyright>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>Tomasz Pęczek</Authors>
+    <TargetFrameworks>net462;netcoreapp2.1;net6.0;net7.0</TargetFrameworks>
+    <!-- <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0;net6.0;net461</TargetFrameworks> -->
+    <AssemblyTitle>Lib.AspNetCore.ServerTiming.Abstractions</AssemblyTitle>
+    <AssemblyName>Lib.AspNetCore.ServerTiming.Abstractions</AssemblyName>
+    <PackageId>Lib.AspNetCore.ServerTiming.Abstractions</PackageId>
+    <PackageTags>aspnetcore;servertiming;performance</PackageTags>
+    <PackageProjectUrl>https://github.com/tpeczek/Lib.AspNetCore.ServerTiming</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/tpeczek/Lib.AspNetCore.ServerTiming</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>true</GenerateAssemblyCopyrightAttribute>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net462')">
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="[2.1.0,3.0.0)" />
+  </ItemGroup>
+  <ItemGroup Condition="('$(TargetFramework)' != 'netcoreapp2.1') And ('$(TargetFramework)' != 'net462')">
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="0.1.66" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

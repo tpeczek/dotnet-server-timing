@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  id: Lib.AspNetCore.ServerTiming.Filters
+  children:
+  - Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  - Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  - Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  - Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  - Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  - Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters
+  type: Namespace
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+references:
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  name: CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: HostingEnvironmentServerTimingMetricFilter
+  nameWithType: HostingEnvironmentServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  name: IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+  name: RestrictDescriptionsToDevelopmentMetricFilter
+  nameWithType: RestrictDescriptionsToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  name: RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: IServerTimingMetricFilter
+  nameWithType: IServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters

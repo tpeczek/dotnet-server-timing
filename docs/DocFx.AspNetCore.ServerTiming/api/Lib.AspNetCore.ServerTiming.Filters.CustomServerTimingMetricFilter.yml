@@ -1,0 +1,400 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  id: CustomServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  children:
+  - Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor(Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  - Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  langs:
+  - csharp
+  - vb
+  name: CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: CustomServerTimingMetricFilter
+    path: ../Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+    startLine: 10
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nA function based filter that can inspect and modify the metrics which are to be delivered in a response to current request.\n"
+  example: []
+  syntax:
+    content: 'public class CustomServerTimingMetricFilter : object, IServerTimingMetricFilter'
+    content.vb: >-
+      Public Class CustomServerTimingMetricFilter
+          Inherits Object
+          Implements IServerTimingMetricFilter
+  inheritance:
+  - System.Object
+  implements:
+  - Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor(Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor(Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})
+  id: '#ctor(Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})'
+  parent: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: CustomServerTimingMetricFilter(Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  nameWithType: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func<HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>, System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+    startLine: 18
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public CustomServerTimingMetricFilter(Func<HttpContext, ICollection<ServerTimingMetric>, bool> filter)
+    parameters:
+    - id: filter
+      type: Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean}
+      description: The function used for inspecting and modifying the collection of metrics for current request.
+    content.vb: Public Sub New(filter As Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+  overload: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor*
+  nameWithType.vb: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter(Func(Of HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric), System.Boolean))
+  name.vb: CustomServerTimingMetricFilter(Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean))
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  id: OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  parent: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: OnServerTimingHeaderPreparation
+    path: ../Lib.AspNetCore.ServerTiming/Filters/CustomServerTimingMetricFilter.cs
+    startLine: 24
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  example: []
+  syntax:
+    content: public bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics)
+    parameters:
+    - id: context
+      type: HttpContext
+    - id: metrics
+      type: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+    return:
+      type: System.Boolean
+    content.vb: Public Function OnServerTimingHeaderPreparation(context As HttpContext, metrics As ICollection(Of ServerTimingMetric)) As Boolean
+  overload: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation*
+  nameWithType.vb: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+references:
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: IServerTimingMetricFilter
+  nameWithType: IServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+  name: CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.#ctor
+  name: CustomServerTimingMetricFilter
+  nameWithType: CustomServerTimingMetricFilter.CustomServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.CustomServerTimingMetricFilter
+- uid: Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean}
+  commentId: '!:Func{HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean}'
+  definition: Func`3
+  name: Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>
+  nameWithType: Func<HttpContext, ICollection<ServerTimingMetric>, Boolean>
+  fullName: Func<HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>, System.Boolean>
+  nameWithType.vb: Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean)
+  fullName.vb: Func(Of HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric), System.Boolean)
+  name.vb: Func(Of HttpContext, ICollection(Of ServerTimingMetric), Boolean)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`3
+  isExternal: true
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullName.vb: Func(Of , , )
+  name.vb: Func(Of , , )
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  name: OnServerTimingHeaderPreparation
+  nameWithType: CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  fullName: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter.OnServerTimingHeaderPreparation
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+  commentId: '!:ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}'
+  definition: ICollection`1
+  name: ICollection<ServerTimingMetric>
+  nameWithType: ICollection<ServerTimingMetric>
+  fullName: ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>
+  nameWithType.vb: ICollection(Of ServerTimingMetric)
+  fullName.vb: ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric)
+  name.vb: ICollection(Of ServerTimingMetric)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

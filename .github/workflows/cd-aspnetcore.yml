@@ -33,7 +33,7 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release --no-build
     - name: NuGet Push Lib.AspNetCore.ServerTiming
-      run: dotnet nuget push Lib.AspNetCore.ServerTiming/bin/Release/Lib.AspNetCore.ServerTiming.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
+      run: dotnet nuget push src/Lib.AspNetCore.ServerTiming/bin/Release/Lib.AspNetCore.ServerTiming.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
       shell: bash
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}

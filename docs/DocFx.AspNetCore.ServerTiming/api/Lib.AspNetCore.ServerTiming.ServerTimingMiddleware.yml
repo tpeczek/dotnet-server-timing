@@ -1,0 +1,383 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  id: ServerTimingMiddleware
+  parent: Lib.AspNetCore.ServerTiming
+  children:
+  - Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate)
+  - Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,ICollection{System.String})
+  - Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  - Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  - Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(HttpContext,Lib.AspNetCore.ServerTiming.IServerTiming)
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddleware
+  nameWithType: ServerTimingMiddleware
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: ServerTimingMiddleware
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 14
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nMiddleware providing support for Server Timing API.\n"
+  example: []
+  syntax:
+    content: 'public class ServerTimingMiddleware : object'
+    content.vb: >-
+      Public Class ServerTimingMiddleware
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate)
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate)
+  id: '#ctor(RequestDelegate)'
+  parent: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddleware(RequestDelegate)
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 28
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ServerTimingMiddleware(RequestDelegate next)
+    parameters:
+    - id: next
+      type: RequestDelegate
+      description: The next middleware in the pipeline.
+    content.vb: Public Sub New(next As RequestDelegate)
+  overload: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,ICollection{System.String})
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,ICollection{System.String})
+  id: '#ctor(RequestDelegate,ICollection{System.String})'
+  parent: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddleware(RequestDelegate, ICollection<String>)
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ICollection<String>)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ICollection<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 37
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ServerTimingMiddleware(RequestDelegate next, ICollection<string> timingAllowOrigins)
+    parameters:
+    - id: next
+      type: RequestDelegate
+      description: The next middleware in the pipeline.
+    - id: timingAllowOrigins
+      type: ICollection{System.String}
+      description: The collection of origins that are allowed to see values from timing APIs.
+    content.vb: Public Sub New(next As RequestDelegate, timingAllowOrigins As ICollection(Of String))
+  overload: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*
+  nameWithType.vb: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ICollection(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ICollection(Of System.String))
+  name.vb: ServerTimingMiddleware(RequestDelegate, ICollection(Of String))
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  id: '#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)'
+  parent: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddleware(RequestDelegate, TimingAllowOriginHeaderValue)
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, TimingAllowOriginHeaderValue)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 46
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ServerTimingMiddleware(RequestDelegate next, TimingAllowOriginHeaderValue timingAllowOrigin)
+    parameters:
+    - id: next
+      type: RequestDelegate
+      description: The next middleware in the pipeline.
+    - id: timingAllowOrigin
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+      description: The Timing-Allow-Origin header value.
+    content.vb: Public Sub New(next As RequestDelegate, timingAllowOrigin As TimingAllowOriginHeaderValue)
+  overload: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  id: '#ctor(RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)'
+  parent: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddleware(RequestDelegate, ServerTimingOptions)
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, ServerTimingOptions)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware(RequestDelegate, Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 58
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ServerTimingMiddleware(RequestDelegate next, ServerTimingOptions options)
+    parameters:
+    - id: next
+      type: RequestDelegate
+      description: The next middleware in the pipeline.
+    - id: options
+      type: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+      description: Server timing configuration options
+    content.vb: Public Sub New(next As RequestDelegate, options As ServerTimingOptions)
+  overload: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(HttpContext,Lib.AspNetCore.ServerTiming.IServerTiming)
+  commentId: M:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(HttpContext,Lib.AspNetCore.ServerTiming.IServerTiming)
+  id: Invoke(HttpContext,Lib.AspNetCore.ServerTiming.IServerTiming)
+  parent: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Invoke(HttpContext, IServerTiming)
+  nameWithType: ServerTimingMiddleware.Invoke(HttpContext, IServerTiming)
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(HttpContext, Lib.AspNetCore.ServerTiming.IServerTiming)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: Invoke
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddleware.cs
+    startLine: 73
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming
+  summary: "\nProcess an individual request.\n"
+  example: []
+  syntax:
+    content: public Task Invoke(HttpContext context, IServerTiming serverTiming)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: The context.
+    - id: serverTiming
+      type: Lib.AspNetCore.ServerTiming.IServerTiming
+      description: The instance of <xref href="Lib.AspNetCore.ServerTiming.IServerTiming" data-throw-if-not-resolved="false"></xref> for current requet.
+    return:
+      type: Task
+      description: The task object representing the asynchronous operation.
+    content.vb: Public Function Invoke(context As HttpContext, serverTiming As IServerTiming) As Task
+  overload: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Lib.AspNetCore.ServerTiming
+  commentId: N:Lib.AspNetCore.ServerTiming
+  name: Lib.AspNetCore.ServerTiming
+  nameWithType: Lib.AspNetCore.ServerTiming
+  fullName: Lib.AspNetCore.ServerTiming
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  name: ServerTimingMiddleware
+  nameWithType: ServerTimingMiddleware
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor
+  name: ServerTimingMiddleware
+  nameWithType: ServerTimingMiddleware.ServerTimingMiddleware
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.ServerTimingMiddleware
+- uid: RequestDelegate
+  isExternal: true
+  name: RequestDelegate
+  nameWithType: RequestDelegate
+  fullName: RequestDelegate
+- uid: ICollection{System.String}
+  commentId: '!:ICollection{System.String}'
+  definition: ICollection`1
+  name: ICollection<String>
+  nameWithType: ICollection<String>
+  fullName: ICollection<System.String>
+  nameWithType.vb: ICollection(Of String)
+  fullName.vb: ICollection(Of System.String)
+  name.vb: ICollection(Of String)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  name: TimingAllowOriginHeaderValue
+  nameWithType: TimingAllowOriginHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers
+  commentId: N:Lib.AspNetCore.ServerTiming.Http.Headers
+  name: Lib.AspNetCore.ServerTiming.Http.Headers
+  nameWithType: Lib.AspNetCore.ServerTiming.Http.Headers
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  parent: Lib.AspNetCore.ServerTiming
+  name: ServerTimingOptions
+  nameWithType: ServerTimingOptions
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+- uid: Lib.AspNetCore.ServerTiming.IServerTiming
+  commentId: T:Lib.AspNetCore.ServerTiming.IServerTiming
+  parent: Lib.AspNetCore.ServerTiming
+  name: IServerTiming
+  nameWithType: IServerTiming
+  fullName: Lib.AspNetCore.ServerTiming.IServerTiming
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke
+  name: Invoke
+  nameWithType: ServerTimingMiddleware.Invoke
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

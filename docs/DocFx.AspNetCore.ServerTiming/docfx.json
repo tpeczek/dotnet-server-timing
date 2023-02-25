@@ -1,0 +1,54 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/Lib.AspNetCore.ServerTiming.Abstractions/Lib.AspNetCore.ServerTiming.Abstractions.csproj",
+            "src/Lib.AspNetCore.ServerTiming/Lib.AspNetCore.ServerTiming.csproj"
+          ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "../.."
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net6.0"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/*.yml",
+          "toc.md",
+          "index.md",
+          "articles/getting-started.md",
+          "articles/advanced.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "resources/svg/logo.svg",
+          "resources/ico/favicon.ico",
+          "resources/basic-metrics-values.png",
+          "resources/timing-blocks-of-code.png",
+          "resources/timing-nested-blocks-of-code.png"
+        ]
+      }
+    ],
+    "dest": "wwwroot",
+    "globalMetadata": {
+      "_appTitle": "Lib.AspNetCore.ServerTiming",
+      "_appFooter": "Copyright © 2017 - 2023 Tomasz Pęczek",
+      "_appLogoPath": "resources/svg/logo.svg",
+      "_appFaviconPath": "resources/ico/favicon.ico",
+      "_disableBreadcrumb": true,
+      "_disableAffix": true,
+      "_disableContribution": true
+    }
+  }
+}

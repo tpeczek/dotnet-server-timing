@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  id: RestrictToDevelopmentMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  children:
+  - Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  - Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  langs:
+  - csharp
+  - vb
+  name: RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: RestrictToDevelopmentMetricFilter
+    path: ../Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+    startLine: 9
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nA filter which will remove all metrics unless an application is running in development environment.\n"
+  example: []
+  syntax:
+    content: 'public class RestrictToDevelopmentMetricFilter : HostingEnvironmentServerTimingMetricFilter, IServerTimingMetricFilter'
+    content.vb: >-
+      Public Class RestrictToDevelopmentMetricFilter
+          Inherits HostingEnvironmentServerTimingMetricFilter
+          Implements IServerTimingMetricFilter
+  inheritance:
+  - System.Object
+  - Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  implements:
+  - Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  inheritedMembers:
+  - Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  - Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  - Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)
+  id: '#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)'
+  parent: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: RestrictToDevelopmentMetricFilter(IHostEnvironment)
+  nameWithType: RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter(IHostEnvironment)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter(Microsoft.Extensions.Hosting.IHostEnvironment)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+    startLine: 16
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public RestrictToDevelopmentMetricFilter(IHostEnvironment hostEnvironment)
+    parameters:
+    - id: hostEnvironment
+      type: Microsoft.Extensions.Hosting.IHostEnvironment
+      description: The <xref href="Microsoft.Extensions.Hosting.IHostEnvironment" data-throw-if-not-resolved="false"></xref> used to determine the hosting environment an application is running in.
+    content.vb: Public Sub New(hostEnvironment As IHostEnvironment)
+  overload: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  id: OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  parent: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: OnServerTimingHeaderPreparation
+    path: ../Lib.AspNetCore.ServerTiming/Filters/RestrictToDevelopmentMetricFilter.cs
+    startLine: 33
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nRemoves all metrics for current request unless an application is running in development environment.\n"
+  example: []
+  syntax:
+    content: public override bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: The <see cref="!:HttpContext"></see> for the current request.
+    - id: metrics
+      type: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+      description: The collection of metrics for current request.
+    return:
+      type: System.Boolean
+      description: True if subsequent filters are allowed to run, otherwise false.
+    content.vb: Public Overrides Function OnServerTimingHeaderPreparation(context As HttpContext, metrics As ICollection(Of ServerTimingMetric)) As Boolean
+  overridden: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  overload: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation*
+  nameWithType.vb: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+references:
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: HostingEnvironmentServerTimingMetricFilter
+  nameWithType: HostingEnvironmentServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: IServerTimingMetricFilter
+  nameWithType: IServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  parent: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  name: IsDevelopment
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsDevelopment
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+  parent: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  name: IsStaging
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsStaging
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsStaging
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  commentId: P:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+  parent: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  name: IsProduction
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.IsProduction
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.IsProduction
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+  name: RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+- uid: Microsoft.Extensions.Hosting.IHostEnvironment
+  commentId: T:Microsoft.Extensions.Hosting.IHostEnvironment
+  parent: Microsoft.Extensions.Hosting
+  isExternal: true
+  name: IHostEnvironment
+  nameWithType: IHostEnvironment
+  fullName: Microsoft.Extensions.Hosting.IHostEnvironment
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.#ctor
+  name: RestrictToDevelopmentMetricFilter
+  nameWithType: RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.RestrictToDevelopmentMetricFilter
+- uid: Microsoft.Extensions.Hosting
+  commentId: N:Microsoft.Extensions.Hosting
+  isExternal: true
+  name: Microsoft.Extensions.Hosting
+  nameWithType: Microsoft.Extensions.Hosting
+  fullName: Microsoft.Extensions.Hosting
+- uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  parent: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+  isExternal: true
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  nameWithType.vb: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  spec.csharp:
+  - uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+    name: OnServerTimingHeaderPreparation
+    nameWithType: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+    fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+    name: OnServerTimingHeaderPreparation
+    nameWithType: HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+    fullName: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  name: OnServerTimingHeaderPreparation
+  nameWithType: RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+  fullName: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.OnServerTimingHeaderPreparation
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+  commentId: '!:ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}'
+  definition: ICollection`1
+  name: ICollection<ServerTimingMetric>
+  nameWithType: ICollection<ServerTimingMetric>
+  fullName: ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>
+  nameWithType.vb: ICollection(Of ServerTimingMetric)
+  fullName.vb: ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric)
+  name.vb: ICollection(Of ServerTimingMetric)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

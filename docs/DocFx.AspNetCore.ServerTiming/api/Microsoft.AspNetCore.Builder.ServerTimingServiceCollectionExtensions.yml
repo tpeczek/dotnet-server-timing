@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  commentId: T:Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  id: ServerTimingServiceCollectionExtensions
+  parent: Microsoft.AspNetCore.Builder
+  children:
+  - Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingServiceCollectionExtensions
+  nameWithType: ServerTimingServiceCollectionExtensions
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingServiceCollectionExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: ServerTimingServiceCollectionExtensions
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingServiceCollectionExtensions.cs
+    startLine: 8
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nThe <xref href=\"Microsoft.Extensions.DependencyInjection.IServiceCollection\" data-throw-if-not-resolved=\"false\"></xref> extensions for adding Server Timing API related services.\n"
+  example: []
+  syntax:
+    content: 'public static class ServerTimingServiceCollectionExtensions : object'
+    content.vb: >-
+      Public Module ServerTimingServiceCollectionExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: AddServerTiming(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  isExtensionMethod: true
+  parent: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddServerTiming(IServiceCollection)
+  nameWithType: ServerTimingServiceCollectionExtensions.AddServerTiming(IServiceCollection)
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingServiceCollectionExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: AddServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingServiceCollectionExtensions.cs
+    startLine: 16
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nRegisters default service which provides support for Server Timing API.\n"
+  example: []
+  syntax:
+    content: public static IServiceCollection AddServerTiming(this IServiceCollection services)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The collection of service descriptors.
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The collection of service descriptors.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddServerTiming(services As IServiceCollection) As IServiceCollection
+  overload: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+- uid: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming*
+  commentId: Overload:Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming
+  name: AddServerTiming
+  nameWithType: ServerTimingServiceCollectionExtensions.AddServerTiming
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions.AddServerTiming

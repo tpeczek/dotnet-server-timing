@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  id: TimingAllowOriginHeaderValue
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  children:
+  - Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor
+  - Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(ICollection{System.String})
+  - Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(System.String[])
+  - Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+  - Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString
+  langs:
+  - csharp
+  - vb
+  name: TimingAllowOriginHeaderValue
+  nameWithType: TimingAllowOriginHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: TimingAllowOriginHeaderValue
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 8
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nRepresents value of Timing-Allow-Origin header.\n"
+  example: []
+  syntax:
+    content: 'public class TimingAllowOriginHeaderValue : object'
+    content.vb: >-
+      Public Class TimingAllowOriginHeaderValue
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+  commentId: P:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+  id: Origins
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  langs:
+  - csharp
+  - vb
+  name: Origins
+  nameWithType: TimingAllowOriginHeaderValue.Origins
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+  type: Property
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: Origins
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 14
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nGets the collection of origins that are allowed to see values from timing APIs.\n"
+  example: []
+  syntax:
+    content: public ICollection<string> Origins { get; }
+    parameters: []
+    return:
+      type: ICollection{System.String}
+    content.vb: Public ReadOnly Property Origins As ICollection(Of String)
+  overload: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor
+  id: '#ctor'
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  langs:
+  - csharp
+  - vb
+  name: TimingAllowOriginHeaderValue()
+  nameWithType: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue()
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue()
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 21
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TimingAllowOriginHeaderValue()
+    content.vb: Public Sub New
+  overload: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(ICollection{System.String})
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(ICollection{System.String})
+  id: '#ctor(ICollection{System.String})'
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  langs:
+  - csharp
+  - vb
+  name: TimingAllowOriginHeaderValue(ICollection<String>)
+  nameWithType: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(ICollection<String>)
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(ICollection<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 30
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TimingAllowOriginHeaderValue(ICollection<string> origins)
+    parameters:
+    - id: origins
+      type: ICollection{System.String}
+      description: The collection of origins that are allowed to see values from timing APIs.
+    content.vb: Public Sub New(origins As ICollection(Of String))
+  overload: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor*
+  nameWithType.vb: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(ICollection(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(ICollection(Of System.String))
+  name.vb: TimingAllowOriginHeaderValue(ICollection(Of String))
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(System.String[])
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor(System.String[])
+  id: '#ctor(System.String[])'
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  langs:
+  - csharp
+  - vb
+  name: TimingAllowOriginHeaderValue(String[])
+  nameWithType: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(String[])
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(System.String[])
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 39
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TimingAllowOriginHeaderValue(params string[] origins)
+    parameters:
+    - id: origins
+      type: System.String[]
+      description: The origins that are allowed to see values from timing APIs.
+    content.vb: Public Sub New(ParamArray origins As String())
+  overload: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor*
+  nameWithType.vb: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue(System.String())
+  name.vb: TimingAllowOriginHeaderValue(String())
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString
+  id: ToString
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimingAllowOriginHeaderValue.ToString()
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString()
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: ToString
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/TimingAllowOriginHeaderValue.cs
+    startLine: 54
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nGets the string representation of header value.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The string representation of header value.
+    content.vb: Public Overrides Function ToString As String
+  overload: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers
+  commentId: N:Lib.AspNetCore.ServerTiming.Http.Headers
+  name: Lib.AspNetCore.ServerTiming.Http.Headers
+  nameWithType: Lib.AspNetCore.ServerTiming.Http.Headers
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+  name: Origins
+  nameWithType: TimingAllowOriginHeaderValue.Origins
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.Origins
+- uid: ICollection{System.String}
+  commentId: '!:ICollection{System.String}'
+  definition: ICollection`1
+  name: ICollection<String>
+  nameWithType: ICollection<String>
+  fullName: ICollection<System.String>
+  nameWithType.vb: ICollection(Of String)
+  fullName.vb: ICollection(Of System.String)
+  name.vb: ICollection(Of String)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  name: TimingAllowOriginHeaderValue
+  nameWithType: TimingAllowOriginHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.#ctor
+  name: TimingAllowOriginHeaderValue
+  nameWithType: TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.TimingAllowOriginHeaderValue
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString
+  name: ToString
+  nameWithType: TimingAllowOriginHeaderValue.ToString
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

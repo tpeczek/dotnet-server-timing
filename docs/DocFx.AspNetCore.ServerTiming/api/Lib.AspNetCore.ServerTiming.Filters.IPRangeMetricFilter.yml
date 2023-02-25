@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  id: IPRangeMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  children:
+  - Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(IPAddress,IPAddress)
+  - Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  langs:
+  - csharp
+  - vb
+  name: IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: IPRangeMetricFilter
+    path: ../Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+    startLine: 11
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nA filter which will remove all metrics unless the current request IP address falls within the specified range.\n"
+  example: []
+  syntax:
+    content: 'public class IPRangeMetricFilter : object, IServerTimingMetricFilter'
+    content.vb: >-
+      Public Class IPRangeMetricFilter
+          Inherits Object
+          Implements IServerTimingMetricFilter
+  inheritance:
+  - System.Object
+  implements:
+  - Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(IPAddress,IPAddress)
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(IPAddress,IPAddress)
+  id: '#ctor(IPAddress,IPAddress)'
+  parent: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: IPRangeMetricFilter(IPAddress, IPAddress)
+  nameWithType: IPRangeMetricFilter.IPRangeMetricFilter(IPAddress, IPAddress)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.IPRangeMetricFilter(IPAddress, IPAddress)
+  type: Constructor
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: .ctor
+    path: ../Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+    startLine: 22
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nInstantiates a new <xref href=\"Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IPRangeMetricFilter(IPAddress lowerInclusive, IPAddress upperInclusive)
+    parameters:
+    - id: lowerInclusive
+      type: IPAddress
+      description: Lower (inclusive) bound of the IP addresses range.
+    - id: upperInclusive
+      type: IPAddress
+      description: Upper (inclusive) bound of the IP addresses range.
+    content.vb: Public Sub New(lowerInclusive As IPAddress, upperInclusive As IPAddress)
+  overload: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  commentId: M:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  id: OnServerTimingHeaderPreparation(HttpContext,ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})
+  parent: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  langs:
+  - csharp
+  - vb
+  name: OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  nameWithType: IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<ServerTimingMetric>)
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: OnServerTimingHeaderPreparation
+    path: ../Lib.AspNetCore.ServerTiming/Filters/IPRangeMetricFilter.cs
+    startLine: 35
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Filters
+  summary: "\nRemoves all metrics for current request unless the current request IP address falls within the specified range.\n"
+  example: []
+  syntax:
+    content: public bool OnServerTimingHeaderPreparation(HttpContext context, ICollection<ServerTimingMetric> metrics)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: The <see cref="!:HttpContext"></see> for the current request.
+    - id: metrics
+      type: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+      description: The collection of metrics for current request.
+    return:
+      type: System.Boolean
+      description: True if subsequent filters are allowed to run, otherwise false.
+    content.vb: Public Function OnServerTimingHeaderPreparation(context As HttpContext, metrics As ICollection(Of ServerTimingMetric)) As Boolean
+  overload: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation*
+  nameWithType.vb: IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(HttpContext, ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric))
+  name.vb: OnServerTimingHeaderPreparation(HttpContext, ICollection(Of ServerTimingMetric))
+references:
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  commentId: N:Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  nameWithType: Lib.AspNetCore.ServerTiming.Filters
+  fullName: Lib.AspNetCore.ServerTiming.Filters
+- uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+  parent: Lib.AspNetCore.ServerTiming.Filters
+  name: IServerTimingMetricFilter
+  nameWithType: IServerTimingMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  commentId: T:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+  name: IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor
+  name: IPRangeMetricFilter
+  nameWithType: IPRangeMetricFilter.IPRangeMetricFilter
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.IPRangeMetricFilter
+- uid: IPAddress
+  isExternal: true
+  name: IPAddress
+  nameWithType: IPAddress
+  fullName: IPAddress
+- uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation
+  name: OnServerTimingHeaderPreparation
+  nameWithType: IPRangeMetricFilter.OnServerTimingHeaderPreparation
+  fullName: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}
+  commentId: '!:ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric}'
+  definition: ICollection`1
+  name: ICollection<ServerTimingMetric>
+  nameWithType: ICollection<ServerTimingMetric>
+  fullName: ICollection<Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric>
+  nameWithType.vb: ICollection(Of ServerTimingMetric)
+  fullName.vb: ICollection(Of Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric)
+  name.vb: ICollection(Of ServerTimingMetric)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

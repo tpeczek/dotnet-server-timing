@@ -1,0 +1,54 @@
+### YamlMime:TableOfContent
+- uid: Lib.AspNetCore.ServerTiming
+  name: Lib.AspNetCore.ServerTiming
+  items:
+  - uid: Lib.AspNetCore.ServerTiming.IServerTiming
+    name: IServerTiming
+  - uid: Lib.AspNetCore.ServerTiming.ServerTimingDeliveryMode
+    name: ServerTimingDeliveryMode
+  - uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+    name: ServerTimingMiddleware
+  - uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+    name: ServerTimingOptions
+  - uid: Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions
+    name: ServerTimingOptionsExtensions
+  - uid: Lib.AspNetCore.ServerTiming.ServerTimingUtility
+    name: ServerTimingUtility
+- uid: Lib.AspNetCore.ServerTiming.Filters
+  name: Lib.AspNetCore.ServerTiming.Filters
+  items:
+  - uid: Lib.AspNetCore.ServerTiming.Filters.CustomServerTimingMetricFilter
+    name: CustomServerTimingMetricFilter
+  - uid: Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter
+    name: HostingEnvironmentServerTimingMetricFilter
+  - uid: Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter
+    name: IPRangeMetricFilter
+  - uid: Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter
+    name: IServerTimingMetricFilter
+  - uid: Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter
+    name: RestrictDescriptionsToDevelopmentMetricFilter
+  - uid: Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter
+    name: RestrictToDevelopmentMetricFilter
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions
+  name: Lib.AspNetCore.ServerTiming.Http.Extensions
+  items:
+  - uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+    name: HttpResponseHeadersExtensions
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers
+  name: Lib.AspNetCore.ServerTiming.Http.Headers
+  items:
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+    name: HeaderNames
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+    name: ServerTimingHeaderValue
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+    name: TimingAllowOriginHeaderValue
+- uid: Microsoft.AspNetCore.Builder
+  name: Microsoft.AspNetCore.Builder
+  items:
+  - uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+    name: ServerTimingMiddlewareExtensions
+  - uid: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+    name: ServerTimingServiceCollectionExtensions

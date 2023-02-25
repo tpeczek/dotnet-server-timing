@@ -1,0 +1,379 @@
+### YamlMime:ManagedReference
+items:
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  commentId: T:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  id: ServerTimingMiddlewareExtensions
+  parent: Microsoft.AspNetCore.Builder
+  children:
+  - Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+  - Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,ICollection{System.String})
+  - Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  - Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,System.String[])
+  langs:
+  - csharp
+  - vb
+  name: ServerTimingMiddlewareExtensions
+  nameWithType: ServerTimingMiddlewareExtensions
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: ServerTimingMiddlewareExtensions
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+    startLine: 10
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nThe <see cref=\"!:IApplicationBuilder\"></see> extensions for adding Server Timing API middleware to pipeline.\n"
+  example: []
+  syntax:
+    content: 'public static class ServerTimingMiddlewareExtensions : object'
+    content.vb: >-
+      Public Module ServerTimingMiddlewareExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+  id: UseServerTiming(IApplicationBuilder)
+  isExtensionMethod: true
+  parent: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseServerTiming(IApplicationBuilder)
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: UseServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+    startLine: 18
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nAdds a <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref> to application pipeline.\n"
+  example: []
+  syntax:
+    content: public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app)
+    parameters:
+    - id: app
+      type: IApplicationBuilder
+      description: The <see cref="!:IApplicationBuilder"></see> passed to Configure method.
+    return:
+      type: IApplicationBuilder
+      description: The original app parameter
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseServerTiming(app As IApplicationBuilder) As IApplicationBuilder
+  overload: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,ICollection{System.String})
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,ICollection{System.String})
+  id: UseServerTiming(IApplicationBuilder,ICollection{System.String})
+  isExtensionMethod: true
+  parent: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseServerTiming(IApplicationBuilder, ICollection<String>)
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ICollection<String>)
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ICollection<System.String>)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: UseServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+    startLine: 34
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nAdds a <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref> to application pipeline.\n"
+  example: []
+  syntax:
+    content: public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ICollection<string> timingAllowOrigins)
+    parameters:
+    - id: app
+      type: IApplicationBuilder
+      description: The <see cref="!:IApplicationBuilder"></see> passed to Configure method.
+    - id: timingAllowOrigins
+      type: ICollection{System.String}
+      description: The collection of origins that are allowed to see values from timing APIs.
+    return:
+      type: IApplicationBuilder
+      description: The original app parameter
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseServerTiming(app As IApplicationBuilder, timingAllowOrigins As ICollection(Of String)) As IApplicationBuilder
+  overload: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*
+  nameWithType.vb: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ICollection(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ICollection(Of System.String))
+  name.vb: UseServerTiming(IApplicationBuilder, ICollection(Of String))
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,System.String[])
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,System.String[])
+  id: UseServerTiming(IApplicationBuilder,System.String[])
+  isExtensionMethod: true
+  parent: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseServerTiming(IApplicationBuilder, String[])
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, String[])
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: UseServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+    startLine: 51
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nAdds a <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref> to application pipeline.\n"
+  example: []
+  syntax:
+    content: public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, params string[] timingAllowOrigins)
+    parameters:
+    - id: app
+      type: IApplicationBuilder
+      description: The <see cref="!:IApplicationBuilder"></see> passed to Configure method.
+    - id: timingAllowOrigins
+      type: System.String[]
+      description: The origins that are allowed to see values from timing APIs.
+    return:
+      type: IApplicationBuilder
+      description: The original app parameter
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseServerTiming(app As IApplicationBuilder, ParamArray timingAllowOrigins As String()) As IApplicationBuilder
+  overload: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*
+  nameWithType.vb: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, System.String())
+  name.vb: UseServerTiming(IApplicationBuilder, String())
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  commentId: M:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  id: UseServerTiming(IApplicationBuilder,Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  isExtensionMethod: true
+  parent: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseServerTiming(IApplicationBuilder, ServerTimingOptions)
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, ServerTimingOptions)
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming(IApplicationBuilder, Lib.AspNetCore.ServerTiming.ServerTimingOptions)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: UseServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/ServerTimingMiddlewareExtensions.cs
+    startLine: 68
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Microsoft.AspNetCore.Builder
+  summary: "\nAdds a <xref href=\"Lib.AspNetCore.ServerTiming.ServerTimingMiddleware\" data-throw-if-not-resolved=\"false\"></xref> to application pipeline.\n"
+  example: []
+  syntax:
+    content: public static IApplicationBuilder UseServerTiming(this IApplicationBuilder app, ServerTimingOptions options)
+    parameters:
+    - id: app
+      type: IApplicationBuilder
+      description: The <see cref="!:IApplicationBuilder"></see> passed to Configure method.
+    - id: options
+      type: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+      description: The <xref href="Lib.AspNetCore.ServerTiming.ServerTimingOptions" data-throw-if-not-resolved="false"></xref> to configure the middleware.
+    return:
+      type: IApplicationBuilder
+      description: The original app parameter
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseServerTiming(app As IApplicationBuilder, options As ServerTimingOptions) As IApplicationBuilder
+  overload: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+  name: ServerTimingMiddleware
+  nameWithType: ServerTimingMiddleware
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingMiddleware
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming*
+  commentId: Overload:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming
+  name: UseServerTiming
+  nameWithType: ServerTimingMiddlewareExtensions.UseServerTiming
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions.UseServerTiming
+- uid: IApplicationBuilder
+  isExternal: true
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: IApplicationBuilder
+- uid: ICollection{System.String}
+  commentId: '!:ICollection{System.String}'
+  definition: ICollection`1
+  name: ICollection<String>
+  nameWithType: ICollection<String>
+  fullName: ICollection<System.String>
+  nameWithType.vb: ICollection(Of String)
+  fullName.vb: ICollection(Of System.String)
+  name.vb: ICollection(Of String)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  commentId: T:Lib.AspNetCore.ServerTiming.ServerTimingOptions
+  parent: Lib.AspNetCore.ServerTiming
+  name: ServerTimingOptions
+  nameWithType: ServerTimingOptions
+  fullName: Lib.AspNetCore.ServerTiming.ServerTimingOptions
+- uid: Lib.AspNetCore.ServerTiming
+  commentId: N:Lib.AspNetCore.ServerTiming
+  name: Lib.AspNetCore.ServerTiming
+  nameWithType: Lib.AspNetCore.ServerTiming
+  fullName: Lib.AspNetCore.ServerTiming

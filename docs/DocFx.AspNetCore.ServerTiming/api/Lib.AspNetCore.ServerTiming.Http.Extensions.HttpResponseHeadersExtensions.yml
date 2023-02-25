@@ -1,0 +1,421 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  id: HttpResponseHeadersExtensions
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions
+  children:
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  - Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,System.String[])
+  langs:
+  - csharp
+  - vb
+  name: HttpResponseHeadersExtensions
+  nameWithType: HttpResponseHeadersExtensions
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: HttpResponseHeadersExtensions
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 9
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nExtensions for setting timing APIs response headers.\n"
+  example: []
+  syntax:
+    content: 'public static class HttpResponseHeadersExtensions : object'
+    content.vb: >-
+      Public Module HttpResponseHeadersExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  id: SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetServerTiming(HttpResponse, ServerTimingHeaderValue)
+  nameWithType: HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, ServerTimingHeaderValue)
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 17
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Server-Timing header value.\n"
+  example: []
+  syntax:
+    content: public static void SetServerTiming(this HttpResponse response, ServerTimingHeaderValue serverTiming)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: serverTiming
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+      description: The Server-Timing header value.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetServerTiming(response As HttpResponse, serverTiming As ServerTimingHeaderValue)
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  id: SetServerTiming(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetServerTiming(HttpResponse, ServerTimingMetric[])
+  nameWithType: HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, ServerTimingMetric[])
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 27
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Server-Timing header value.\n"
+  example: []
+  syntax:
+    content: public static void SetServerTiming(this HttpResponse response, params ServerTimingMetric[] metrics)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: metrics
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[]
+      description: The metrics.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetServerTiming(response As HttpResponse, ParamArray metrics As ServerTimingMetric())
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming*
+  nameWithType.vb: HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, ServerTimingMetric())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric())
+  name.vb: SetServerTiming(HttpResponse, ServerTimingMetric())
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  id: SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetServerTimingTrailer(HttpResponse, ServerTimingHeaderValue)
+  nameWithType: HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, ServerTimingHeaderValue)
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetServerTimingTrailer
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 40
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Server-Timing trailer header value.\n"
+  example: []
+  syntax:
+    content: public static void SetServerTimingTrailer(this HttpResponse response, ServerTimingHeaderValue serverTiming)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: serverTiming
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+      description: The Server-Timing header value.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetServerTimingTrailer(response As HttpResponse, serverTiming As ServerTimingHeaderValue)
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  id: SetServerTimingTrailer(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetServerTimingTrailer(HttpResponse, ServerTimingMetric[])
+  nameWithType: HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, ServerTimingMetric[])
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[])
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetServerTimingTrailer
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 50
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Server-Timing trailer header value.\n"
+  example: []
+  syntax:
+    content: public static void SetServerTimingTrailer(this HttpResponse response, params ServerTimingMetric[] metrics)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: metrics
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[]
+      description: The metrics.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetServerTimingTrailer(response As HttpResponse, ParamArray metrics As ServerTimingMetric())
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer*
+  nameWithType.vb: HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, ServerTimingMetric())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric())
+  name.vb: SetServerTimingTrailer(HttpResponse, ServerTimingMetric())
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  id: SetTimingAllowOrigin(HttpResponse,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetTimingAllowOrigin(HttpResponse, TimingAllowOriginHeaderValue)
+  nameWithType: HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, TimingAllowOriginHeaderValue)
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetTimingAllowOrigin
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 63
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Timing-Allow-Origin header value.\n"
+  example: []
+  syntax:
+    content: public static void SetTimingAllowOrigin(this HttpResponse response, TimingAllowOriginHeaderValue timingAllowOrigin)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: timingAllowOrigin
+      type: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+      description: The Timing-Allow-Origin header value.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetTimingAllowOrigin(response As HttpResponse, timingAllowOrigin As TimingAllowOriginHeaderValue)
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,System.String[])
+  commentId: M:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse,System.String[])
+  id: SetTimingAllowOrigin(HttpResponse,System.String[])
+  isExtensionMethod: true
+  parent: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetTimingAllowOrigin(HttpResponse, String[])
+  nameWithType: HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, String[])
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: SetTimingAllowOrigin
+    path: ../Lib.AspNetCore.ServerTiming/Http/Extensions/HttpResponseHeadersExtensions.cs
+    startLine: 73
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Extensions
+  summary: "\nSets the Timing-Allow-Origin header value.\n"
+  example: []
+  syntax:
+    content: public static void SetTimingAllowOrigin(this HttpResponse response, params string[] origins)
+    parameters:
+    - id: response
+      type: HttpResponse
+      description: The response.
+    - id: origins
+      type: System.String[]
+      description: The origins that are allowed to see values from timing APIs.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetTimingAllowOrigin(response As HttpResponse, ParamArray origins As String())
+  overload: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin*
+  nameWithType.vb: HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin(HttpResponse, System.String())
+  name.vb: SetTimingAllowOrigin(HttpResponse, String())
+references:
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions
+  commentId: N:Lib.AspNetCore.ServerTiming.Http.Extensions
+  name: Lib.AspNetCore.ServerTiming.Http.Extensions
+  nameWithType: Lib.AspNetCore.ServerTiming.Http.Extensions
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming
+  name: SetServerTiming
+  nameWithType: HttpResponseHeadersExtensions.SetServerTiming
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTiming
+- uid: HttpResponse
+  isExternal: true
+  name: HttpResponse
+  nameWithType: HttpResponse
+  fullName: HttpResponse
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  name: ServerTimingHeaderValue
+  nameWithType: ServerTimingHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingHeaderValue
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers
+  commentId: N:Lib.AspNetCore.ServerTiming.Http.Headers
+  name: Lib.AspNetCore.ServerTiming.Http.Headers
+  nameWithType: Lib.AspNetCore.ServerTiming.Http.Headers
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[]
+  isExternal: true
+  name: ServerTimingMetric[]
+  nameWithType: ServerTimingMetric[]
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric[]
+  nameWithType.vb: ServerTimingMetric()
+  fullName.vb: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric()
+  name.vb: ServerTimingMetric()
+  spec.csharp:
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    name: ServerTimingMetric
+    nameWithType: ServerTimingMetric
+    fullName: Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer
+  name: SetServerTimingTrailer
+  nameWithType: HttpResponseHeadersExtensions.SetServerTimingTrailer
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetServerTimingTrailer
+- uid: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin*
+  commentId: Overload:Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin
+  name: SetTimingAllowOrigin
+  nameWithType: HttpResponseHeadersExtensions.SetTimingAllowOrigin
+  fullName: Lib.AspNetCore.ServerTiming.Http.Extensions.HttpResponseHeadersExtensions.SetTimingAllowOrigin
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  name: TimingAllowOriginHeaderValue
+  nameWithType: TimingAllowOriginHeaderValue
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

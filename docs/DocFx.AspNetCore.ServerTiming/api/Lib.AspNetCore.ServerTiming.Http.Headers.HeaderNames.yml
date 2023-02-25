@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+  commentId: T:Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+  id: HeaderNames
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers
+  children:
+  - Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.ServerTiming
+  - Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.TimingAllowOrigin
+  langs:
+  - csharp
+  - vb
+  name: HeaderNames
+  nameWithType: HeaderNames
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+  type: Class
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: HeaderNames
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+    startLine: 5
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nThe names of HTTP headers used by timing APIs.\n"
+  example: []
+  syntax:
+    content: 'public static class HeaderNames : object'
+    content.vb: >-
+      Public Module HeaderNames
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.ServerTiming
+  commentId: F:Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.ServerTiming
+  id: ServerTiming
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+  langs:
+  - csharp
+  - vb
+  name: ServerTiming
+  nameWithType: HeaderNames.ServerTiming
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.ServerTiming
+  type: Field
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: ServerTiming
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+    startLine: 10
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nThe Server-Timing header.\n"
+  example: []
+  syntax:
+    content: public const string ServerTiming = null
+    return:
+      type: System.String
+    content.vb: Public Const ServerTiming As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.TimingAllowOrigin
+  commentId: F:Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.TimingAllowOrigin
+  id: TimingAllowOrigin
+  parent: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames
+  langs:
+  - csharp
+  - vb
+  name: TimingAllowOrigin
+  nameWithType: HeaderNames.TimingAllowOrigin
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers.HeaderNames.TimingAllowOrigin
+  type: Field
+  source:
+    remote:
+      path: Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+      branch: main
+      repo: https://github.com/tpeczek/Lib.AspNetCore.ServerTiming.git
+    id: TimingAllowOrigin
+    path: ../Lib.AspNetCore.ServerTiming/Http/Headers/HeaderNames.cs
+    startLine: 15
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+  namespace: Lib.AspNetCore.ServerTiming.Http.Headers
+  summary: "\nThe Timing-Allow-Origin header.\n"
+  example: []
+  syntax:
+    content: public const string TimingAllowOrigin = null
+    return:
+      type: System.String
+    content.vb: Public Const TimingAllowOrigin As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Lib.AspNetCore.ServerTiming.Http.Headers
+  commentId: N:Lib.AspNetCore.ServerTiming.Http.Headers
+  name: Lib.AspNetCore.ServerTiming.Http.Headers
+  nameWithType: Lib.AspNetCore.ServerTiming.Http.Headers
+  fullName: Lib.AspNetCore.ServerTiming.Http.Headers
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.AspNetCore.ServerTiming", "Lib.AspNetCore.ServerTiming\Lib.AspNetCore.ServerTiming.csproj", "{9984CCBB-FE62-426D-81C0-07F07C043000}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.AspNetCore.ServerTiming", "Test.AspNetCore.ServerTiming\Test.AspNetCore.ServerTiming.csproj", "{B74171BA-39DA-4406-96AB-D5A78DC030F1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.AspNetCore.ServerTiming", "Demo.AspNetCore.ServerTiming\Demo.AspNetCore.ServerTiming.csproj", "{C7A47113-CBA9-486C-8F95-50B2E12D71B3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocFx.AspNetCore.ServerTiming", "DocFx.AspNetCore.ServerTiming\DocFx.AspNetCore.ServerTiming.csproj", "{E7DC599F-40C9-4651-97B9-6B47CD05BA0D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0AE38B1E-B1A7-4CB7-8F17-54AED3982407}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
@@ -18,9 +10,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.AspNetCore.ServerTiming.Abstractions", "Lib.AspNetCore.ServerTiming.Abstractions\Lib.AspNetCore.ServerTiming.Abstractions.csproj", "{B7DECE31-F8E4-4503-BF5B-1A8D5671F4FD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{1E4DD091-DE82-4ABF-B56B-B20D00B2A007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Azure.Functions.Worker.ServerTiming", "Demo.Azure.Functions.Worker.ServerTiming\Demo.Azure.Functions.Worker.ServerTiming.csproj", "{8B267F7C-5AAD-4A2E-BD0C-4DC18BC6C355}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7C82AF44-AD9A-4A40-9661-AFE39DBFB8FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A98ADA68-EA83-4BCB-BC4A-E7547759582D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ED23FFF4-C081-48D6-90C0-4AD406ADE25A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.AspNetCore.ServerTiming", "src\Lib.AspNetCore.ServerTiming\Lib.AspNetCore.ServerTiming.csproj", "{9984CCBB-FE62-426D-81C0-07F07C043000}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.AspNetCore.ServerTiming.Abstractions", "src\Lib.AspNetCore.ServerTiming.Abstractions\Lib.AspNetCore.ServerTiming.Abstractions.csproj", "{B7DECE31-F8E4-4503-BF5B-1A8D5671F4FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.AspNetCore.ServerTiming", "test\Test.AspNetCore.ServerTiming\Test.AspNetCore.ServerTiming.csproj", "{B74171BA-39DA-4406-96AB-D5A78DC030F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.AspNetCore.ServerTiming", "demos\Demo.AspNetCore.ServerTiming\Demo.AspNetCore.ServerTiming.csproj", "{C7A47113-CBA9-486C-8F95-50B2E12D71B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Azure.Functions.Worker.ServerTiming", "demos\Demo.Azure.Functions.Worker.ServerTiming\Demo.Azure.Functions.Worker.ServerTiming.csproj", "{8B267F7C-5AAD-4A2E-BD0C-4DC18BC6C355}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocFx.AspNetCore.ServerTiming", "docs\DocFx.AspNetCore.ServerTiming\DocFx.AspNetCore.ServerTiming.csproj", "{E7DC599F-40C9-4651-97B9-6B47CD05BA0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +63,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9984CCBB-FE62-426D-81C0-07F07C043000} = {A98ADA68-EA83-4BCB-BC4A-E7547759582D}
+		{B74171BA-39DA-4406-96AB-D5A78DC030F1} = {ED23FFF4-C081-48D6-90C0-4AD406ADE25A}
+		{C7A47113-CBA9-486C-8F95-50B2E12D71B3} = {1E4DD091-DE82-4ABF-B56B-B20D00B2A007}
+		{E7DC599F-40C9-4651-97B9-6B47CD05BA0D} = {7C82AF44-AD9A-4A40-9661-AFE39DBFB8FD}
+		{B7DECE31-F8E4-4503-BF5B-1A8D5671F4FD} = {A98ADA68-EA83-4BCB-BC4A-E7547759582D}
+		{8B267F7C-5AAD-4A2E-BD0C-4DC18BC6C355} = {1E4DD091-DE82-4ABF-B56B-B20D00B2A007}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AFF5A25-912B-455D-BB01-96C81CFE82CE}

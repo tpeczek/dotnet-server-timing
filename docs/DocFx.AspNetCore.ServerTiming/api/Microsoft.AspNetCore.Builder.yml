@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  id: Microsoft.AspNetCore.Builder
+  children:
+  - Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  - Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  type: Namespace
+  assemblies:
+  - Lib.AspNetCore.ServerTiming
+references:
+- uid: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  commentId: T:Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+  name: ServerTimingMiddlewareExtensions
+  nameWithType: ServerTimingMiddlewareExtensions
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingMiddlewareExtensions
+- uid: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  commentId: T:Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
+  name: ServerTimingServiceCollectionExtensions
+  nameWithType: ServerTimingServiceCollectionExtensions
+  fullName: Microsoft.AspNetCore.Builder.ServerTimingServiceCollectionExtensions
