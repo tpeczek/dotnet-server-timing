@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Lib.AspNetCore.ServerTiming;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming;
+using Lib.ServerTiming.Http.Headers;
 
 namespace Demo.AspNetCore.ServerTiming
 {

@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
     /// Base class for filters whose behavior depends on the web hosting environment an application is running in.
     /// </summary>
-    public abstract class HostingEnvironmentServerTimingMetricFilter : IServerTimingMetricFilter
+    public abstract class HostingEnvironmentServerTimingMetricFilter : IServerTimingMetricFilter<HttpContext>
     {
         /// <summary>
         /// True if the environment name is development, otherwise false.

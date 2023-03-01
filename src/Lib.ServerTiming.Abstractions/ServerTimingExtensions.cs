@@ -3,14 +3,14 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Http.Headers;
 
-namespace Lib.AspNetCore.ServerTiming 
+namespace Lib.ServerTiming 
 {
     /// <summary>
-    /// Utilities for easier logging of server timing performance metric.
+    /// Extensions for easier logging of server timing performance metric.
     /// </summary>
-    public static class ServerTimingUtility
+    public static class ServerTimingExtensions
     {
         /// <summary>
         /// Time a block of code.
@@ -132,16 +132,6 @@ namespace Lib.AspNetCore.ServerTiming
             ServerTimingMetric metric = new ServerTimingMetric(metricName ?? FormatCallerName(functionName, filePath, lineNumber), description);
 
             serverTiming.Metrics.Add(metric);
-        }
-
-        internal static void SetServerTimingDeliveryMode(this IServerTiming serverTiming, ServerTimingDeliveryMode deliveryMode)
-        {
-            ServerTiming concreteServerTiming = serverTiming as ServerTiming;
-
-            if (concreteServerTiming != null)
-            {
-                concreteServerTiming.DeliveryMode = deliveryMode;
-            }
         }
 
         // Format a metric name from caller params --> "{fileName}.{function}+{lineNumber}

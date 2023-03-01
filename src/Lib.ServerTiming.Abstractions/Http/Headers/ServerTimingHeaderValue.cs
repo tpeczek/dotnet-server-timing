@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lib.AspNetCore.ServerTiming.Http.Headers
+namespace Lib.ServerTiming.Http.Headers
 {
     /// <summary>
     /// Represents value of Server-Timing header.

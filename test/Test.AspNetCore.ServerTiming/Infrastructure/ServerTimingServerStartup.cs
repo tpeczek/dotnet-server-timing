@@ -5,9 +5,10 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Lib.ServerTiming;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming;
-using Lib.AspNetCore.ServerTiming.Filters;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Test.AspNetCore.ServerTiming.Infrastructure
 {
@@ -19,9 +20,9 @@ namespace Test.AspNetCore.ServerTiming.Infrastructure
 
         private const string RESPONSE_BODY = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Test.AspNetCore.ServerTiming</title></head><body>ServerTimingMiddleware Integration Tests</body></html>";
 
-        private readonly List<IServerTimingMetricFilter> _filters;
+        private readonly List<IServerTimingMetricFilter<HttpContext>> _filters;
 
-        public ServerTimingServerStartup(List<IServerTimingMetricFilter> filters)
+        public ServerTimingServerStartup(List<IServerTimingMetricFilter<HttpContext>> filters)
         {
             _filters = filters ?? throw new ArgumentNullException(nameof(filters));
         }

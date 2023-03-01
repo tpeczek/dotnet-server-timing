@@ -2,14 +2,15 @@
 using System.Net.Sockets;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
     /// A filter which will remove all metrics unless the current request IP address falls within the specified range.
     /// </summary>
-    public class IPRangeMetricFilter : IServerTimingMetricFilter
+    public class IPRangeMetricFilter : IServerTimingMetricFilter<HttpContext>
     {
         private readonly AddressFamily _addressFamily;
         private readonly byte[] _lowerInclusiveBytes;

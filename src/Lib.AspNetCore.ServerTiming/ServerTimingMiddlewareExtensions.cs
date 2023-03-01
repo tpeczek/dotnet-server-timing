@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lib.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
 
 namespace Microsoft.AspNetCore.Builder
 {

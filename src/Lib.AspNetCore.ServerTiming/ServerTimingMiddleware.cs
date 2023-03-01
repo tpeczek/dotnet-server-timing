@@ -3,9 +3,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Filters;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Http.Extensions;
+using HeaderNames = Lib.ServerTiming.Http.Headers.HeaderNames;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -17,7 +19,7 @@ namespace Lib.AspNetCore.ServerTiming
         #region Fields
         private readonly RequestDelegate _next;
         private readonly string _timingAllowOriginHeaderValue;
-        private readonly List<IServerTimingMetricFilter> _serverTimingMetricFilters;
+        private readonly List<IServerTimingMetricFilter<HttpContext>> _serverTimingMetricFilters;
         private static Task _completedTask = Task.FromResult<object>(null);
         #endregion
 
@@ -48,7 +50,7 @@ namespace Lib.AspNetCore.ServerTiming
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
             _timingAllowOriginHeaderValue = timingAllowOrigin?.ToString();
-            _serverTimingMetricFilters = new List<IServerTimingMetricFilter>();
+            _serverTimingMetricFilters = new List<IServerTimingMetricFilter<HttpContext>>();
         }
 
         /// <summary>
@@ -60,7 +62,7 @@ namespace Lib.AspNetCore.ServerTiming
         {
             _next = next ?? throw new ArgumentNullException(nameof(next));
             _timingAllowOriginHeaderValue = (options.AllowedOrigins is null) ? null : new TimingAllowOriginHeaderValue(options.AllowedOrigins).ToString();
-            _serverTimingMetricFilters = options.Filters ?? new List<IServerTimingMetricFilter>();
+            _serverTimingMetricFilters = options.Filters ?? new List<IServerTimingMetricFilter<HttpContext>>();
         }
         #endregion
 

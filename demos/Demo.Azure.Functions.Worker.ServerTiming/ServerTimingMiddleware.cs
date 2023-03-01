@@ -14,9 +14,7 @@ namespace Demo.Azure.Functions.Worker.ServerTiming
             await next(context);
 
             // Post-function execution
-            InvocationResult invocationResult = context.GetInvocationResult();
-
-            HttpResponseData? response = invocationResult.Value as HttpResponseData;
+            HttpResponseData? response = context.GetHttpResponseData();
             if (response is not null)
             {
                 IServerTiming serverTiming = context.InstanceServices.GetRequiredService<IServerTiming>();

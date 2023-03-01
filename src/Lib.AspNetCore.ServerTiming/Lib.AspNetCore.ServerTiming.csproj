@@ -5,7 +5,6 @@
     <VersionPrefix>5.1.0</VersionPrefix>
     <Authors>Tomasz Pęczek</Authors>
     <TargetFrameworks>net462;netcoreapp2.1;net6.0;net7.0</TargetFrameworks>
-    <!-- <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0;net6.0;net461</TargetFrameworks> -->
     <AssemblyTitle>Lib.AspNetCore.ServerTiming</AssemblyTitle>
     <AssemblyName>Lib.AspNetCore.ServerTiming</AssemblyName>
     <PackageId>Lib.AspNetCore.ServerTiming</PackageId>
@@ -26,6 +25,13 @@
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Lib.ServerTiming.Abstractions\Lib.ServerTiming.Abstractions.csproj" />
+    <!-- <PackageReference Include="Lib.ServerTiming.Abstractions" Version="1.0.0" /> -->
+  </ItemGroup>
   <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net462')">
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="[2.1.0,3.0.0)" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="[2.1.0,3.0.0)" />
@@ -38,9 +44,5 @@
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="[7.0.0,)" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DotNet.ReproducibleBuilds" Version="0.1.66" PrivateAssets="All" />
-    <PackageReference Include="Lib.AspNetCore.ServerTiming.Abstractions" Version="1.0.0" />
   </ItemGroup>
 </Project>

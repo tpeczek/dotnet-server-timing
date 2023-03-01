@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 
 namespace Lib.AspNetCore.ServerTiming.Filters
 {
     /// <summary>
     /// A function based filter that can inspect and modify the metrics which are to be delivered in a response to current request.
     /// </summary>
-    public class CustomServerTimingMetricFilter : IServerTimingMetricFilter
+    public class CustomServerTimingMetricFilter : IServerTimingMetricFilter<HttpContext>
     {
         private readonly Func<HttpContext, ICollection<ServerTimingMetric>, bool> _filter;
 

@@ -1,10 +1,9 @@
 ﻿using System.Net;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Lib.ServerTiming.Http.Headers;
 using Lib.AspNetCore.ServerTiming.Filters;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
 using Xunit;
-
 
 namespace Test.AspNetCore.ServerTiming.Filters
 {

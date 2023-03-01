@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Http.Headers;
 
-namespace Lib.AspNetCore.ServerTiming
+namespace Lib.ServerTiming
 {
     /// <summary>
     /// Provides support for Server Timing API.

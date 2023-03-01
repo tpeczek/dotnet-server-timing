@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using Lib.AspNetCore.ServerTiming.Filters;
+using Microsoft.AspNetCore.Http;
+using Lib.ServerTiming.Filters;
 
 namespace Lib.AspNetCore.ServerTiming
 {
@@ -16,6 +17,6 @@ namespace Lib.AspNetCore.ServerTiming
         /// <summary>
         /// The collection of filters that are executed before Server-Timing header is sent.
         /// </summary>
-        public List<IServerTimingMetricFilter> Filters { get; set; } = new List<IServerTimingMetricFilter>();
+        public List<IServerTimingMetricFilter<HttpContext>> Filters { get; set; } = new List<IServerTimingMetricFilter<HttpContext>>();
     }
 }

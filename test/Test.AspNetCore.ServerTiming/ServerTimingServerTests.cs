@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Lib.AspNetCore.ServerTiming.Filters;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Filters;
+using Lib.ServerTiming.Http.Headers;
 using Moq;
 using Xunit;
 using Test.AspNetCore.ServerTiming.Infrastructure;
@@ -21,19 +21,19 @@ namespace Test.AspNetCore.ServerTiming
         #endregion
 
         #region Prepare SUT
-        private TestServer PrepareTestServer(List<IServerTimingMetricFilter> filters = null)
+        private static TestServer PrepareTestServer(List<IServerTimingMetricFilter<HttpContext>> filters = null)
         {
             IWebHostBuilder webHostBuilder = new WebHostBuilder().ConfigureServices(services =>
             {
-                services.AddSingleton<IStartup>(new ServerTimingServerStartup(filters ?? new List<IServerTimingMetricFilter>()));
+                services.AddSingleton<IStartup>(new ServerTimingServerStartup(filters ?? new List<IServerTimingMetricFilter<HttpContext>>()));
             });
 
             return new TestServer(webHostBuilder);
         }
 
-        private Mock<IServerTimingMetricFilter> PrepareServerTimingMetricFilterMock(bool onServerTimingHeaderPreparationResult = true)
+        private static Mock<IServerTimingMetricFilter<HttpContext>> PrepareServerTimingMetricFilterMock(bool onServerTimingHeaderPreparationResult = true)
         {
-            Mock<IServerTimingMetricFilter> serverTimingMetricFilterMock = new Mock<IServerTimingMetricFilter>();
+            Mock<IServerTimingMetricFilter<HttpContext>> serverTimingMetricFilterMock = new Mock<IServerTimingMetricFilter<HttpContext>>();
 
             serverTimingMetricFilterMock.Setup(m => m.OnServerTimingHeaderPreparation(It.IsAny<HttpContext>(), It.IsAny<ICollection<ServerTimingMetric>>())).Returns(onServerTimingHeaderPreparationResult);
 
@@ -94,10 +94,10 @@ namespace Test.AspNetCore.ServerTiming
         [Fact]
         public async Task Request_TwoFiltersRegistered_FiltersNotShortCircuiting_AllFiltersRun()
         {
-            Mock<IServerTimingMetricFilter> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
-            Mock<IServerTimingMetricFilter> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+            Mock<IServerTimingMetricFilter<HttpContext>> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+            Mock<IServerTimingMetricFilter<HttpContext>> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
 
-            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter>
+            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter<HttpContext>>
             {
                 firstServerTimingMetricFilter.Object,
                 secondServerTimingMetricFilter.Object
@@ -116,10 +116,10 @@ namespace Test.AspNetCore.ServerTiming
         [Fact]
         public async Task Request_TwoFiltersRegistered_FirstFilterShortCircuiting_OnlyFirstFiltersRun()
         {
-            Mock<IServerTimingMetricFilter> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock(false);
-            Mock<IServerTimingMetricFilter> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
+            Mock<IServerTimingMetricFilter<HttpContext>> firstServerTimingMetricFilter = PrepareServerTimingMetricFilterMock(false);
+            Mock<IServerTimingMetricFilter<HttpContext>> secondServerTimingMetricFilter = PrepareServerTimingMetricFilterMock();
 
-            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter>
+            using (TestServer server = PrepareTestServer(new List<IServerTimingMetricFilter<HttpContext>>
             {
                 firstServerTimingMetricFilter.Object,
                 secondServerTimingMetricFilter.Object

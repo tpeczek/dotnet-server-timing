@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Lib.ServerTiming;
 using Lib.AspNetCore.ServerTiming;
 
 namespace Microsoft.AspNetCore.Builder

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
-using Lib.AspNetCore.ServerTiming.Http.Headers;
+using Lib.ServerTiming.Http.Headers;
+using HeaderNames = Lib.ServerTiming.Http.Headers.HeaderNames;
 
 namespace Lib.AspNetCore.ServerTiming.Http.Extensions
 {
