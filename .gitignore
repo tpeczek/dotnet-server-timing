@@ -30,9 +30,9 @@ bld/
 #wwwroot/
 
 # DocFX generated stuff
-DocFx.AspNetCore.ServerTiming/log.txt
-DocFx.AspNetCore.ServerTiming/api/
-DocFx.AspNetCore.ServerTiming/wwwroot/
+docs/DocFx.AspNetCore.ServerTiming/log.txt
+docs/DocFx.AspNetCore.ServerTiming/api/
+docs/DocFx.AspNetCore.ServerTiming/wwwroot/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

@@ -1,6 +1,8 @@
 using System.Net;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
+using Lib.ServerTiming;
+using Lib.ServerTiming.Http.Headers;
 
 namespace Demo.Azure.Functions.Worker.ServerTiming
 {
