@@ -4,8 +4,9 @@
       "src": [
         {
           "files": [
-            "src/Lib.AspNetCore.ServerTiming.Abstractions/Lib.AspNetCore.ServerTiming.Abstractions.csproj",
-            "src/Lib.AspNetCore.ServerTiming/Lib.AspNetCore.ServerTiming.csproj"
+            "src/Lib.ServerTiming.Abstractions/Lib.ServerTiming.Abstractions.csproj",
+            "src/Lib.AspNetCore.ServerTiming/Lib.AspNetCore.ServerTiming.csproj",
+            "src/Lib.Azure.Functions.Worker.ServerTiming/Lib.Azure.Functions.Worker.ServerTiming.csproj"
           ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
           "src": "../.."

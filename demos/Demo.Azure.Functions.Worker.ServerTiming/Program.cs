@@ -1,11 +1,14 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Lib.Azure.Functions.Worker.ServerTiming;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWorkerDefaults(workerApplication =>
     {
-        workerApplication.UseMiddleware<ServerTimingMiddleware>();
+        //workerApplication.UseServerTiming(new()
+        //{
+        //    AllowedOrigins = new List<string> { "https://tpeczek.com", "https://developer.tpeczek.com" }
+        //});
+        workerApplication.UseServerTiming();
     })
     .ConfigureServices(s =>
     {

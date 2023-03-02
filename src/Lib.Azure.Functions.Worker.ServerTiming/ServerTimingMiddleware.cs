@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Azure.Functions.Worker.Middleware;
@@ -13,6 +14,25 @@ namespace Lib.Azure.Functions.Worker.ServerTiming
     /// </summary>
     public class ServerTimingMiddleware : IFunctionsWorkerMiddleware
     {
+        private readonly string? _timingAllowOriginHeaderValue = null;
+
+        /// <summary>
+        /// Instantiates a new <see cref="ServerTimingMiddleware"/>.
+        /// </summary>
+        /// <param name="options">Server timing configuration options</param>        
+        public ServerTimingMiddleware(ServerTimingOptions options)
+        {
+            if (options is null)
+            {
+                throw new ArgumentNullException(nameof(options));
+            }
+
+            if ((options.AllowedOrigins is not null) && (options.AllowedOrigins.Count > 0))
+            {
+                _timingAllowOriginHeaderValue = new TimingAllowOriginHeaderValue(options.AllowedOrigins).ToString();
+            }
+        }
+
         /// <summary>
         /// Process an individual invocation.
         /// </summary>
@@ -26,6 +46,11 @@ namespace Lib.Azure.Functions.Worker.ServerTiming
             HttpResponseData? response = context.GetHttpResponseData();
             if (response is not null)
             {
+                if (_timingAllowOriginHeaderValue is not null)
+                {
+                    response.Headers.Add(HeaderNames.TimingAllowOrigin, _timingAllowOriginHeaderValue);
+                }
+
                 IServerTiming serverTiming = context.InstanceServices.GetRequiredService<IServerTiming>();
                 response.Headers.Add(HeaderNames.ServerTiming, new ServerTimingHeaderValue(serverTiming.Metrics).ToString());
             }
