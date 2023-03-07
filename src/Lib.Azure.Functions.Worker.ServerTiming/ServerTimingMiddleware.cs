@@ -52,7 +52,11 @@ namespace Lib.Azure.Functions.Worker.ServerTiming
                 }
 
                 IServerTiming serverTiming = context.InstanceServices.GetRequiredService<IServerTiming>();
-                response.Headers.Add(HeaderNames.ServerTiming, new ServerTimingHeaderValue(serverTiming.Metrics).ToString());
+
+                if (serverTiming.Metrics.Count > 0)
+                {
+                    response.Headers.Add(HeaderNames.ServerTiming, new ServerTimingHeaderValue(serverTiming.Metrics).ToString());
+                }
             }
         }
     }

@@ -27,7 +27,7 @@ namespace Demo.Azure.Functions.Worker.ServerTiming
             _serverTiming.Metrics.Add(new ServerTimingMetric("fs", 600, "FileSystem"));
             _serverTiming.Metrics.Add(new ServerTimingMetric("cpu", 1230, "Total CPU"));
 
-            response.WriteString("-- Demo.Azure.Functions.Worker.ServerTiming --");
+            response.WriteString("-- Demo.Azure.Functions.Worker.ServerTiming (Basic) --");
 
             return response;
         }
