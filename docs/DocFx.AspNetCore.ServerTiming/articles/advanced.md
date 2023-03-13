@@ -4,72 +4,41 @@ This section covers following subjects:
 
 - [Timing Blocks of Code](#timing-blocks-of-code)
 - [Timing Tasks](#timing-tasks)
-- [Metric Filters](#metric-filters)
+- [Metric Filters (ASP.NET Core Only)](#metric-filters-aspnet-core-only)
 
 ## Timing Blocks of Code
 
-[`ServerTimingUtility`](../api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html) provides `TimeAction` method which allows for timing block of code. Calling the method starts a timer which will be stopped upon disposing the returned value.
+[`ServerTimingExtensions`](../api/Lib.ServerTiming.ServerTimingExtensions.html) provide `TimeAction` method which allows for timing block of code. Calling the method starts a timer which will be stopped upon disposing the returned value.
 
 ```cs
-[Route("api/[controller]")]
-[ApiController]
-public class WeatherForecastsController : Controller
+...
+
+IDisposable serverTimerInstance = _serverTiming.TimeAction();
+
+for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
 {
-    private readonly IServerTiming _serverTiming;
+    weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
+};
 
-    public WeatherForecastsController(IServerTiming serverTiming)
-    {
-        _serverTiming = serverTiming;
-    }
+serverTimerInstance.Dispose();
 
-    [HttpGet]
-    public async Task<IEnumerable<WeatherForecast>> Get()
-    {
-        List<WeatherForecast> weatherForecasts = new();
-
-        IDisposable serverTimerInstance = _serverTiming.TimeAction();
-
-        for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
-        {
-            weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-        };
-
-        serverTimerInstance.Dispose();
-
-        return weatherForecasts;
-    }
-
-    ...
-}
+...
 ```
 
 This also allows for wrapping code block in `using` statement.
 
 ```cs
-[Route("api/[controller]")]
-[ApiController]
-public class WeatherForecastsController : Controller
+...
+
+using (_serverTiming.TimeAction())
 {
-    ...
-
-    [HttpGet]
-    public async Task<IEnumerable<WeatherForecast>> Get()
+    for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
     {
-        List<WeatherForecast> weatherForecasts = new();
-
-        using (_serverTiming.TimeAction())
-        {
-            for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
-            {
-                weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-            };
-        }
-
-        return weatherForecasts;
-    }
-
-    ...
+        weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
+    };
 }
+
+...
 ```
 
 Above snippets doesn't provide name for the metric as it is an optional parameter. If not provided, the method will generate a metric name based on caller attributes.
@@ -79,33 +48,20 @@ Above snippets doesn't provide name for the metric as it is an optional paramete
 It's possible to nest timed code blocks, in such case it's strongly advised to provide names for metrics.
 
 ```cs
-[Route("api/[controller]")]
-[ApiController]
-public class WeatherForecastsController : Controller
+...
+
+using (_serverTiming.TimeAction("getting-weather-forecasts"))
 {
-    ...
-
-    [HttpGet]
-    public async Task<IEnumerable<WeatherForecast>> Get()
+    for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
     {
-        List<WeatherForecast> weatherForecasts = new();
-
-        using (_serverTiming.TimeAction("getting-weather-forecasts"))
+        using (_serverTiming.TimeAction($"getting-weather-forecast-{daysFromToday}"))
         {
-            for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
-            {
-                using (_serverTiming.TimeAction($"getting-weather-forecast-{daysFromToday}"))
-                {
-                    weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-                }
-            };
+            weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
         }
-
-        return weatherForecasts;
-    }
-
-    ...
+    };
 }
+
+...
 ```
 
 Unfortunatelly, the Server Timing API doesn't have a concept of nested metrics and there is no convention for nested rendering in browsers.
@@ -114,40 +70,27 @@ Unfortunatelly, the Server Timing API doesn't have a concept of nested metrics a
 
 ## Timing Tasks
 
-[`ServerTimingUtility`](../api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html) also provides `TimeTask` method which allows for timing a `Task`.
+[`ServerTimingExtensions`](../api/Lib.ServerTiming.ServerTimingExtensions.html) also provides `TimeTask` method which allows for timing a `Task`.
 
 ```cs
-[Route("api/[controller]")]
-[ApiController]
-public class WeatherForecastsController : Controller
+...
+
+using (_serverTiming.TimeAction("getting-weather-forecasts"))
 {
-    ...
-
-    [HttpGet]
-    public async Task<IEnumerable<WeatherForecast>> Get()
+    for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
     {
-        List<WeatherForecast> weatherForecasts = new();
-
-        using (_serverTiming.TimeAction("getting-weather-forecasts"))
-        {
-            for (int daysFromToday = 1; daysFromToday <= 10; daysFromToday++)
-            {
-                weatherForecasts.Add(await _serverTiming.TimeTask(GetWeatherForecastAsync(daysFromToday), $"getting-weather-forecast-{daysFromToday}"));
-            };
-        }
-
-        return weatherForecasts;
-    }
-
-    ...
+        weatherForecasts.Add(await _serverTiming.TimeTask(GetWeatherForecastAsync(daysFromToday), $"getting-weather-forecast-{daysFromToday}"));
+    };
 }
+
+...
 ```
 
 The result of the above snippet is exactly the same as the previous one.
 
-## Metric Filters
+## Metric Filters (ASP.NET Core Only)
 
-Filters provide a way to inspect and modify the metrics which are to be delivered in a response to current request. They run on the collected metrics just before they are set as the response header value. This provides flexibility around exposing metrics only in certain scenarios or to certain clients.
+Filters, available for ASP.NET Core implementation, provide a way to inspect and modify the metrics which are to be delivered in a response to current request. They run on the collected metrics just before they are set as the response header value. This provides flexibility around exposing metrics only in certain scenarios or to certain clients.
 
 Filters can be added when registering the middleware by interacting with the `Filters` collection available on [`ServerTimingOptions`](../api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html).
 

@@ -1,4 +1,4 @@
-﻿# Getting Started
+﻿# Getting Started (ASP.NET Core)
 
 ## Configuration
 
@@ -51,7 +51,7 @@ public class Startup
 
 ## Adding Metrics
 
-In order to add timing metrics values for current request the instance of the [`IServerTiming`](../api/Lib.AspNetCore.ServerTiming.IServerTiming.html) service should be obtained (it's a scoped service). Once that is done, the values can simply be added to metrics collection.
+In order to add timing metrics values for current request the instance of the [`IServerTiming`](../api/Lib.ServerTiming.IServerTiming.html) service should be obtained (it's a scoped service). Once that is done, the values can simply be added to metrics collection.
 
 ```cs
 serverTiming.Metrics.Add(new ServerTimingMetric("cache", 300, "Cache"));

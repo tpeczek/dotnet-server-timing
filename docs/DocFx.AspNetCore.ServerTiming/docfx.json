@@ -25,7 +25,8 @@
           "api/*.yml",
           "toc.md",
           "index.md",
-          "articles/getting-started.md",
+          "articles/getting-started-aspnetcore.md",
+          "articles/getting-started-azurefunctions.md",
           "articles/advanced.md"
         ]
       }
