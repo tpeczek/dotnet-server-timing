@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Lib.Azure.Functions.Worker.ServerTiming is a library which provides Server Timing API support for isolated worker process Azure Functions.</Description>
+    <Copyright>Copyright © 2023 Tomasz Pęczek</Copyright>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>Tomasz Pęczek</Authors>
+    <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+    <AssemblyTitle>Lib.Azure.Functions.Worker.ServerTiming</AssemblyTitle>
+    <AssemblyName>Lib.Azure.Functions.Worker.ServerTiming</AssemblyName>
+    <PackageId>Lib.Azure.Functions.Worker.ServerTiming</PackageId>
+    <PackageTags>azure;functions;worker;servertiming;performance</PackageTags>
+    <PackageProjectUrl>https://github.com/tpeczek/Lib.AspNetCore.ServerTiming</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/tpeczek/Lib.AspNetCore.ServerTiming</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>true</GenerateAssemblyCopyrightAttribute>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Lib.ServerTiming.Abstractions\Lib.ServerTiming.Abstractions.csproj" />
+    <!-- <PackageReference Include="Lib.ServerTiming.Abstractions" Version="1.0.0" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="[1.8.0,)" />
+  </ItemGroup>
+</Project>
