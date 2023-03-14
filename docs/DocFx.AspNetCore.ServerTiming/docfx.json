@@ -44,7 +44,7 @@
     ],
     "dest": "wwwroot",
     "globalMetadata": {
-      "_appTitle": "Lib.AspNetCore.ServerTiming",
+      "_appTitle": "Server Timing API support for .NET",
       "_appFooter": "Copyright © 2017 - 2023 Tomasz Pęczek",
       "_appLogoPath": "resources/svg/logo.svg",
       "_appFaviconPath": "resources/ico/favicon.ico",

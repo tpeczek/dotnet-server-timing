@@ -9,11 +9,11 @@
     <AssemblyName>Lib.ServerTiming.Abstractions</AssemblyName>
     <PackageId>Lib.ServerTiming.Abstractions</PackageId>
     <PackageTags>servertiming;performance</PackageTags>
-    <PackageProjectUrl>https://github.com/tpeczek/Lib.AspNetCore.ServerTiming</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/tpeczek/dotnet-server-timing</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/tpeczek/Lib.AspNetCore.ServerTiming</RepositoryUrl>
+    <RepositoryUrl>git://github.com/tpeczek/dotnet-server-timing</RepositoryUrl>
     <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
