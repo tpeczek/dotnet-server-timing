@@ -1,3 +1,7 @@
+## Lib.Azure.Functions.Worker.ServerTiming 1.0.0
+### Additions and Changes
+- Initial release
+
 ## Lib.AspNetCore.ServerTiming 6.0.0
 ### Additions and Changes
 - Adjusted TFMs to current .NET support policy.
