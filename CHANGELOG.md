@@ -1,3 +1,8 @@
+## Lib.AspNetCore.ServerTiming 6.0.0
+### Additions and Changes
+- Adjusted TFMs to current .NET support policy.
+- Moved abstractions to [Lib.ServerTiming.Abstractions](https://www.nuget.org/packages/Lib.ServerTiming.Abstractions/) package
+
 ## Lib.AspNetCore.ServerTiming 5.1.0
 ### Additions and Changes
 - Removed upper bounds on dependencies for .NET 6 TFM so it can be used with .NET 7 without resolution issues.

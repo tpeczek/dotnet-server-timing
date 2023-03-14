@@ -2,18 +2,18 @@
   <PropertyGroup>
     <Description>Lib.AspNetCore.ServerTiming is a library which provides Server Timing API support for ASP.NET Core.</Description>
     <Copyright>Copyright © 2017 - 2023 Tomasz Pęczek</Copyright>
-    <VersionPrefix>5.1.0</VersionPrefix>
+    <VersionPrefix>6.0.0</VersionPrefix>
     <Authors>Tomasz Pęczek</Authors>
     <TargetFrameworks>net462;netcoreapp2.1;net6.0;net7.0</TargetFrameworks>
     <AssemblyTitle>Lib.AspNetCore.ServerTiming</AssemblyTitle>
     <AssemblyName>Lib.AspNetCore.ServerTiming</AssemblyName>
     <PackageId>Lib.AspNetCore.ServerTiming</PackageId>
     <PackageTags>aspnetcore;servertiming;performance</PackageTags>
-    <PackageProjectUrl>https://github.com/tpeczek/Lib.AspNetCore.ServerTiming</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/tpeczek/dotnet-server-timing</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/tpeczek/Lib.AspNetCore.ServerTiming</RepositoryUrl>
+    <RepositoryUrl>git://github.com/tpeczek/dotnet-server-timing</RepositoryUrl>
     <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyProductAttribute>true</GenerateAssemblyProductAttribute>
@@ -29,8 +29,8 @@
     <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Lib.ServerTiming.Abstractions\Lib.ServerTiming.Abstractions.csproj" />
-    <!-- <PackageReference Include="Lib.ServerTiming.Abstractions" Version="1.0.0" /> -->
+    <!-- <ProjectReference Include="..\..\src\Lib.ServerTiming.Abstractions\Lib.ServerTiming.Abstractions.csproj" /> -->
+    <PackageReference Include="Lib.ServerTiming.Abstractions" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup Condition="('$(TargetFramework)' == 'netcoreapp2.1') Or ('$(TargetFramework)' == 'net462')">
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="[2.1.0,3.0.0)" />

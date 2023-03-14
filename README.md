@@ -5,7 +5,7 @@
 [![NuGet Version](https://img.shields.io/nuget/v/Lib.Azure.Functions.Worker.ServerTiming?label=Lib.Azure.Functions.Worker.ServerTiming&logo=nuget)](https://www.nuget.org/packages/Lib.Azure.Functions.Worker.ServerTiming)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Lib.Azure.Functions.Worker.ServerTiming?label=⭳)](https://www.nuget.org/packages/Lib.Azure.Functions.Worker.ServerTiming)
 
-Server Timing API provides a convenient way to communicate performance metrics about the request-response cycle to the user agent (which conveniently includes developer tools in the browser). Here you can find a set of libraries which  simplify the onboarding of Server Timing API in .NET solutions:
+Server Timing API provides a convenient way to communicate performance metrics about the request-response cycle to the user agent (which conveniently includes developer tools in the browser). Here you can find a set of libraries that simplify the onboarding of Server Timing API in .NET projects:
 - Lib.AspNetCore.ServerTiming for ASP.NET Core
 - Lib.Azure.Functions.Worker.ServerTiming for isolated worker process Azure Functions
 
