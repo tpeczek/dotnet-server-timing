@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Lib.AspNetCore.ServerTiming | Lib.AspNetCore.ServerTiming </title>
+    <title>Server Timing API support for .NET | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Lib.AspNetCore.ServerTiming | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="title" content="Server Timing API support for .NET | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="resources/ico/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -52,17 +52,32 @@
         <div class="article row grid">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="libaspnetcoreservertiming">Lib.AspNetCore.ServerTiming</h1>
+<h1 id="server-timing-api-support-for-net">Server Timing API support for .NET</h1>
 
 <p><a href="https://www.nuget.org/packages/Lib.AspNetCore.ServerTiming"><img src="https://img.shields.io/nuget/v/Lib.AspNetCore.ServerTiming?label=Lib.AspNetCore.ServerTiming&amp;logo=nuget" alt="NuGet Version"></a>
 <a href="https://www.nuget.org/packages/Lib.AspNetCore.ServerTiming"><img src="https://img.shields.io/nuget/dt/Lib.AspNetCore.ServerTiming?label=⭳" alt="NuGet Downloads"></a></p>
-<p>Lib.AspNetCore.ServerTiming is a library which provides Server Timing API support for ASP.NET Core.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>You can install <a href="https://www.nuget.org/packages/Lib.AspNetCore.ServerTiming/">Lib.AspNetCore.ServerTiming</a> from NuGet.</p>
+<p><a href="https://www.nuget.org/packages/Lib.Azure.Functions.Worker.ServerTiming"><img src="https://img.shields.io/nuget/v/Lib.Azure.Functions.Worker.ServerTiming?label=Lib.Azure.Functions.Worker.ServerTiming&amp;logo=nuget" alt="NuGet Version"></a>
+<a href="https://www.nuget.org/packages/Lib.Azure.Functions.Worker.ServerTiming"><img src="https://img.shields.io/nuget/dt/Lib.Azure.Functions.Worker.ServerTiming?label=⭳" alt="NuGet Downloads"></a></p>
+<p>Server Timing API provides a convenient way to communicate performance metrics about the request-response cycle to the user agent (which conveniently includes developer tools in the browser). Here you can find a set of libraries that simplify the onboarding of Server Timing API in .NET projects:</p>
+<ul>
+<li>Lib.AspNetCore.ServerTiming for ASP.NET Core</li>
+<li>Lib.Azure.Functions.Worker.ServerTiming for isolated worker process Azure Functions</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>All libraries are available as NuGet packages.</p>
 <pre><code>PM&gt;  Install-Package Lib.AspNetCore.ServerTiming
-</code></pre><p>The configuration and basic usage patterns are described <a href="articles/getting-started.html">here</a>.</p>
+</code></pre><pre><code>PM&gt;  Install-Package Lib.Azure.Functions.Worker.ServerTiming
+</code></pre><p>Once you install the correct library for your scenario, please refer to &quot;Getting Started&quot; article which will get you further:</p>
+<ul>
+<li><a href="articles/getting-started-aspnetcore.html">Getting Started (ASP.NET Core)</a></li>
+<li><a href="articles/getting-started-azurefunctions.html">Getting Started (Isolated Worker Process Azure Functions)</a></li>
+</ul>
 <h2 id="demos">Demos</h2>
-<p>The demo project is available on <a href="https://github.com/tpeczek/Lib.AspNetCore.ServerTiming/tree/main/Demo.AspNetCore.ServerTiming">GitHub</a>.</p>
+<p>The project repository contains demos for the libraries:</p>
+<ul>
+<li><a href="https://github.com/tpeczek/Lib.AspNetCore.ServerTiming/tree/main/demos/Demo.AspNetCore.ServerTiming">ASP.NET Core</a></li>
+<li><a href="https://github.com/tpeczek/Lib.AspNetCore.ServerTiming/tree/main/demos/Demo.Azure.Functions.Worker.ServerTiming">Isolated Worker Process Azure Functions</a></li>
+</ul>
 <h2 id="additional-resources">Additional Resources</h2>
 <p>There are some blog posts available which describe implementation details:</p>
 <ul>
@@ -84,7 +99,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

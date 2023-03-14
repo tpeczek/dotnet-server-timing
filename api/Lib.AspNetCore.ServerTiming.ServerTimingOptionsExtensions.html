@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Class ServerTimingOptionsExtensions
-   | Lib.AspNetCore.ServerTiming </title>
+   | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServerTimingOptionsExtensions
-   | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+   | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -65,7 +65,7 @@
   
   <h1 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions" class="text-break">Class ServerTimingOptionsExtensions
   </h1>
-  <div class="markdown level0 summary"><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a> extensions for registering <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a>s.</p>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a> extensions for registering <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a>s.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -106,8 +106,8 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_AddCustomMetricFilter_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_AddCustomMetricFilter_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Func_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__System_Boolean__" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})">AddCustomMetricFilter(ServerTimingOptions, Func&lt;HttpContext, ICollection&lt;ServerTimingMetric&gt;, Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a>.</p>
+  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_AddCustomMetricFilter_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Func_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_ServerTiming_Http_Headers_ServerTimingMetric__System_Boolean__" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.AddCustomMetricFilter(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Func{Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.ServerTiming.Http.Headers.ServerTimingMetric},System.Boolean})">AddCustomMetricFilter(ServerTimingOptions, Func&lt;HttpContext, ICollection&lt;ServerTimingMetric&gt;, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a custom <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -131,7 +131,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>, <span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>, <span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">filter</span></td>
         <td><p>The function used for inspecting and modifying the collection of metrics.</p>
 </td>
@@ -140,7 +140,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictDescriptionsToDevelopment_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictDescriptionsToDevelopment_Lib_AspNetCore_ServerTiming_ServerTimingOptions_Microsoft_Extensions_Hosting_IHostEnvironment_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictDescriptionsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)">RestrictDescriptionsToDevelopment(ServerTimingOptions, IHostEnvironment)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove the descriptions from all metrics unless an application is running in development environment.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove the descriptions from all metrics unless an application is running in development environment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -173,7 +173,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToDevelopment_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToDevelopment_Lib_AspNetCore_ServerTiming_ServerTimingOptions_Microsoft_Extensions_Hosting_IHostEnvironment_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToDevelopment(Lib.AspNetCore.ServerTiming.ServerTimingOptions,Microsoft.Extensions.Hosting.IHostEnvironment)">RestrictMetricsToDevelopment(ServerTimingOptions, IHostEnvironment)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove all metrics unless an application is running in development environment.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove all metrics unless an application is running in development environment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -206,7 +206,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Net_IPAddress_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress)">RestrictMetricsToIp(ServerTimingOptions, IPAddress)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove all metrics unless request comes from specific IP address.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove all metrics unless request comes from specific IP address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -239,7 +239,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIp_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_String_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIp(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String)">RestrictMetricsToIp(ServerTimingOptions, String)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove all metrics unless request comes from specific IP address.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove all metrics unless request comes from specific IP address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -272,7 +272,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_Net_IPAddress_System_Net_IPAddress_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.Net.IPAddress,System.Net.IPAddress)">RestrictMetricsToIpRange(ServerTimingOptions, IPAddress, IPAddress)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove all metrics unless request comes from IP address which falls within the specified range.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove all metrics unless request comes from IP address which falls within the specified range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -311,7 +311,7 @@
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingOptionsExtensions_RestrictMetricsToIpRange_Lib_AspNetCore_ServerTiming_ServerTimingOptions_System_String_System_String_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingOptionsExtensions.RestrictMetricsToIpRange(Lib.AspNetCore.ServerTiming.ServerTimingOptions,System.String,System.String)">RestrictMetricsToIpRange(ServerTimingOptions, String, String)</h4>
-  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a> which will remove all metrics unless request comes from IP address which falls within the specified range.</p>
+  <div class="markdown level1 summary"><p>Adds <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a> which will remove all metrics unless request comes from IP address which falls within the specified range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -360,7 +360,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

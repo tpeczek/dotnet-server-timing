@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Class ServerTimingMiddleware
-   | Lib.AspNetCore.ServerTiming </title>
+   | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServerTimingMiddleware
-   | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+   | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -133,39 +133,6 @@
     </tbody>
   </table>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Lib_AspNetCore_ServerTiming_Http_Headers_TimingAllowOriginHeaderValue_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)">ServerTimingMiddleware(RequestDelegate, TimingAllowOriginHeaderValue)</h4>
-  <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServerTimingMiddleware(RequestDelegate next, TimingAllowOriginHeaderValue timingAllowOrigin)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span></td>
-        <td><span class="parametername">next</span></td>
-        <td><p>The next middleware in the pipeline.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.html">TimingAllowOriginHeaderValue</a></td>
-        <td><span class="parametername">timingAllowOrigin</span></td>
-        <td><p>The Timing-Allow-Origin header value.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*"></a>
   <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Lib_AspNetCore_ServerTiming_ServerTimingOptions_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.AspNetCore.ServerTiming.ServerTimingOptions)">ServerTimingMiddleware(RequestDelegate, ServerTimingOptions)</h4>
   <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a>.</p>
 </div>
@@ -194,6 +161,39 @@
         <td><a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>Server timing configuration options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor*"></a>
+  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Lib_ServerTiming_Http_Headers_TimingAllowOriginHeaderValue_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lib.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue)">ServerTimingMiddleware(RequestDelegate, TimingAllowOriginHeaderValue)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerTimingMiddleware(RequestDelegate next, TimingAllowOriginHeaderValue timingAllowOrigin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next middleware in the pipeline.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Lib.ServerTiming.Http.Headers.TimingAllowOriginHeaderValue.html">TimingAllowOriginHeaderValue</a></td>
+        <td><span class="parametername">timingAllowOrigin</span></td>
+        <td><p>The Timing-Allow-Origin header value.</p>
 </td>
       </tr>
     </tbody>
@@ -234,7 +234,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware_Invoke_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_Lib_AspNetCore_ServerTiming_IServerTiming_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,Lib.AspNetCore.ServerTiming.IServerTiming)">Invoke(HttpContext, IServerTiming)</h4>
+  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_Lib_ServerTiming_IServerTiming_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,Lib.ServerTiming.IServerTiming)">Invoke(HttpContext, IServerTiming)</h4>
   <div class="markdown level1 summary"><p>Process an individual request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -259,9 +259,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The instance of <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> for current requet.</p>
+        <td><p>The instance of <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> for current requet.</p>
 </td>
       </tr>
     </tbody>
@@ -294,7 +294,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

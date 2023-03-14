@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Advanced | Lib.AspNetCore.ServerTiming </title>
+    <title>Advanced | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Advanced | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="title" content="Advanced | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -58,128 +58,71 @@
 <ul>
 <li><a href="#timing-blocks-of-code">Timing Blocks of Code</a></li>
 <li><a href="#timing-tasks">Timing Tasks</a></li>
-<li><a href="#metric-filters">Metric Filters</a></li>
+<li><a href="#metric-filters-aspnet-core-only">Metric Filters (ASP.NET Core Only)</a></li>
 </ul>
 <h2 id="timing-blocks-of-code">Timing Blocks of Code</h2>
-<p><a href="../api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html"><code>ServerTimingUtility</code></a> provides <code>TimeAction</code> method which allows for timing block of code. Calling the method starts a timer which will be stopped upon disposing the returned value.</p>
-<pre><code class="lang-cs">[Route(&quot;api/[controller]&quot;)]
-[ApiController]
-public class WeatherForecastsController : Controller
+<p><a href="../api/Lib.ServerTiming.ServerTimingExtensions.html"><code>ServerTimingExtensions</code></a> provide <code>TimeAction</code> method which allows for timing block of code. Calling the method starts a timer which will be stopped upon disposing the returned value.</p>
+<pre><code class="lang-cs">...
+
+IDisposable serverTimerInstance = _serverTiming.TimeAction();
+
+for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
 {
-    private readonly IServerTiming _serverTiming;
+    weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
+};
 
-    public WeatherForecastsController(IServerTiming serverTiming)
-    {
-        _serverTiming = serverTiming;
-    }
+serverTimerInstance.Dispose();
 
-    [HttpGet]
-    public async Task&lt;IEnumerable&lt;WeatherForecast&gt;&gt; Get()
-    {
-        List&lt;WeatherForecast&gt; weatherForecasts = new();
-
-        IDisposable serverTimerInstance = _serverTiming.TimeAction();
-
-        for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
-        {
-            weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-        };
-
-        serverTimerInstance.Dispose();
-
-        return weatherForecasts;
-    }
-
-    ...
-}
+...
 </code></pre><p>This also allows for wrapping code block in <code>using</code> statement.</p>
-<pre><code class="lang-cs">[Route(&quot;api/[controller]&quot;)]
-[ApiController]
-public class WeatherForecastsController : Controller
+<pre><code class="lang-cs">...
+
+using (_serverTiming.TimeAction())
 {
-    ...
-
-    [HttpGet]
-    public async Task&lt;IEnumerable&lt;WeatherForecast&gt;&gt; Get()
+    for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
     {
-        List&lt;WeatherForecast&gt; weatherForecasts = new();
-
-        using (_serverTiming.TimeAction())
-        {
-            for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
-            {
-                weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-            };
-        }
-
-        return weatherForecasts;
-    }
-
-    ...
+        weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
+    };
 }
+
+...
 </code></pre><p>Above snippets doesn&#39;t provide name for the metric as it is an optional parameter. If not provided, the method will generate a metric name based on caller attributes.</p>
 <center><img src="../resources/timing-blocks-of-code.png" alt="Timing Blocks of Code"></center>
 
 <p>It&#39;s possible to nest timed code blocks, in such case it&#39;s strongly advised to provide names for metrics.</p>
-<pre><code class="lang-cs">[Route(&quot;api/[controller]&quot;)]
-[ApiController]
-public class WeatherForecastsController : Controller
+<pre><code class="lang-cs">...
+
+using (_serverTiming.TimeAction(&quot;getting-weather-forecasts&quot;))
 {
-    ...
-
-    [HttpGet]
-    public async Task&lt;IEnumerable&lt;WeatherForecast&gt;&gt; Get()
+    for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
     {
-        List&lt;WeatherForecast&gt; weatherForecasts = new();
-
-        using (_serverTiming.TimeAction(&quot;getting-weather-forecasts&quot;))
+        using (_serverTiming.TimeAction($&quot;getting-weather-forecast-{daysFromToday}&quot;))
         {
-            for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
-            {
-                using (_serverTiming.TimeAction($&quot;getting-weather-forecast-{daysFromToday}&quot;))
-                {
-                    weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
-                }
-            };
+            weatherForecasts.Add(await GetWeatherForecastAsync(daysFromToday));
         }
-
-        return weatherForecasts;
-    }
-
-    ...
+    };
 }
+
+...
 </code></pre><p>Unfortunatelly, the Server Timing API doesn&#39;t have a concept of nested metrics and there is no convention for nested rendering in browsers.</p>
 <center><img src="../resources/timing-nested-blocks-of-code.png" alt="Timing Nested Blocks of Code"></center>
 
 <h2 id="timing-tasks">Timing Tasks</h2>
-<p><a href="../api/Lib.AspNetCore.ServerTiming.ServerTimingUtility.html"><code>ServerTimingUtility</code></a> also provides <code>TimeTask</code> method which allows for timing a <code>Task</code>.</p>
-<pre><code class="lang-cs">[Route(&quot;api/[controller]&quot;)]
-[ApiController]
-public class WeatherForecastsController : Controller
+<p><a href="../api/Lib.ServerTiming.ServerTimingExtensions.html"><code>ServerTimingExtensions</code></a> also provides <code>TimeTask</code> method which allows for timing a <code>Task</code>.</p>
+<pre><code class="lang-cs">...
+
+using (_serverTiming.TimeAction(&quot;getting-weather-forecasts&quot;))
 {
-    ...
-
-    [HttpGet]
-    public async Task&lt;IEnumerable&lt;WeatherForecast&gt;&gt; Get()
+    for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
     {
-        List&lt;WeatherForecast&gt; weatherForecasts = new();
-
-        using (_serverTiming.TimeAction(&quot;getting-weather-forecasts&quot;))
-        {
-            for (int daysFromToday = 1; daysFromToday &lt;= 10; daysFromToday++)
-            {
-                weatherForecasts.Add(await _serverTiming.TimeTask(GetWeatherForecastAsync(daysFromToday), $&quot;getting-weather-forecast-{daysFromToday}&quot;));
-            };
-        }
-
-        return weatherForecasts;
-    }
-
-    ...
+        weatherForecasts.Add(await _serverTiming.TimeTask(GetWeatherForecastAsync(daysFromToday), $&quot;getting-weather-forecast-{daysFromToday}&quot;));
+    };
 }
+
+...
 </code></pre><p>The result of the above snippet is exactly the same as the previous one.</p>
-<h2 id="metric-filters">Metric Filters</h2>
-<p>Filters provide a way to inspect and modify the metrics which are to be delivered in a response to current request. They run on the collected metrics just before they are set as the response header value. This provides flexibility around exposing metrics only in certain scenarios or to certain clients.</p>
+<h2 id="metric-filters-aspnet-core-only">Metric Filters (ASP.NET Core Only)</h2>
+<p>Filters, available for ASP.NET Core implementation, provide a way to inspect and modify the metrics which are to be delivered in a response to current request. They run on the collected metrics just before they are set as the response header value. This provides flexibility around exposing metrics only in certain scenarios or to certain clients.</p>
 <p>Filters can be added when registering the middleware by interacting with the <code>Filters</code> collection available on <a href="../api/Lib.AspNetCore.ServerTiming.ServerTimingOptions.html"><code>ServerTimingOptions</code></a>.</p>
 <pre><code class="lang-cs">public class Startup
 {
@@ -229,7 +172,7 @@ public class WeatherForecastsController : Controller
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

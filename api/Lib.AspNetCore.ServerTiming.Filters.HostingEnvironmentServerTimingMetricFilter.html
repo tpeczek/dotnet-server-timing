@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Class HostingEnvironmentServerTimingMetricFilter
-   | Lib.AspNetCore.ServerTiming </title>
+   | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HostingEnvironmentServerTimingMetricFilter
-   | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+   | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,9 +75,9 @@
       <div class="level2"><a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.RestrictDescriptionsToDevelopmentMetricFilter.html">RestrictDescriptionsToDevelopmentMetricFilter</a></div>
       <div class="level2"><a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.RestrictToDevelopmentMetricFilter.html">RestrictToDevelopmentMetricFilter</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a></div>
+    <div><a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter</a>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,7 +107,7 @@
   <h6><strong>Assembly</strong>: Lib.AspNetCore.ServerTiming.dll</h6>
   <h5 id="Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class HostingEnvironmentServerTimingMetricFilter : IServerTimingMetricFilter</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class HostingEnvironmentServerTimingMetricFilter : IServerTimingMetricFilter&lt;HttpContext&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -215,7 +215,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_OnServerTimingHeaderPreparation_" data-uid="Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_AspNetCore_ServerTiming_Http_Headers_ServerTimingMetric__" data-uid="Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric})">OnServerTimingHeaderPreparation(HttpContext, ICollection&lt;ServerTimingMetric&gt;)</h4>
+  <h4 id="Lib_AspNetCore_ServerTiming_Filters_HostingEnvironmentServerTimingMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_ServerTiming_Http_Headers_ServerTimingMetric__" data-uid="Lib.AspNetCore.ServerTiming.Filters.HostingEnvironmentServerTimingMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.ServerTiming.Http.Headers.ServerTimingMetric})">OnServerTimingHeaderPreparation(HttpContext, ICollection&lt;ServerTimingMetric&gt;)</h4>
   <div class="markdown level1 summary"><p>Inspects and modifies the collection of metrics for current request. If no more metrics remain in the collection after, the Server-Timing header will not be sent.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -236,11 +236,10 @@
       <tr>
         <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td><p>The <span class="xref">Microsoft.AspNetCore.Http.HttpContext</span> for the current request.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.AspNetCore.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;</td>
         <td><span class="parametername">metrics</span></td>
         <td><p>The collection of metrics for current request.</p>
 </td>
@@ -265,7 +264,7 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IServerTimingMetricFilter.html">IServerTimingMetricFilter</a>
+      <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a>
   </div>
 </article>
           </div>
@@ -279,7 +278,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

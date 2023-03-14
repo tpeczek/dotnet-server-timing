@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class IPRangeMetricFilter
+    <title>Class ServerTimingMiddlewareExtensions
    | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class IPRangeMetricFilter
+    <meta name="title" content="Class ServerTimingMiddlewareExtensions
    | Server Timing API support for .NET ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -60,22 +60,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter">
+            <article class="content wrap" id="_content" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions">
   
   
-  <h1 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter" class="text-break">Class IPRangeMetricFilter
+  <h1 id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions" class="text-break">Class ServerTimingMiddlewareExtensions
   </h1>
-  <div class="markdown level0 summary"><p>A filter which will remove all metrics unless the current request IP address falls within the specified range.</p>
+  <div class="markdown level0 summary"><p>The <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> extensions for adding <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a> to the worker execution pipeline.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IPRangeMetricFilter</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter</a>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>&gt;</div>
+    <div class="level1"><span class="xref">ServerTimingMiddlewareExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,57 +97,22 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.html">Lib.AspNetCore.ServerTiming.Filters</a></h6>
-  <h6><strong>Assembly</strong>: Lib.AspNetCore.ServerTiming.dll</h6>
-  <h5 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.Extensions.Hosting.html">Microsoft.Extensions.Hosting</a></h6>
+  <h6><strong>Assembly</strong>: Lib.Azure.Functions.Worker.ServerTiming.dll</h6>
+  <h5 id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IPRangeMetricFilter : IServerTimingMetricFilter&lt;HttpContext&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ServerTimingMiddlewareExtensions</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <a id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_System_Net_IPAddress_System_Net_IPAddress_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(System.Net.IPAddress,System.Net.IPAddress)">IPRangeMetricFilter(IPAddress, IPAddress)</h4>
-  <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html">IPRangeMetricFilter</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPRangeMetricFilter(IPAddress lowerInclusive, IPAddress upperInclusive)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Net.IPAddress</span></td>
-        <td><span class="parametername">lowerInclusive</span></td>
-        <td><p>Lower (inclusive) bound of the IP addresses range.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Net.IPAddress</span></td>
-        <td><span class="parametername">upperInclusive</span></td>
-        <td><p>Upper (inclusive) bound of the IP addresses range.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_ServerTiming_Http_Headers_ServerTimingMetric__" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.ServerTiming.Http.Headers.ServerTimingMetric})">OnServerTimingHeaderPreparation(HttpContext, ICollection&lt;ServerTimingMetric&gt;)</h4>
-  <div class="markdown level1 summary"><p>Removes all metrics for current request unless the current request IP address falls within the specified range.</p>
+  <a id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions_UseServerTiming_" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions.UseServerTiming*"></a>
+  <h4 id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_Azure_Functions_Worker_IFunctionsWorkerApplicationBuilder_" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder)">UseServerTiming(IFunctionsWorkerApplicationBuilder)</h4>
+  <div class="markdown level1 summary"><p>Configures the <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> to use <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a> in the worker execution pipeline.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OnServerTimingHeaderPreparation(HttpContext context, ICollection&lt;ServerTimingMetric&gt; metrics)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IFunctionsWorkerApplicationBuilder UseServerTiming(this IFunctionsWorkerApplicationBuilder builder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,15 +125,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>The <span class="xref">Microsoft.AspNetCore.Http.HttpContext</span> for the current request.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;</td>
-        <td><span class="parametername">metrics</span></td>
-        <td><p>The collection of metrics for current request.</p>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> to configure.</p>
 </td>
       </tr>
     </tbody>
@@ -187,16 +142,61 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if subsequent filters are allowed to run, otherwise false.</p>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span></td>
+        <td><p>The same instance of the <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> for chaining.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a>
+  <a id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions_UseServerTiming_" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions.UseServerTiming*"></a>
+  <h4 id="Microsoft_Extensions_Hosting_ServerTimingMiddlewareExtensions_UseServerTiming_Microsoft_Azure_Functions_Worker_IFunctionsWorkerApplicationBuilder_Lib_Azure_Functions_Worker_ServerTiming_ServerTimingOptions_" data-uid="Microsoft.Extensions.Hosting.ServerTimingMiddlewareExtensions.UseServerTiming(Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder,Lib.Azure.Functions.Worker.ServerTiming.ServerTimingOptions)">UseServerTiming(IFunctionsWorkerApplicationBuilder, ServerTimingOptions)</h4>
+  <div class="markdown level1 summary"><p>Configures the <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> to use <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a> in the worker execution pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IFunctionsWorkerApplicationBuilder UseServerTiming(this IFunctionsWorkerApplicationBuilder builder, ServerTimingOptions options)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> to configure.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a> to configure the middleware.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span></td>
+        <td><p>The same instance of the <span class="xref">Microsoft.Azure.Functions.Worker.IFunctionsWorkerApplicationBuilder</span> for chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
         </div>

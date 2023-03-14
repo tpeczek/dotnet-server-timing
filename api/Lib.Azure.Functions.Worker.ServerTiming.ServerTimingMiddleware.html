@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class IPRangeMetricFilter
+    <title>Class ServerTimingMiddleware
    | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class IPRangeMetricFilter
+    <meta name="title" content="Class ServerTimingMiddleware
    | Server Timing API support for .NET ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -60,22 +60,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter">
+            <article class="content wrap" id="_content" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware">
   
   
-  <h1 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter" class="text-break">Class IPRangeMetricFilter
+  <h1 id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware" class="text-break">Class ServerTimingMiddleware
   </h1>
-  <div class="markdown level0 summary"><p>A filter which will remove all metrics unless the current request IP address falls within the specified range.</p>
+  <div class="markdown level0 summary"><p>Middleware providing support for Server Timing API in the worker execution pipeline.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IPRangeMetricFilter</span></div>
+    <div class="level1"><span class="xref">ServerTimingMiddleware</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter</a>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>&gt;</div>
+    <div><span class="xref">Microsoft.Azure.Functions.Worker.Middleware.IFunctionsWorkerMiddleware</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,22 +101,22 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.html">Lib.AspNetCore.ServerTiming.Filters</a></h6>
-  <h6><strong>Assembly</strong>: Lib.AspNetCore.ServerTiming.dll</h6>
-  <h5 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.html">Lib.Azure.Functions.Worker.ServerTiming</a></h6>
+  <h6><strong>Assembly</strong>: Lib.Azure.Functions.Worker.ServerTiming.dll</h6>
+  <h5 id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IPRangeMetricFilter : IServerTimingMetricFilter&lt;HttpContext&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ServerTimingMiddleware : IFunctionsWorkerMiddleware</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter__ctor_System_Net_IPAddress_System_Net_IPAddress_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.#ctor(System.Net.IPAddress,System.Net.IPAddress)">IPRangeMetricFilter(IPAddress, IPAddress)</h4>
-  <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.html">IPRangeMetricFilter</a>.</p>
+  <a id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware__ctor_" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.#ctor*"></a>
+  <h4 id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware__ctor_Lib_Azure_Functions_Worker_ServerTiming_ServerTimingOptions_" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.#ctor(Lib.Azure.Functions.Worker.ServerTiming.ServerTimingOptions)">ServerTimingMiddleware(ServerTimingOptions)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new <a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.html">ServerTimingMiddleware</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPRangeMetricFilter(IPAddress lowerInclusive, IPAddress upperInclusive)</code></pre>
+    <pre><code class="lang-csharp hljs">public ServerTimingMiddleware(ServerTimingOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,29 +129,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.IPAddress</span></td>
-        <td><span class="parametername">lowerInclusive</span></td>
-        <td><p>Lower (inclusive) bound of the IP addresses range.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Net.IPAddress</span></td>
-        <td><span class="parametername">upperInclusive</span></td>
-        <td><p>Upper (inclusive) bound of the IP addresses range.</p>
+        <td><a class="xref" href="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingOptions.html">ServerTimingOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Server timing configuration options</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_Filters_IPRangeMetricFilter_OnServerTimingHeaderPreparation_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_ICollection_Lib_ServerTiming_Http_Headers_ServerTimingMetric__" data-uid="Lib.AspNetCore.ServerTiming.Filters.IPRangeMetricFilter.OnServerTimingHeaderPreparation(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.ICollection{Lib.ServerTiming.Http.Headers.ServerTimingMetric})">OnServerTimingHeaderPreparation(HttpContext, ICollection&lt;ServerTimingMetric&gt;)</h4>
-  <div class="markdown level1 summary"><p>Removes all metrics for current request unless the current request IP address falls within the specified range.</p>
+  <a id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware_Invoke_" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.Invoke*"></a>
+  <h4 id="Lib_Azure_Functions_Worker_ServerTiming_ServerTimingMiddleware_Invoke_Microsoft_Azure_Functions_Worker_FunctionContext_Microsoft_Azure_Functions_Worker_Middleware_FunctionExecutionDelegate_" data-uid="Lib.Azure.Functions.Worker.ServerTiming.ServerTimingMiddleware.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext,Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)">Invoke(FunctionContext, FunctionExecutionDelegate)</h4>
+  <div class="markdown level1 summary"><p>Process an individual invocation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OnServerTimingHeaderPreparation(HttpContext context, ICollection&lt;ServerTimingMetric&gt; metrics)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task Invoke(FunctionContext context, FunctionExecutionDelegate next)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,15 +158,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.FunctionContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td><p>The <span class="xref">Microsoft.AspNetCore.Http.HttpContext</span> for the current request.</p>
+        <td><p>The <span class="xref">Microsoft.Azure.Functions.Worker.FunctionContext</span> for the current invocation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Lib.ServerTiming.Http.Headers.ServerTimingMetric.html">ServerTimingMetric</a>&gt;</td>
-        <td><span class="parametername">metrics</span></td>
-        <td><p>The collection of metrics for current request.</p>
+        <td><span class="xref">Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next middleware in the pipeline.</p>
 </td>
       </tr>
     </tbody>
@@ -187,15 +181,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if subsequent filters are allowed to run, otherwise false.</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task</span> object representing the asynchronous operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Lib.ServerTiming.Filters.IServerTimingMetricFilter-1.html">IServerTimingMetricFilter&lt;TContext&gt;</a>
+      <span class="xref">Microsoft.Azure.Functions.Worker.Middleware.IFunctionsWorkerMiddleware</span>
   </div>
 </article>
           </div>

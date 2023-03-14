@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting Started | Lib.AspNetCore.ServerTiming </title>
+    <title>Getting Started (ASP.NET Core) | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting Started | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="title" content="Getting Started (ASP.NET Core) | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -52,7 +52,7 @@
         <div class="article row grid">
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="getting-started-aspnet-core">Getting Started (ASP.NET Core)</h1>
 
 <h2 id="configuration">Configuration</h2>
 <p>In order to add the Server Timing API support to an application a required service and middleware must be registered. The library provides <a href="../api/Microsoft.AspNetCore.Builder.html">extensions</a> which make it really simple.</p>
@@ -95,7 +95,7 @@
     }
 }
 </code></pre><h2 id="adding-metrics">Adding Metrics</h2>
-<p>In order to add timing metrics values for current request the instance of the <a href="../api/Lib.AspNetCore.ServerTiming.IServerTiming.html"><code>IServerTiming</code></a> service should be obtained (it&#39;s a scoped service). Once that is done, the values can simply be added to metrics collection.</p>
+<p>In order to add timing metrics values for current request the instance of the <a href="../api/Lib.ServerTiming.IServerTiming.html"><code>IServerTiming</code></a> service should be obtained (it&#39;s a scoped service). Once that is done, the values can simply be added to metrics collection.</p>
 <pre><code class="lang-cs">serverTiming.Metrics.Add(new ServerTimingMetric(&quot;cache&quot;, 300, &quot;Cache&quot;));
 serverTiming.Metrics.Add(new ServerTimingMetric(&quot;sql&quot;, 900, &quot;Sql Server&quot;));
 serverTiming.Metrics.Add(new ServerTimingMetric(&quot;fs&quot;, 600, &quot;FileSystem&quot;));
@@ -114,7 +114,7 @@ serverTiming.Metrics.Add(new ServerTimingMetric(&quot;cpu&quot;, 1230, &quot;Tot
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>

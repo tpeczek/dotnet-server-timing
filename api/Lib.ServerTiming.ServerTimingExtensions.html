@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ServerTimingUtility
-   | Lib.AspNetCore.ServerTiming </title>
+    <title>Class ServerTimingExtensions
+   | Server Timing API support for .NET </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ServerTimingUtility
-   | Lib.AspNetCore.ServerTiming ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="title" content="Class ServerTimingExtensions
+   | Server Timing API support for .NET ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../resources/ico/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -60,18 +60,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-12">
-            <article class="content wrap" id="_content" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility">
+            <article class="content wrap" id="_content" data-uid="Lib.ServerTiming.ServerTimingExtensions">
   
   
-  <h1 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility" class="text-break">Class ServerTimingUtility
+  <h1 id="Lib_ServerTiming_ServerTimingExtensions" data-uid="Lib.ServerTiming.ServerTimingExtensions" class="text-break">Class ServerTimingExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Utilities for easier logging of server timing performance metric.</p>
+  <div class="markdown level0 summary"><p>Extensions for easier logging of server timing performance metric.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServerTimingUtility</span></div>
+    <div class="level1"><span class="xref">ServerTimingExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -97,16 +97,16 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Lib.AspNetCore.ServerTiming.html">Lib.AspNetCore.ServerTiming</a></h6>
-  <h6><strong>Assembly</strong>: Lib.AspNetCore.ServerTiming.dll</h6>
-  <h5 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Lib.ServerTiming.html">Lib.ServerTiming</a></h6>
+  <h6><strong>Assembly</strong>: Lib.ServerTiming.Abstractions.dll</h6>
+  <h5 id="Lib_ServerTiming_ServerTimingExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ServerTimingUtility</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ServerTimingExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_Lib_AspNetCore_ServerTiming_IServerTiming_System_Decimal_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.Decimal,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, Decimal, String, String, String, Int32)</h4>
+  <a id="Lib_ServerTiming_ServerTimingExtensions_AddMetric_" data-uid="Lib.ServerTiming.ServerTimingExtensions.AddMetric*"></a>
+  <h4 id="Lib_ServerTiming_ServerTimingExtensions_AddMetric_Lib_ServerTiming_IServerTiming_System_Decimal_System_String_System_String_System_String_System_Int32_" data-uid="Lib.ServerTiming.ServerTimingExtensions.AddMetric(Lib.ServerTiming.IServerTiming,System.Decimal,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, Decimal, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Add a timed metric to the timing, if present.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -125,9 +125,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+        <td><p>The <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
 </td>
       </tr>
       <tr>
@@ -162,8 +162,8 @@
       </tr>
     </tbody>
   </table>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_AddMetric_Lib_AspNetCore_ServerTiming_IServerTiming_System_String_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.AddMetric(Lib.AspNetCore.ServerTiming.IServerTiming,System.String,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, String, String, String, String, Int32)</h4>
+  <a id="Lib_ServerTiming_ServerTimingExtensions_AddMetric_" data-uid="Lib.ServerTiming.ServerTimingExtensions.AddMetric*"></a>
+  <h4 id="Lib_ServerTiming_ServerTimingExtensions_AddMetric_Lib_ServerTiming_IServerTiming_System_String_System_String_System_String_System_String_System_Int32_" data-uid="Lib.ServerTiming.ServerTimingExtensions.AddMetric(Lib.ServerTiming.IServerTiming,System.String,System.String,System.String,System.String,System.Int32)">AddMetric(IServerTiming, String, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Add an untimed metric to the timing, if present.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -182,9 +182,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+        <td><p>The <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
 </td>
       </tr>
       <tr>
@@ -219,8 +219,8 @@
       </tr>
     </tbody>
   </table>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeAction_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeAction*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeAction_Lib_AspNetCore_ServerTiming_IServerTiming_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeAction(Lib.AspNetCore.ServerTiming.IServerTiming,System.String,System.String,System.String,System.Int32)">TimeAction(IServerTiming, String, String, String, Int32)</h4>
+  <a id="Lib_ServerTiming_ServerTimingExtensions_TimeAction_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeAction*"></a>
+  <h4 id="Lib_ServerTiming_ServerTimingExtensions_TimeAction_Lib_ServerTiming_IServerTiming_System_String_System_String_System_String_System_Int32_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeAction(Lib.ServerTiming.IServerTiming,System.String,System.String,System.String,System.Int32)">TimeAction(IServerTiming, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Time a block of code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -239,9 +239,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+        <td><p>The <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
 </td>
       </tr>
       <tr>
@@ -285,8 +285,8 @@
       </tr>
     </tbody>
   </table>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeTask_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeTask*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeTask_Lib_AspNetCore_ServerTiming_IServerTiming_System_Threading_Tasks_Task_System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeTask(Lib.AspNetCore.ServerTiming.IServerTiming,System.Threading.Tasks.Task,System.String,System.String,System.String,System.Int32)">TimeTask(IServerTiming, Task, String, String, String, Int32)</h4>
+  <a id="Lib_ServerTiming_ServerTimingExtensions_TimeTask_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeTask*"></a>
+  <h4 id="Lib_ServerTiming_ServerTimingExtensions_TimeTask_Lib_ServerTiming_IServerTiming_System_Threading_Tasks_Task_System_String_System_String_System_String_System_Int32_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeTask(Lib.ServerTiming.IServerTiming,System.Threading.Tasks.Task,System.String,System.String,System.String,System.Int32)">TimeTask(IServerTiming, Task, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Time an async task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -305,9 +305,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+        <td><p>The <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
 </td>
       </tr>
       <tr>
@@ -357,8 +357,8 @@
       </tr>
     </tbody>
   </table>
-  <a id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeTask_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeTask*"></a>
-  <h4 id="Lib_AspNetCore_ServerTiming_ServerTimingUtility_TimeTask__1_Lib_AspNetCore_ServerTiming_IServerTiming_System_Threading_Tasks_Task___0__System_String_System_String_System_String_System_Int32_" data-uid="Lib.AspNetCore.ServerTiming.ServerTimingUtility.TimeTask``1(Lib.AspNetCore.ServerTiming.IServerTiming,System.Threading.Tasks.Task{``0},System.String,System.String,System.String,System.Int32)">TimeTask&lt;T&gt;(IServerTiming, Task&lt;T&gt;, String, String, String, Int32)</h4>
+  <a id="Lib_ServerTiming_ServerTimingExtensions_TimeTask_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeTask*"></a>
+  <h4 id="Lib_ServerTiming_ServerTimingExtensions_TimeTask__1_Lib_ServerTiming_IServerTiming_System_Threading_Tasks_Task___0__System_String_System_String_System_String_System_Int32_" data-uid="Lib.ServerTiming.ServerTimingExtensions.TimeTask``1(Lib.ServerTiming.IServerTiming,System.Threading.Tasks.Task{``0},System.String,System.String,System.String,System.Int32)">TimeTask&lt;T&gt;(IServerTiming, Task&lt;T&gt;, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Time an async task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -377,9 +377,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a></td>
+        <td><a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a></td>
         <td><span class="parametername">serverTiming</span></td>
-        <td><p>The <a class="xref" href="Lib.AspNetCore.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
+        <td><p>The <a class="xref" href="Lib.ServerTiming.IServerTiming.html">IServerTiming</a> to add metric to.</p>
 </td>
       </tr>
       <tr>
@@ -457,7 +457,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2017 - 2022 Tomasz Pęczek
+            Copyright © 2017 - 2023 Tomasz Pęczek
             
           </div>
         </div>
