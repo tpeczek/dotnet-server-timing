@@ -1,21 +1,21 @@
-name: DocFx
+name: Continuous Documentation
 on: workflow_dispatch
 jobs:
   build:
     runs-on: windows-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Setup .NET Core 2.1 SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '2.1.x'
     - name: Setup .NET 6.0 SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
     - name: Setup .NET 7.0 SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7.0.x'
     - name: Restore
@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: docfx
         path: docs/DocFx.AspNetCore.ServerTiming/wwwroot
@@ -33,14 +33,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Download Artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: docfx
         path: docs/DocFx.AspNetCore.ServerTiming/wwwroot
     - name: Publish
-      uses: JamesIves/github-pages-deploy-action@4.1.5
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
         folder: docs/DocFx.AspNetCore.ServerTiming/wwwroot
