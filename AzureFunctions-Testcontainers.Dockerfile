@@ -10,7 +10,7 @@ WORKDIR /demos
 COPY demos/Demo.Azure.Functions.Worker.ServerTiming/ ./Demo.Azure.Functions.Worker.ServerTiming/
 
 RUN dotnet publish Demo.Azure.Functions.Worker.ServerTiming \
-    --output /home/site/wwwroot \
+    --output /home/site/wwwroot
 
 FROM mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated7.0
 
