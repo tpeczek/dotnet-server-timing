@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using DotNet.Testcontainers.Images;
-using Testcontainers.Azurite;
 using Xunit;
 
 namespace Test.Azure.Functions.Worker.ServerTiming.Infrastructure
@@ -11,8 +10,6 @@ namespace Test.Azure.Functions.Worker.ServerTiming.Infrastructure
     public class AzureFunctionsTestcontainersFixture : IAsyncLifetime
     {
         private readonly IFutureDockerImage _azureFunctionsDockerImage;
-
-        public AzuriteContainer AzuriteContainerInstance { get; private set; }
 
         public IContainer AzureFunctionsContainerInstance { get; private set; }
 
@@ -29,13 +26,9 @@ namespace Test.Azure.Functions.Worker.ServerTiming.Infrastructure
         {
             await _azureFunctionsDockerImage.CreateAsync();
 
-            AzuriteContainerInstance = new AzuriteBuilder().Build();
-            await AzuriteContainerInstance.StartAsync();
-
             AzureFunctionsContainerInstance = new ContainerBuilder()
                 .WithImage(_azureFunctionsDockerImage)
                 .WithPortBinding(80, true)
-                .WithEnvironment("AzureWebJobsStorage", AzuriteContainerInstance.GetConnectionString())
                 .WithWaitStrategy(Wait.ForUnixContainer().UntilHttpRequestIsSucceeded(r => r.ForPort(80)))
                 .Build();
             await AzureFunctionsContainerInstance.StartAsync();
@@ -44,9 +37,8 @@ namespace Test.Azure.Functions.Worker.ServerTiming.Infrastructure
         public async Task DisposeAsync()
         {
             await AzureFunctionsContainerInstance.DisposeAsync();
-            await _azureFunctionsDockerImage.DisposeAsync();
 
-            await AzuriteContainerInstance.DisposeAsync();
+            await _azureFunctionsDockerImage.DisposeAsync();
         }
     }
 }
