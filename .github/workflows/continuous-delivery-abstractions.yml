@@ -4,7 +4,50 @@ on:
     tags:
     - "abstractions-v[0-9]+.[0-9]+.[0-9]+"
 jobs:
+  build-and-test-aspnetcore:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup .NET Core 2.1 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '2.1.x'
+    - name: Setup .NET 6.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Setup .NET 7.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.x'
+    - name: Restore
+      run: dotnet restore src/Lib.AspNetCore.ServerTiming
+    - name: Build
+      run: dotnet build src/Lib.AspNetCore.ServerTiming --configuration Release --no-restore
+    - name: Test
+      run: dotnet test test/Test.AspNetCore.ServerTiming --configuration Release
+  build-and-test-azurefunctions:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup .NET 6.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Setup .NET 7.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.x'
+    - name: Restore
+      run: dotnet restore src/Lib.Azure.Functions.Worker.ServerTiming
+    - name: Build
+      run: dotnet build src/Lib.Azure.Functions.Worker.ServerTiming --configuration Release --no-restore
+    - name: Test
+      run: dotnet test test/Test.Azure.Functions.Worker.ServerTiming --configuration Release
   pack-and-push:
+    needs: [build-and-test-aspnetcore, build-and-test-azurefunctions]
     runs-on: windows-latest
     steps:
     - name: Checkout
@@ -25,13 +68,11 @@ jobs:
       with:
         dotnet-version: '7.0.x'
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore src/Lib.ServerTiming.Abstractions
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --configuration Release --no-build
+      run: dotnet build src/Lib.ServerTiming.Abstractions --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack --configuration Release --no-build
+      run: dotnet pack src/Lib.ServerTiming.Abstractions --configuration Release --no-build
     - name: NuGet Push Lib.ServerTiming.Abstractions
       run: dotnet nuget push src/Lib.ServerTiming.Abstractions/bin/Release/Lib.ServerTiming.Abstractions.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
       shell: bash
