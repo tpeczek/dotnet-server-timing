@@ -8,7 +8,7 @@ on:
     - main
   workflow_dispatch:
 jobs:
-  build-and-test:
+  build-and-test-aspnetcore:
     runs-on: windows-latest
     steps:
     - name: Checkout
@@ -26,11 +26,30 @@ jobs:
       with:
         dotnet-version: '7.0.x'
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore src/Lib.AspNetCore.ServerTiming
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build src/Lib.AspNetCore.ServerTiming --configuration Release --no-restore
     - name: Test
-      run: dotnet test --configuration Release --no-build
+      run: dotnet test test/Test.AspNetCore.ServerTiming --configuration Release
+  build-and-test-azurefunctions:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup .NET 6.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Setup .NET 7.0 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.x'
+    - name: Restore
+      run: dotnet restore src/Lib.Azure.Functions.Worker.ServerTiming
+    - name: Build
+      run: dotnet build src/Lib.Azure.Functions.Worker.ServerTiming --configuration Release --no-restore
+    - name: Test
+      run: dotnet test test/Test.Azure.Functions.Worker.ServerTiming --configuration Release
   code-scanning:
     runs-on: ubuntu-latest
     permissions:

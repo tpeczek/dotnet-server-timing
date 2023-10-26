@@ -5,6 +5,7 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0AE38B1E-B1A7-4CB7-8F17-54AED3982407}"
 	ProjectSection(SolutionItems) = preProject
+		AzureFunctions-Testcontainers.Dockerfile = AzureFunctions-Testcontainers.Dockerfile
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE.md = LICENSE.md
 		README.md = README.md
@@ -31,6 +32,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Azure.Functions.Worker.ServerTiming", "src\Lib.Azure.Functions.Worker.ServerTiming\Lib.Azure.Functions.Worker.ServerTiming.csproj", "{F3E4069B-96CF-49EB-886B-7D095956D466}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.ServerTiming.Abstractions", "src\Lib.ServerTiming.Abstractions\Lib.ServerTiming.Abstractions.csproj", "{A4EF5ECE-BB97-4FF8-BDCE-D1D33E25A2A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Azure.Functions.Worker.ServerTiming", "test\Test.Azure.Functions.Worker.ServerTiming\Test.Azure.Functions.Worker.ServerTiming.csproj", "{513FEC67-0B18-48B4-BFD6-3F59AF4625CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +69,10 @@ Global
 		{A4EF5ECE-BB97-4FF8-BDCE-D1D33E25A2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4EF5ECE-BB97-4FF8-BDCE-D1D33E25A2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4EF5ECE-BB97-4FF8-BDCE-D1D33E25A2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513FEC67-0B18-48B4-BFD6-3F59AF4625CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513FEC67-0B18-48B4-BFD6-3F59AF4625CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513FEC67-0B18-48B4-BFD6-3F59AF4625CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513FEC67-0B18-48B4-BFD6-3F59AF4625CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +85,7 @@ Global
 		{E7DC599F-40C9-4651-97B9-6B47CD05BA0D} = {7C82AF44-AD9A-4A40-9661-AFE39DBFB8FD}
 		{F3E4069B-96CF-49EB-886B-7D095956D466} = {A98ADA68-EA83-4BCB-BC4A-E7547759582D}
 		{A4EF5ECE-BB97-4FF8-BDCE-D1D33E25A2A5} = {A98ADA68-EA83-4BCB-BC4A-E7547759582D}
+		{513FEC67-0B18-48B4-BFD6-3F59AF4625CE} = {ED23FFF4-C081-48D6-90C0-4AD406ADE25A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7AFF5A25-912B-455D-BB01-96C81CFE82CE}

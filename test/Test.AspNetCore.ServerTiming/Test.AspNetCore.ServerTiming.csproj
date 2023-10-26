@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net462;netcoreapp2.1;net6.0;net7.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
