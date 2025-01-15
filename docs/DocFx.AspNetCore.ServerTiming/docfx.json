@@ -45,7 +45,7 @@
     "dest": "wwwroot",
     "globalMetadata": {
       "_appTitle": "Server Timing API support for .NET",
-      "_appFooter": "Copyright © 2017 - 2024 Tomasz Pęczek",
+      "_appFooter": "Copyright © 2017 - 2025 Tomasz Pęczek",
       "_appLogoPath": "resources/svg/logo.svg",
       "_appFaviconPath": "resources/ico/favicon.ico",
       "_disableBreadcrumb": true,
